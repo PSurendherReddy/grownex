@@ -6,7 +6,6 @@ export interface Service {
   description: string;
   longDescription: string;
   icon: LucideIcon;
-  category: 'Branding & Design' | 'Digital Marketing' | 'Offline Advertising' | 'PR & Influencer Marketing' | 'Consulting Services' | 'Website Development' | 'Shoots & Production';
   offerings: { title: string; description: string }[];
   caseStudySlug?: string;
 }

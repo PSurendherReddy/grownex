@@ -12,10 +12,10 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4 text-center">
           <Badge>Our Expertise</Badge>
           <h1 className="text-4xl md:text-5xl font-bold mt-4 font-headline">
-            A Full-Service Growth Engine
+            Our Services
           </h1>
           <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
-            From crafting a compelling brand story to executing multi-channel marketing campaigns, we offer a complete suite of services to fuel your growth at every stage.
+            Explore our comprehensive suite of services designed to elevate your brand and drive measurable results. From branding to web development, we're your partner in growth.
           </p>
         </div>
       </section>

@@ -27,8 +27,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
             {/* Hero Section */}
             <section className="bg-secondary py-20 md:py-32">
                 <div className="container mx-auto px-4 text-center">
-                    <Badge>{service.category}</Badge>
-                    <h1 className="text-4xl md:text-5xl font-bold mt-4 font-headline">
+                    <h1 className="text-4xl md:text-5xl font-bold font-headline">
                         {service.title}
                     </h1>
                     <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
@@ -41,7 +40,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
             <section className="py-16 md:py-24">
                 <div className="container mx-auto px-4 grid lg:grid-cols-3 gap-12">
                     <div className="lg:col-span-2">
-                        <h2 className="text-3xl font-bold font-headline">Problem → Solution</h2>
+                        <h2 className="text-3xl font-bold font-headline">Our Approach</h2>
                         <p className="mt-4 text-muted-foreground text-lg">
                             {service.longDescription}
                         </p>

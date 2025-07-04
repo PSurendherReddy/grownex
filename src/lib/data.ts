@@ -1,18 +1,17 @@
 import type { Service, PortfolioItem, Testimonial, Partner, BlogPost, TeamMember } from './types';
-import { Paintbrush, LineChart, Megaphone, Users, BrainCircuit, Code, Camera } from 'lucide-react';
+import { Paintbrush, LineChart, Megaphone, Users, BrainCircuit, Code, Camera, Share2 } from 'lucide-react';
 
 export const services: Service[] = [
   {
-    title: 'Branding & Design',
-    slug: 'branding-design',
-    description: 'Crafting unique brand identities that resonate and endure.',
-    longDescription: "In a crowded marketplace, a strong brand is your greatest asset. We go beyond logos to build comprehensive brand ecosystems that tell your story, captivate your audience, and create lasting connections. Our process is strategic, creative, and tailored to your unique business goals.",
+    title: 'Graphic Design & Branding',
+    slug: 'graphic-design-branding',
+    description: 'Crafting powerful brand identities that connect and convert.',
+    longDescription: 'We build memorable brands from the ground up, providing everything you need for a cohesive and compelling brand presence. Our strategic approach ensures your brand not only looks good but also communicates your core values and resonates with your target audience.',
     icon: Paintbrush,
-    category: 'Branding & Design',
     offerings: [
-        { title: 'Logo Design & Visual Identity', description: 'Creating memorable logos and a complete visual system for your brand.' },
-        { title: 'Brand Strategy & Messaging', description: 'Defining your brand’s core message, voice, and positioning.' },
-        { title: 'Corporate Decks & Collaterals', description: 'Designing professional materials that communicate your value effectively.' },
+        { title: 'Logo Design', description: 'Unique and memorable logo creation reflecting your brand’s essence.' },
+        { title: 'Brand Identity & Strategy', description: 'Developing a complete brand identity and a roadmap for its growth.' },
+        { title: 'Brand Guidelines', description: 'Comprehensive guidelines to ensure brand consistency across all channels.' },
     ],
     caseStudySlug: 'brand-refresh-innovatech'
   },
@@ -22,11 +21,12 @@ export const services: Service[] = [
     description: 'Driving targeted traffic and generating qualified leads online.',
     longDescription: 'Our digital marketing services are designed to place your brand in front of the right audience at the right time. We use a data-driven approach to create, manage, and optimize campaigns across various channels, ensuring maximum ROI and sustainable growth.',
     icon: LineChart,
-    category: 'Digital Marketing',
     offerings: [
-        { title: 'SEO & AEO', description: 'Optimizing for search and answer engines to boost organic visibility.' },
-        { title: 'Paid Advertising (Google, Meta, LinkedIn)', description: 'Managing targeted ad campaigns to drive immediate results.' },
-        { title: 'Email Marketing & Automation', description: 'Nurturing leads and retaining customers through automated email sequences.' },
+        { title: 'SEO & AEO', description: 'Improving organic visibility on search engines to attract high-intent traffic.' },
+        { title: 'Lead Generation', description: 'Building and executing strategies to fill your sales pipeline with qualified leads.' },
+        { title: 'PPC ADS - Google, Meta, LinkedIn', description: 'Managing paid campaigns for immediate impact.' },
+        { title: 'Email Marketing', description: 'Nurturing leads and customers with targeted email campaigns and automation.' },
+        { title: 'Social Media Management', description: 'Building and engaging your community across social platforms.' },
     ],
     caseStudySlug: 'lead-gen-for-saas'
   },
@@ -36,65 +36,76 @@ export const services: Service[] = [
     description: 'Making a real-world impact with tangible advertising solutions.',
     longDescription: "While digital is crucial, offline advertising creates a powerful, tangible presence that can't be ignored. We specialize in high-impact offline campaigns that capture attention in physical spaces, from bustling city centers to local communities.",
     icon: Megaphone,
-    category: 'Offline Advertising',
     offerings: [
-        { title: 'Hoardings & Mall Advertising', description: 'Large-format ads in high-traffic areas.' },
-        { title: 'Campus & Apartment Ads', description: 'Targeting specific demographics in their living and learning spaces.' },
-        { title: 'Pamphlet Distribution', description: 'Direct, localized marketing for events and promotions.' },
+        { title: 'Hoardings & Malls', description: 'Large-format ads in high-traffic areas for maximum visibility.' },
+        { title: 'College & Campus Ads', description: 'Targeting specific demographics in their living and learning spaces.' },
+        { title: 'Apartment Complexes', description: 'Reaching residents directly within their communities.' },
+        { title: 'Petrol Pumps', description: 'Engaging a captive audience during their daily commute.' },
+        { title: 'Pamphlet Distribution', description: 'Direct, localized marketing for events, offers, and announcements.' },
     ]
   },
   {
-    title: 'PR & Influencer Marketing',
-    slug: 'pr-influencer-marketing',
-    description: 'Building credibility and amplifying your message through trusted voices.',
-    longDescription: "Shape public perception and leverage influential voices with our PR and influencer marketing services. We build authentic relationships and craft compelling narratives to enhance your brand's reputation and reach.",
-    icon: Users,
-    category: 'PR & Influencer Marketing',
+    title: 'Photography & Video Production',
+    slug: 'photo-video-production',
+    description: 'Creating stunning visual content that tells your brand’s story.',
+    longDescription: "High-quality visuals are non-negotiable in today's market. Our production team specializes in creating compelling photography and videography that captures the essence of your brand, products, and events, making your story unforgettable.",
+    icon: Camera,
     offerings: [
-        { title: 'Public Relations', description: 'Managing media relations and press releases for politicians, entrepreneurs, and businesses.' },
-        { title: 'Influencer Collaboration', description: 'Partnering with influencers to reach engaged audiences.' },
-        { title: 'Meme Marketing & Celebrity Endorsements', description: 'Creating viral content and leveraging celebrity power.' },
+        { title: 'Product Shoots', description: 'Crisp, professional photos for e-commerce, catalogs, and marketing materials.' },
+        { title: 'Event Shoots: Sports, Corporate, Opening Events', description: 'Capturing the energy and key moments of your important events.' },
+    ]
+  },
+  {
+    title: 'Public Relations',
+    slug: 'public-relations',
+    description: 'Building credibility and shaping public perception.',
+    longDescription: "Manage your reputation and build trust with our comprehensive public relations services. We craft compelling narratives and secure media coverage to position you or your business as a leader in your field.",
+    icon: Users,
+    offerings: [
+        { title: 'Political PR', description: 'Strategic communications and media management for political campaigns and figures.' },
+        { title: 'Business PR', description: 'Enhancing corporate reputation and managing communications for businesses.' },
+        { title: 'Entrepreneur Features', description: 'Securing media features and interviews for entrepreneurs and thought leaders.' },
+        { title: 'Press Release Handling', description: 'Crafting and distributing effective press releases to the right channels.' },
     ]
   },
   {
     title: 'Business Consulting',
     slug: 'business-consulting',
-    description: 'Providing strategic insights and operational frameworks for growth.',
-    longDescription: "Beyond marketing, we offer strategic business consulting to help you build a solid foundation for success. Our experts analyze your market, operations, and competition to provide actionable insights and clear roadmaps.",
+    description: 'Providing strategic insights for sustainable growth.',
+    longDescription: "Beyond marketing, we offer strategic business consulting to help you build a solid foundation for success. Our experts analyze your market, operations, and competition to provide actionable insights and clear roadmaps for growth and efficiency.",
     icon: BrainCircuit,
-    category: 'Consulting Services',
     offerings: [
-        { title: 'SOP Creation & Market Research', description: 'Developing standard operating procedures and gathering critical market intelligence.' },
-        { title: 'Competitor & Architecture Analysis', description: 'Understanding the competitive landscape and your business structure.' },
-        { title: 'Data Collection & Grant Research', description: 'Conducting surveys and identifying funding opportunities.' },
+        { title: 'SOP Creation', description: 'Developing Standard Operating Procedures to streamline your business processes.' },
+        { title: 'Market & Competitor Research', description: 'In-depth analysis of the market landscape and your competition.' },
+        { title: 'Architecture Analysis', description: 'Evaluating and optimizing your business or technical architecture.' },
+        { title: 'Data Collection & Surveys', description: 'Gathering crucial data through targeted surveys and research methods.' },
+        { title: 'Government/Private Grants Research', description: 'Identifying and assisting with applications for funding opportunities.' },
+    ]
+  },
+  {
+    title: 'Influencer Marketing',
+    slug: 'influencer-marketing',
+    description: 'Amplifying your message through trusted voices.',
+    longDescription: "Leverage the power of influence to connect with your audience authentically. We design and manage end-to-end influencer marketing campaigns that drive brand awareness, engagement, and conversions.",
+    icon: Share2,
+    offerings: [
+        { title: 'Influencers, Memers, & Celebrities', description: 'Identifying and collaborating with the right voices for your brand.' },
+        { title: 'Campaign Execution & Reporting', description: 'Managing campaigns from start to finish with detailed performance reporting.' },
     ]
   },
   {
     title: 'Website Development',
     slug: 'website-development',
-    description: 'Building high-performance websites that convert visitors into customers.',
-    longDescription: "Your website is your digital storefront. We build websites that are not only beautiful but also fast, secure, and optimized for conversion. From simple landing pages to complex e-commerce platforms, we have the expertise to bring your vision to life.",
+    description: 'Building high-performance websites that convert visitors.',
+    longDescription: "Your website is your digital storefront. We build websites that are not only beautiful but also fast, secure, and optimized for conversion. From e-commerce to custom platforms, we bring your digital vision to life.",
     icon: Code,
-    category: 'Website Development',
     offerings: [
-        { title: 'WordPress, Webflow, & Shopify', description: 'Developing on leading platforms for flexibility and scalability.' },
-        { title: 'Custom Website Design', description: 'Creating unique, tailor-made websites from scratch.' },
-        { title: 'Performance Optimization', description: 'Ensuring your site is fast, responsive, and SEO-friendly.' },
+        { title: 'WordPress Websites', description: 'Flexible and scalable websites built on the world’s most popular CMS.' },
+        { title: 'Shopify Stores', description: 'Powerful e-commerce solutions for businesses of all sizes.' },
+        { title: 'Webflow Designs', description: 'Visually stunning and highly interactive websites with no-code flexibility.' },
+        { title: 'Custom-Coded Websites', description: 'Bespoke web solutions for unique requirements and maximum performance.' },
     ],
     caseStudySlug: 'ecommerce-platform-for-artisan'
-  },
-  {
-    title: 'Shoots & Production',
-    slug: 'shoots-production',
-    description: 'Creating stunning visual content that tells your brand’s story.',
-    longDescription: "High-quality visuals are non-negotiable in today's market. Our production team specializes in creating compelling photography and videography that captures the essence of your brand, products, and events.",
-    icon: Camera,
-    category: 'Shoots & Production',
-    offerings: [
-        { title: 'Product Photography', description: 'Crisp, professional photos for e-commerce and marketing.' },
-        { title: 'Event Shoots', description: 'Capturing the energy of sports, corporate, and opening events.' },
-        { title: 'Corporate Videos', description: 'Producing brand stories, testimonials, and promotional videos.' },
-    ]
   }
 ];
 
