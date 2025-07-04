@@ -1,5 +1,163 @@
 import type { Service, ServiceGroup, PortfolioItem, Testimonial, Partner, BlogPost, TeamMember } from './types';
 
+const serviceDetails: Record<string, { about: string; whenToChoose: string; whoIsItFor: string }> = {
+  'logo-design': {
+    about: "Our Logo Design service focuses on creating a powerful, memorable visual identity. We go beyond aesthetics to develop a logo that encapsulates your brand's essence, values, and mission. The process involves in-depth research, conceptualization, and refinement to produce a timeless mark that works across all media.",
+    whenToChoose: "Choose this when you're launching a new business, rebranding an existing one, or feel your current logo no longer represents your company. A strong logo is the foundation of your brand identity and crucial for making a lasting first impression.",
+    whoIsItFor: "Ideal for startups needing a strong market entry, established businesses looking to modernize their image, and organizations aiming to improve brand recognition and stand out in a crowded marketplace."
+  },
+  'brand-identity-strategy': {
+    about: 'This comprehensive service aligns your business goals with a cohesive brand identity. We develop a complete visual and verbal system, including your mission, vision, voice, and a strategic roadmap for implementation, ensuring every brand touchpoint is consistent and impactful.',
+    whenToChoose: 'Select this service when you need more than just a logo. It’s for times of significant business transformation, market repositioning, or when you need to unify a fragmented brand message to build equity and drive growth.',
+    whoIsItFor: 'Perfect for businesses seeking to establish a strong, unified market presence, companies undergoing a merger or acquisition, and established brands aiming to reconnect with their audience on a deeper level.'
+  },
+  'brand-guidelines': {
+    about: 'We create a comprehensive rulebook that defines how your brand presents itself. This document covers everything from logo usage and color palettes to typography and tone of voice, ensuring absolute consistency across all internal and external communications.',
+    whenToChoose: 'This is essential after a rebrand or if you find your brand is being represented inconsistently. It’s crucial when working with multiple teams, partners, or agencies to maintain a cohesive and professional brand image.',
+    whoIsItFor: 'A must-have for any organization with more than one employee. It is especially critical for marketing teams, design departments, and companies that use freelancers or external agencies.'
+  },
+  'seo-aeo': {
+    about: 'Our SEO & AEO (Answer Engine Optimization) service is designed to increase your visibility where it matters most. We focus on a holistic strategy of technical optimization, high-quality content, and authority building to rank for high-intent keywords and directly answer user questions.',
+    whenToChoose: 'Engage this service when your website isn’t generating enough organic traffic, your competitors are outranking you, or you’re launching a new website. It’s a long-term strategy for sustainable growth.',
+    whoIsItFor: 'Beneficial for any business with an online presence, from local stores wanting to attract nearby customers to global B2B companies looking to capture a niche audience.'
+  },
+  'lead-generation': {
+    about: 'This service is focused on one thing: filling your sales pipeline with qualified, high-intent leads. We implement and manage targeted campaigns across various channels, using data-driven methods to attract, engage, and convert potential customers.',
+    whenToChoose: 'If your sales team needs more prospects, your growth has stalled, or your current lead generation efforts are too expensive or ineffective, this service provides a direct path to acquiring new customers.',
+    whoIsItFor: 'Primarily for B2B companies, high-value B2C services (e.g., real estate, finance), and any business that relies on a consistent flow of new customer inquiries to fuel growth.'
+  },
+  'ppc-advertising': {
+    about: 'Our Pay-Per-Click advertising service offers immediate visibility and targeted traffic. We manage campaigns on platforms like Google Ads and social media, focusing on maximizing your return on ad spend (ROAS) through meticulous keyword research, ad copy testing, and landing page optimization.',
+    whenToChoose: 'Use PPC for quick results, to promote a specific offer, enter a new market, or to complement your long-term SEO efforts. It’s ideal for testing market response and driving traffic while your organic presence grows.',
+    whoIsItFor: 'Excellent for e-commerce brands, lead generation campaigns, and any business that wants to control its advertising budget precisely and see immediate, measurable results.'
+  },
+  'email-marketing': {
+    about: 'We help you build and nurture direct relationships with your audience through strategic email campaigns. From automated welcome series to targeted promotional newsletters, we create content that engages subscribers and drives conversions.',
+    whenToChoose: 'If you have a list of contacts you aren’t engaging or want to improve customer retention and lifetime value, email marketing is one of the most cost-effective channels available.',
+    whoIsItFor: 'Essential for e-commerce businesses, content creators, and any company looking to build a loyal community and drive repeat business from its existing customer base.'
+  },
+  'social-media-management': {
+    about: 'Our team manages your social media presence, creating and curating content that builds your brand and engages your community. We develop a platform-specific strategy to grow your following and drive meaningful interactions.',
+    whenToChoose: "If you lack the time or expertise to maintain an active, professional social media presence, or if your current efforts aren't yielding results, it's time to bring in experts.",
+    whoIsItFor: 'Crucial for B2C brands, personality-driven businesses, and any organization looking to build brand awareness and connect with its audience on a daily basis.'
+  },
+  'hoarding-advertising': {
+    about: 'Make a big statement with large-format hoarding (billboard) advertising. We secure prime locations and design eye-catching visuals to ensure your message captures the attention of thousands of commuters and pedestrians daily.',
+    whenToChoose: 'Ideal for broad brand awareness campaigns, event promotions, or announcing a new store opening. Hoardings are powerful for dominating a specific geographic area with your message.',
+    whoIsItFor: 'Best for businesses targeting a mass local audience, such as retail stores, real estate developers, event organizers, and major consumer brands.'
+  },
+  'mall-advertising': {
+    about: 'Engage a captive audience of shoppers in a high-traffic environment. We place your brand across various formats within malls, from digital screens to static posters, targeting consumers when they are in a buying mindset.',
+    whenToChoose: 'Choose this to drive foot traffic to your retail store within the mall, launch a new product, or to target specific consumer demographics that frequent shopping centers.',
+    whoIsItFor: 'Retailers, restaurants, entertainment venues, and brands targeting families, teens, or affluent shoppers who frequent malls.'
+  },
+  'college-campus-ads': {
+    about: 'Directly target the valuable student and faculty demographic through on-campus advertising. We utilize posters, digital screens, and event sponsorships to integrate your brand into the daily life of the campus community.',
+    whenToChoose: "When your product or service is specifically tailored to young adults or academics. It's perfect for recruitment, brand loyalty building, and promoting student-focused offers.",
+    whoIsItFor: 'Companies in tech, banking (student accounts), food and beverage, apparel, and entertainment looking to capture the next generation of consumers.'
+  },
+  'apartment-complex-ads': {
+    about: 'Reach residents where they live. We place advertisements in common areas of apartment complexes, such as lobbies, elevators, and clubhouses, providing a highly targeted way to reach a specific neighborhood.',
+    whenToChoose: 'This is a great strategy for local businesses like restaurants, gyms, cleaners, and service providers who want to become the go-to choice for a specific residential community.',
+    whoIsItFor: 'Local service providers, furniture stores, internet service providers, and any business looking to target new movers or a concentrated local population.'
+  },
+  'petrol-pump-advertising': {
+    about: 'Capture the undivided attention of drivers during the few minutes they spend refueling. We use nozzles, pump toppers, and digital screens to deliver your message to a broad, captive audience.',
+    whenToChoose: 'An excellent choice for general brand awareness and targeting a wide demographic of vehicle owners. It’s particularly effective for automotive products, insurance, and local radio stations.',
+    whoIsItFor: 'Auto-related businesses, insurance companies, convenience stores, and major consumer brands seeking high-frequency exposure.'
+  },
+  'pamphlet-distribution': {
+    about: 'Our targeted pamphlet and flyer distribution service gets your message directly into the hands of potential customers. We plan strategic distribution in residential areas, business districts, and at events to maximize reach and impact.',
+    whenToChoose: 'When you need to promote a local event, a special offer, or a new business opening with a geographically focused, cost-effective method. It provides a tangible reminder of your brand.',
+    whoIsItFor: 'Local businesses, restaurants, real estate agents, event organizers, and political campaigns that require deep penetration in a specific geographic area.'
+  },
+  'product-shoots': {
+    about: 'High-quality product photography is essential for e-commerce success. We create clean, professional, and appealing images of your products for use on your website, social media, and marketing materials, making your items look their absolute best.',
+    whenToChoose: "This is a must when launching a new product, updating your e-commerce store, or creating a print catalog. Professional photos significantly increase conversion rates.",
+    whoIsItFor: 'E-commerce businesses, retailers, Amazon sellers, and anyone who sells a physical product online or in print.'
+  },
+  'event-photo-video': {
+    about: 'We capture the energy and key moments of your corporate events, conferences, sports tournaments, or grand openings. Our professional photo and video coverage provides you with valuable assets for marketing, PR, and internal use.',
+    whenToChoose: 'Any time you are hosting a significant event that you want to document for promotional purposes or to share with those who couldn’t attend. It immortalizes the success of your event.',
+    whoIsItFor: 'Corporate event planners, marketing departments, PR agencies, sports organizations, and businesses hosting launch parties or conferences.'
+  },
+  'political-pr': {
+    about: 'We provide strategic communications and media relations for political figures and campaigns. Our service focuses on shaping public perception, managing messaging, and securing positive media coverage to build a strong, electable profile.',
+    whenToChoose: 'Crucial during an election cycle, when announcing a candidacy, or when a public figure needs to manage their reputation and communicate their platform effectively to voters and the media.',
+    whoIsItFor: 'Political candidates, elected officials, political action committees (PACs), and public affairs organizations.'
+  },
+  'business-pr': {
+    about: 'Our Business PR service works to enhance your corporate reputation and build credibility. We craft compelling stories and secure placements in relevant media outlets to position your company as a leader in its industry.',
+    whenToChoose: 'Choose this when you are launching a major product, announcing a partnership, sharing company milestones, or want to build long-term brand authority and trust in your market.',
+    whoIsItFor: 'Startups seeking credibility, established companies looking to enhance their reputation, and any business that wants to be seen as a thought leader.'
+  },
+  'entrepreneur-features': {
+    about: 'We help founders and entrepreneurs build their personal brand by securing feature articles and interviews in prominent media outlets. This service positions you as a thought leader and expert in your field.',
+    whenToChoose: 'When you want to elevate your personal profile beyond your company, attract speaking opportunities, or build a following as an industry expert. It adds significant credibility to both you and your business.',
+    whoIsItFor: 'Founders, CEOs, authors, consultants, and any expert looking to build their personal brand and industry influence.'
+  },
+  'press-release-handling': {
+    about: 'We handle the entire press release process, from crafting a newsworthy announcement to distributing it to our network of journalists and media outlets. We focus on getting your news in front of the right people to maximize coverage.',
+    whenToChoose: "This is the standard procedure for announcing company news, such as a funding round, a new executive hire, a product launch, or a significant partnership. It's the official way to communicate with the press.",
+    whoIsItFor: 'Any business with newsworthy information to share. It is a foundational tool for all corporate communications departments and PR agencies.'
+  },
+  'sop-creation': {
+    about: 'We develop clear and effective Standard Operating Procedures (SOPs) to streamline your business processes. This ensures consistency, reduces errors, improves efficiency, and makes it easier to train new employees.',
+    whenToChoose: 'When your business is scaling and processes are becoming inconsistent, or if you find recurring errors in your operations. SOPs are essential for building a scalable and efficient organization.',
+    whoIsItFor: 'Growing businesses, startups looking to establish processes, and established companies aiming to optimize their operations and improve quality control.'
+  },
+  'market-competitor-research': {
+    about: 'Gain a competitive edge with our in-depth market and competitor research. We provide detailed analysis of market trends, consumer behavior, and your competitors\' strategies, strengths, and weaknesses to inform your business decisions.',
+    whenToChoose: 'Before entering a new market, launching a new product, or when you are losing market share. This research is foundational to any sound business or marketing strategy.',
+    whoIsItFor: 'Strategic planners, marketing teams, product managers, and startups looking to validate their business idea and understand the competitive landscape.'
+  },
+  'architecture-analysis': {
+    about: 'We evaluate your business or technical architecture to identify inefficiencies, risks, and opportunities for improvement. Our analysis provides a roadmap for optimizing your systems and structures for better performance and scalability.',
+    whenToChoose: 'When you are experiencing scalability issues, high operational costs, or planning a major technological transformation. It helps ensure your foundation can support future growth.',
+    whoIsItFor: 'CTOs, IT departments, and business leaders of tech-enabled companies who need to ensure their infrastructure is robust, scalable, and cost-effective.'
+  },
+  'data-collection-surveys': {
+    about: 'Gather crucial insights directly from your target audience through professionally designed and executed surveys. We handle everything from question design to data collection and analysis, providing you with actionable data.',
+    whenToChoose: 'When you need to validate a hypothesis, understand customer satisfaction, gauge market demand for a new feature, or gather any form of quantitative or qualitative feedback from a specific group.',
+    whoIsItFor: 'Product managers, marketing teams, researchers, and any business that wants to make data-driven decisions based on direct audience feedback.'
+  },
+  'grant-research': {
+    about: 'We help you navigate the complex world of grants by identifying relevant funding opportunities from foundations, government bodies, and corporations. Our service assists in finding grants that align with your mission and projects.',
+    whenToChoose: 'If your organization is seeking funding for a specific project or operational support and lacks the resources to constantly search for and evaluate grant opportunities.',
+    whoIsItFor: 'Non-profit organizations, educational institutions, research labs, and startups in specific industries (like clean tech or biotech) that are eligible for grant funding.'
+  },
+  'influencer-sourcing-management': {
+    about: 'We connect your brand with the right influencers, content creators, and celebrities to amplify your message. We handle the sourcing, vetting, negotiation, and relationship management to ensure a seamless partnership.',
+    whenToChoose: 'When you want to leverage the trust and reach of established voices to promote your product. It’s an effective way to reach a new, engaged audience with an authentic endorsement.',
+    whoIsItFor: 'B2C brands, especially in fashion, beauty, gaming, and lifestyle, looking for authentic ways to reach and influence their target demographic.'
+  },
+  'influencer-campaign-management': {
+    about: 'This is a full-service offering where we manage your entire influencer marketing campaign from start to finish. This includes strategy development, creative briefs, execution, and detailed performance reporting to measure ROI.',
+    whenToChoose: 'When you want to run a coordinated, multi-influencer campaign but lack the in-house expertise to manage the complexity. We ensure the campaign is cohesive, on-brand, and results-driven.',
+    whoIsItFor: 'Brands that are serious about investing in influencer marketing and want a strategic, professionally managed campaign with clear objectives and measurable outcomes.'
+  },
+  'wordpress-websites': {
+    about: 'We build flexible, scalable, and easy-to-manage websites on WordPress, the world’s most popular CMS. Our service includes custom theme development and plugin configuration to meet your specific business needs.',
+    whenToChoose: 'WordPress is an excellent choice for content-heavy websites like blogs, news sites, and corporate websites that require flexibility and a user-friendly backend for non-technical users to manage content.',
+    whoIsItFor: 'Businesses of all sizes, from bloggers and small businesses to large enterprises, who need a powerful, customizable, and scalable web presence.'
+  },
+  'shopify-stores': {
+    about: 'We design and develop powerful e-commerce solutions on the Shopify platform. Our focus is on creating visually stunning, high-converting online stores that provide a seamless shopping experience for your customers.',
+    whenToChoose: 'If you are selling products online, Shopify is the industry-leading platform. Choose this service to launch a new e-commerce store or to redesign and optimize an existing one for better performance.',
+    whoIsItFor: 'E-commerce businesses of all sizes, from small artisan shops to large multi-channel retailers, who want a robust, secure, and scalable platform to sell their products.'
+  },
+  'webflow-designs': {
+    about: 'We create visually stunning, highly interactive, and pixel-perfect websites using Webflow. This platform allows for advanced design and animation possibilities without sacrificing performance or a clean codebase.',
+    whenToChoose: 'When design and user experience are your top priorities. Webflow is perfect for marketing sites, creative portfolios, and brands that want to make a bold visual statement with rich animations and interactions.',
+    whoIsItFor: 'Design-forward companies, creative agencies, and startups that want a high-end, custom-looking website without the need for extensive custom development.'
+  },
+  'custom-coded-websites': {
+    about: 'For projects with unique requirements, we offer fully custom-coded web solutions. We build bespoke websites and web applications from the ground up, giving you complete control over every aspect of design and functionality.',
+    whenToChoose: 'When your project has complex functional requirements, needs to integrate with specific APIs, or requires a level of performance and security that off-the-shelf solutions cannot provide.',
+    whoIsItFor: 'Tech startups building a web application, businesses with highly specific needs, and companies that require a unique, high-performance web platform tailored exactly to their specifications.'
+  }
+};
+
 export const serviceGroups: ServiceGroup[] = [
   {
     title: 'Graphic Design & Branding',
@@ -150,6 +308,8 @@ const createServicePageContent = (group: ServiceGroup, service: { title: string;
             break;
     }
 
+    const details = serviceDetails[service.slug];
+
     return {
         title: service.title,
         slug: service.slug,
@@ -161,6 +321,9 @@ const createServicePageContent = (group: ServiceGroup, service: { title: string;
         },
         caseStudySlug: service.caseStudySlug,
         stats,
+        aboutService: details?.about,
+        whenToChoose: details?.whenToChoose,
+        whoIsItFor: details?.whoIsItFor,
     }
 }
 

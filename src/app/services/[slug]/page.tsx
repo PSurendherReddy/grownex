@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { ServiceIllustration } from "@/components/vectors/ServiceIllustration";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export function generateStaticParams() {
     return services.map(service => ({
@@ -61,6 +62,44 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                          <p>{service.longDescription}</p>
                     </div>
                 </section>
+
+                 {/* Detailed Info Section */}
+                {(service.aboutService || service.whenToChoose || service.whoIsItFor) && (
+                    <section className="mt-20 md:mt-24">
+                        <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+                            {service.aboutService && (
+                                <Card>
+                                    <CardHeader>
+                                        <CardTitle className="text-xl">About the Service</CardTitle>
+                                    </CardHeader>
+                                    <CardContent>
+                                        <p className="text-muted-foreground">{service.aboutService}</p>
+                                    </CardContent>
+                                </Card>
+                            )}
+                            {service.whenToChoose && (
+                                <Card>
+                                    <CardHeader>
+                                        <CardTitle className="text-xl">When to Choose</CardTitle>
+                                    </CardHeader>
+                                    <CardContent>
+                                        <p className="text-muted-foreground">{service.whenToChoose}</p>
+                                    </CardContent>
+                                </Card>
+                            )}
+                            {service.whoIsItFor && (
+                                <Card>
+                                    <CardHeader>
+                                        <CardTitle className="text-xl">Who It's For</CardTitle>
+                                    </CardHeader>
+                                    <CardContent>
+                                        <p className="text-muted-foreground">{service.whoIsItFor}</p>
+                                    </CardContent>
+                                </Card>
+                            )}
+                        </div>
+                    </section>
+                )}
             </div>
              {/* CTA Section */}
             <section className="bg-secondary">

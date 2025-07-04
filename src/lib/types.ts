@@ -12,6 +12,9 @@ export interface Service {
     value: string;
     label: string;
   }[];
+  aboutService?: string;
+  whenToChoose?: string;
+  whoIsItFor?: string;
 }
 
 export interface ServiceGroup {
