@@ -3,6 +3,7 @@ import { blogPosts } from "@/lib/data";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
 import { AbstractShape1 } from "@/components/vectors/AbstractShape1";
+import { ArrowRight } from "lucide-react";
 
 export default function BlogPage() {
     return (
@@ -25,33 +26,31 @@ export default function BlogPage() {
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {blogPosts.map(post => (
-                            <Card key={post.slug} className="flex flex-col">
-                                <CardHeader className="p-0">
-                                    <Link href={`/blog/${post.slug}`}>
+                           <Link href={`/blog/${post.slug}`} key={post.slug} className="group block">
+                                <Card className="flex flex-col h-full transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-2 border bg-background">
+                                    <CardHeader className="p-0">
                                         <AbstractShape1
                                             className="w-full h-48 object-cover"
                                         />
-                                    </Link>
-                                </CardHeader>
-                                <CardContent className="p-6 flex-grow">
-                                    <Badge variant="outline">{post.category}</Badge>
-                                    <CardTitle className="mt-2 text-xl font-bold">
-                                        <Link href={`/blog/${post.slug}`} className="hover:text-primary transition-colors">
+                                    </CardHeader>
+                                    <CardContent className="p-6 flex-grow flex flex-col">
+                                        <Badge variant="outline">{post.category}</Badge>
+                                        <CardTitle className="mt-4 text-xl group-hover:text-primary transition-colors">
                                             {post.title}
-                                        </Link>
-                                    </CardTitle>
-                                    <CardDescription className="mt-2 text-sm">{post.excerpt}</CardDescription>
-                                </CardContent>
-                                <CardFooter className="p-6 pt-0 flex justify-between items-center text-xs text-muted-foreground">
-                                    <div className="flex items-center gap-4">
-                                        <span>{post.author}</span>
-                                        <span>{post.date}</span>
-                                    </div>
-                                    <Link href={`/blog/${post.slug}`} className="text-primary font-semibold hover:underline">
-                                        Read <span className="hidden sm:inline">More</span>
-                                    </Link>
-                                </CardFooter>
-                            </Card>
+                                        </CardTitle>
+                                        <CardDescription className="mt-2 text-sm flex-grow">{post.excerpt}</CardDescription>
+                                    </CardContent>
+                                    <CardFooter className="p-6 pt-0 flex justify-between items-center text-sm text-muted-foreground">
+                                        <div className="flex items-center gap-2">
+                                            <span className="text-xs">{post.author} &bull; {post.date}</span>
+                                        </div>
+                                        <div className="flex items-center gap-1 text-primary font-semibold">
+                                            Read More
+                                            <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                                        </div>
+                                    </CardFooter>
+                                </Card>
+                            </Link>
                         ))}
                     </div>
                 </div>
