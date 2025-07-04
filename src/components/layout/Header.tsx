@@ -70,27 +70,30 @@ export function Header() {
                   </Link>
                   {isServicesMenuOpen && (
                     <div className="absolute left-1/2 -translate-x-1/2 top-full pt-4 w-screen max-w-7xl">
-                      <div className="bg-background shadow-lg rounded-lg border p-8">
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10">
-                          {serviceGroups.map((group) => (
-                            <div key={group.slug}>
-                              <h3 className="font-semibold text-base font-headline mb-4 text-primary">
-                                <Link href={`/services#${group.slug}`} onClick={() => setIsServicesMenuOpen(false)} className="hover:underline flex items-center gap-2">
-                                  {group.title}
-                                </Link>
-                              </h3>
-                              <ul className="space-y-3">
-                                {group.services.map((service) => (
-                                  <li key={service.slug}>
-                                    <Link href={`/services/${service.slug}`} onClick={() => setIsServicesMenuOpen(false)} className="text-foreground hover:text-primary text-sm font-medium">
-                                      {service.title}
-                                    </Link>
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
-                          ))}
+                      <div className="bg-background shadow-lg rounded-lg border overflow-hidden">
+                        <div className="p-8">
+                          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10">
+                            {serviceGroups.map((group) => (
+                              <div key={group.slug}>
+                                <h3 className="font-semibold text-base font-headline mb-4 text-primary">
+                                  <Link href={`/services#${group.slug}`} onClick={() => setIsServicesMenuOpen(false)} className="hover:underline flex items-center gap-2">
+                                    {group.title}
+                                  </Link>
+                                </h3>
+                                <ul className="space-y-3">
+                                  {group.services.map((service) => (
+                                    <li key={service.slug}>
+                                      <Link href={`/services/${service.slug}`} onClick={() => setIsServicesMenuOpen(false)} className="text-foreground hover:text-primary text-sm font-medium">
+                                        {service.title}
+                                      </Link>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            ))}
+                          </div>
                         </div>
+                        <div className="h-1 bg-accent"></div>
                       </div>
                     </div>
                   )}
