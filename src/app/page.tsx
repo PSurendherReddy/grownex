@@ -28,10 +28,10 @@ export default function Home() {
           </div>
           <div className="relative z-10 p-4">
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-foreground font-headline">
-              Clarity in Design. Impact in Results.
+              We’re not just marketers. We’re Smarketers.
             </h1>
             <p className="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground">
-              We create focused brand experiences through minimalist design and clear strategy.
+              Blending design, data, and direction for brands that mean business.
             </p>
             <div className="mt-8 flex justify-center gap-4">
               <Button asChild size="lg">
