@@ -9,6 +9,16 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet"
+import { Chatbot } from './Chatbot';
+
 
 const WhatsAppIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
@@ -24,45 +34,59 @@ const WhatsAppIcon = (props: React.SVGProps<SVGSVGElement>) => (
 
 export function FloatingActionButtons() {
   return (
-    <TooltipProvider>
-      <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <Button asChild size="icon" className="rounded-full w-14 h-14 bg-[#25D366] hover:bg-[#128C7E] text-white">
-              <Link href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
-                <WhatsAppIcon className="h-7 w-7" />
-              </Link>
-            </Button>
-          </TooltipTrigger>
-          <TooltipContent side="left">
-            <p>Chat on WhatsApp</p>
-          </TooltipContent>
-        </Tooltip>
+    <Sheet>
+      <TooltipProvider>
+        <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button asChild size="icon" className="rounded-full w-14 h-14 bg-[#25D366] hover:bg-[#128C7E] text-white">
+                <Link href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+                  <WhatsAppIcon className="h-7 w-7" />
+                </Link>
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent side="left">
+              <p>Chat on WhatsApp</p>
+            </TooltipContent>
+          </Tooltip>
 
-        <Tooltip>
-          <TooltipTrigger asChild>
-             <Button size="icon" className="rounded-full w-14 h-14 bg-accent hover:bg-accent/90 text-accent-foreground" aria-label="Open Chatbot">
-                <Sparkles className="h-7 w-7" />
-            </Button>
-          </TooltipTrigger>
-          <TooltipContent side="left">
-            <p>Talk to AI Assistant</p>
-          </TooltipContent>
-        </Tooltip>
+          <Tooltip>
+            <TooltipTrigger asChild>
+               <SheetTrigger asChild>
+                <Button size="icon" className="rounded-full w-14 h-14 bg-accent hover:bg-accent/90 text-accent-foreground" aria-label="Open Chatbot">
+                    <Sparkles className="h-7 w-7" />
+                </Button>
+               </SheetTrigger>
+            </TooltipTrigger>
+            <TooltipContent side="left">
+              <p>Talk to AI Assistant</p>
+            </TooltipContent>
+          </Tooltip>
 
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <Button asChild size="icon" className="rounded-full w-14 h-14">
-              <Link href="tel:+1234567890" aria-label="Call us">
-                <Phone className="h-7 w-7" />
-              </Link>
-            </Button>
-          </TooltipTrigger>
-          <TooltipContent side="left">
-            <p>Call Us</p>
-          </TooltipContent>
-        </Tooltip>
-      </div>
-    </TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button asChild size="icon" className="rounded-full w-14 h-14">
+                <Link href="tel:+1234567890" aria-label="Call us">
+                  <Phone className="h-7 w-7" />
+                </Link>
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent side="left">
+              <p>Call Us</p>
+            </TooltipContent>
+          </Tooltip>
+        </div>
+      </TooltipProvider>
+
+      <SheetContent className="w-full max-w-lg p-0 flex flex-col" side="right">
+          <SheetHeader className="p-4 border-b">
+            <SheetTitle>AI Assistant</SheetTitle>
+            <SheetDescription>
+              Ask me anything about Grownex services and I'll do my best to help.
+            </SheetDescription>
+          </SheetHeader>
+          <Chatbot />
+      </SheetContent>
+    </Sheet>
   );
 }
