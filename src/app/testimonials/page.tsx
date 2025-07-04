@@ -17,7 +17,7 @@ export default function TestimonialsPage() {
                         Voices of Our Partners
                     </h1>
                     <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
-                        We take pride in the relationships we build and the results we deliver. Here's what our clients have to say about their experience with Apex Agency.
+                        We take pride in the relationships we build and the results we deliver. Here's what our clients have to say about their experience with Grownex.
                     </p>
                 </div>
             </section>

@@ -101,7 +101,7 @@ export const serviceGroups: ServiceGroup[] = [
 
 
 const createServicePageContent = (group: ServiceGroup, service: { title: string; slug: string; description: string; caseStudySlug?: string }) => {
-    let longDescription = `At Apex Agency, our ${service.title} service is a cornerstone of our ${group.title} offerings. We believe in a bespoke approach, tailoring every aspect of our work to fit your unique business needs and goals. Our team of experts collaborates closely with you to understand your vision and challenges, ensuring that the solutions we provide are not just effective but also innovative and future-proof. 
+    let longDescription = `At Grownex, our ${service.title} service is a cornerstone of our ${group.title} offerings. We believe in a bespoke approach, tailoring every aspect of our work to fit your unique business needs and goals. Our team of experts collaborates closely with you to understand your vision and challenges, ensuring that the solutions we provide are not just effective but also innovative and future-proof. 
 
 We leverage the latest industry trends and data-driven insights to inform our strategies, whether it's crafting a compelling brand narrative, optimizing your digital footprint, or creating high-impact visual content. Our process is transparent and results-oriented, focusing on delivering measurable outcomes that contribute to your long-term success. From initial concept to final execution, we are your dedicated partners in growth, committed to excellence in every detail.`;
 
@@ -197,11 +197,11 @@ export const portfolio: PortfolioItem[] = [
 ];
 
 export const testimonials: Testimonial[] = [
-    { name: 'Sarah Johnson', title: 'CEO, InnovaTech', quote: "Apex Agency completely transformed our brand. Their strategic approach and creative execution were second to none. We've seen a significant impact on our business.", avatar: 'https://placehold.co/100x100.png' },
+    { name: 'Sarah Johnson', title: 'CEO, InnovaTech', quote: "Grownex completely transformed our brand. Their strategic approach and creative execution were second to none. We've seen a significant impact on our business.", avatar: 'https://placehold.co/100x100.png' },
     { name: 'David Chen', title: 'Founder, ConnectFlow', quote: 'The digital marketing campaign they ran for us was a game-changer. Our lead flow has never been stronger, and our cost per acquisition dropped significantly.', avatar: 'https://placehold.co/100x100.png' },
     { name: 'Maria Rodriguez', title: 'Owner, The Artisan Collection', quote: 'I am absolutely in love with my new website. It perfectly captures the essence of my brand and has made a huge difference in my online sales. The team was a pleasure to work with.', avatar: 'https://placehold.co/100x100.png' },
     { name: 'James Williams', title: 'Marketing Director, FutureCorp', quote: "Their team is incredibly knowledgeable and proactive. They feel like an extension of our own marketing department. Highly recommended for any business looking to grow.", avatar: 'https://placehold.co/100x100.png' },
-    { name: 'Li Wei', title: 'Political Candidate', quote: "The PR campaign managed by Apex was instrumental in my election success. They secured key media placements and managed my public image with professionalism and skill.", avatar: 'https://placehold.co/100x100.png' },
+    { name: 'Li Wei', title: 'Political Candidate', quote: "The PR campaign managed by Grownex was instrumental in my election success. They secured key media placements and managed my public image with professionalism and skill.", avatar: 'https://placehold.co/100x100.png' },
 ];
 
 export const partners: Partner[] = [
@@ -314,7 +314,7 @@ export const team: TeamMember[] = [
   {
     name: "Alex Thompson",
     role: "Founder & CEO",
-    bio: "With over 15 years in the industry, Alex is a visionary leader passionate about building brands that make a difference. His strategic mindset and creative drive are the heart of Apex Agency.",
+    bio: "With over 15 years in the industry, Alex is a visionary leader passionate about building brands that make a difference. His strategic mindset and creative drive are the heart of Grownex.",
     imageUrl: "https://placehold.co/400x400.png"
   },
   {

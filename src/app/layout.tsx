@@ -18,7 +18,7 @@ const ptSans = PT_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Apex Agency - 360° Creative & Marketing',
+  title: 'Grownex - 360° Creative & Marketing',
   description:
     'A premium, full-service agency offering high-end branding, marketing, consulting, advertising, and production services.',
 };

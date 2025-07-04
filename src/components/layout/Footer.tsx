@@ -36,7 +36,7 @@ export function Footer() {
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
               <li>123 Creative Lane, Suite 100</li>
               <li>Innovation City, 54321</li>
-              <li className="pt-2"><a href="mailto:hello@apexagency.com" className="hover:text-primary">hello@apexagency.com</a></li>
+              <li className="pt-2"><a href="mailto:hello@grownex.com" className="hover:text-primary">hello@grownex.com</a></li>
               <li><a href="tel:+1234567890" className="hover:text-primary">+1 (234) 567-890</a></li>
             </ul>
           </div>
@@ -50,7 +50,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Apex Agency. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Grownex. All rights reserved.</p>
         </div>
       </div>
     </footer>

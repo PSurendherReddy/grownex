@@ -12,7 +12,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="bg-secondary py-20 md:py-32">
         <div className="container mx-auto px-4 text-center">
-          <Badge>About Apex Agency</Badge>
+          <Badge>About Grownex</Badge>
           <h1 className="text-4xl md:text-5xl font-bold mt-4 font-headline">
             The Architects of Brand Growth
           </h1>
@@ -28,7 +28,7 @@ export default function AboutPage() {
           <div>
             <Image
               src="https://placehold.co/600x400.png"
-              alt="Apex Agency team collaborating"
+              alt="Grownex team collaborating"
               width={600}
               height={400}
               className="rounded-lg shadow-lg"
@@ -38,7 +38,7 @@ export default function AboutPage() {
           <div>
             <h2 className="text-3xl font-bold font-headline">Our Story</h2>
             <p className="mt-4 text-muted-foreground">
-              Founded on the principle that great marketing is a blend of art and science, Apex Agency was born from a desire to do things differently. We saw a gap between cookie-cutter solutions and what businesses truly needed: a strategic partner invested in their long-term success.
+              Founded on the principle that great marketing is a blend of art and science, Grownex was born from a desire to do things differently. We saw a gap between cookie-cutter solutions and what businesses truly needed: a strategic partner invested in their long-term success.
             </p>
             <h3 className="text-2xl font-bold font-headline mt-8">Our Mission</h3>
             <p className="mt-4 text-muted-foreground">
