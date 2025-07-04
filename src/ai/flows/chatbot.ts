@@ -23,6 +23,13 @@ export type ChatMessage = z.infer<typeof ChatMessageSchema>;
  * @returns The AI's response as a string.
  */
 export async function askChatbot(messages: ChatMessage[]): Promise<string> {
+  // The Gemini API requires the conversation to start with a 'user' role.
+  // We clone the array and filter out any leading 'model' messages that are just for UI purposes.
+  const history = [...messages];
+  while (history.length > 0 && history[0].role === 'model') {
+    history.shift();
+  }
+
   const response = await ai.generate({
     prompt: {
       system: `You are a friendly and helpful AI assistant for Grownex, a design and marketing agency.
@@ -43,7 +50,7 @@ When asked about services, briefly mention the relevant category and a few examp
 Keep your answers helpful and not too long. If you don't know an answer, say that you are an AI assistant and don't have that information.
 Do not make up information about pricing or specific project timelines unless the user provides them in the context of a hypothetical question.
 You can ask clarifying questions to better understand the user's needs.`,
-      messages: messages,
+      messages: history,
     },
     model: 'googleai/gemini-2.0-flash',
   });
