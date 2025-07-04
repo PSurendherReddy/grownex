@@ -1,9 +1,19 @@
 import { services } from "@/lib/data";
 import { notFound } from "next/navigation";
-import { ServiceIllustration } from "@/components/vectors/ServiceIllustration";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { ServiceIllustration } from "@/components/vectors/ServiceIllustration";
+import { BrandingIllustration } from "@/components/vectors/BrandingIllustration";
+import { DigitalMarketingIllustration } from "@/components/vectors/DigitalMarketingIllustration";
+import { WebDevIllustration } from "@/components/vectors/WebDevIllustration";
+
+const illustrationComponents: Record<string, React.ElementType> = {
+    ServiceIllustration,
+    BrandingIllustration,
+    DigitalMarketingIllustration,
+    WebDevIllustration,
+}
 
 export function generateStaticParams() {
     return services.map(service => ({
@@ -17,6 +27,8 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
     if (!service) {
         notFound();
     }
+    
+    const IllustrationComponent = illustrationComponents[service.illustration || 'ServiceIllustration'];
 
     return (
         <>
@@ -32,7 +44,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                         </p>
                     </div>
                     <div>
-                        <ServiceIllustration className="w-full h-auto" />
+                        <IllustrationComponent className="w-full h-auto" />
                     </div>
                 </section>
 

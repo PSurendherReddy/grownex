@@ -310,6 +310,15 @@ const createServicePageContent = (group: ServiceGroup, service: { title: string;
 
     const details = serviceDetails[service.slug];
 
+    let illustration = 'ServiceIllustration';
+    if (group.slug === 'graphic-design-branding') {
+        illustration = 'BrandingIllustration';
+    } else if (group.slug === 'digital-marketing') {
+        illustration = 'DigitalMarketingIllustration';
+    } else if (group.slug === 'website-development') {
+        illustration = 'WebDevIllustration';
+    }
+
     return {
         title: service.title,
         slug: service.slug,
@@ -324,6 +333,7 @@ const createServicePageContent = (group: ServiceGroup, service: { title: string;
         aboutService: details?.about,
         whenToChoose: details?.whenToChoose,
         whoIsItFor: details?.whoIsItFor,
+        illustration,
     }
 }
 

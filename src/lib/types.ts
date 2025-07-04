@@ -15,6 +15,7 @@ export interface Service {
   aboutService?: string;
   whenToChoose?: string;
   whoIsItFor?: string;
+  illustration?: string;
 }
 
 export interface ServiceGroup {
