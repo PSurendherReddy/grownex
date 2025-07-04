@@ -44,10 +44,7 @@ const prompt = ai.definePrompt({
 Business Details: {{{businessDetails}}}
 Marketing Goals: {{{marketingGoals}}}
 
-Based on this information, suggest the most effective marketing channels and strategies to achieve the stated goals. Be specific and actionable.
-
-{{outputFormat instructions="Output the suggested marketing channels and strategies. Do not be conversational."}}
-`,
+Based on this information, suggest the most effective marketing channels and strategies to achieve the stated goals. Be specific and actionable.`,
 });
 
 const marketingAdvisorFlow = ai.defineFlow(
