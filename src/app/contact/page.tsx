@@ -1,0 +1,93 @@
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import { Card, CardContent } from "@/components/ui/card";
+import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
+
+export default function ContactPage() {
+    return (
+        <>
+            {/* Hero Section */}
+            <section className="bg-secondary py-20 md:py-32">
+                <div className="container mx-auto px-4 text-center">
+                    <Badge>Get in Touch</Badge>
+                    <h1 className="text-4xl md:text-5xl font-bold mt-4 font-headline">
+                        Let's Start a Conversation
+                    </h1>
+                    <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
+                        We're here to answer your questions, discuss your goals, and explore how we can help your brand thrive. Reach out to us anytime.
+                    </p>
+                </div>
+            </section>
+
+            {/* Contact Form and Info Section */}
+            <section className="py-16 md:py-24">
+                <div className="container mx-auto px-4">
+                    <div className="grid lg:grid-cols-2 gap-12">
+                        <div>
+                            <h2 className="text-3xl font-bold font-headline mb-6">Send Us a Message</h2>
+                            <form className="space-y-6">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                    <div className="space-y-2">
+                                        <Label htmlFor="name">Full Name</Label>
+                                        <Input id="name" placeholder="John Doe" />
+                                    </div>
+                                    <div className="space-y-2">
+                                        <Label htmlFor="email">Email Address</Label>
+                                        <Input id="email" type="email" placeholder="john.doe@example.com" />
+                                    </div>
+                                </div>
+                                <div className="space-y-2">
+                                    <Label htmlFor="subject">Subject</Label>
+                                    <Input id="subject" placeholder="e.g., Branding Inquiry" />
+                                </div>
+                                <div className="space-y-2">
+                                    <Label htmlFor="message">Your Message</Label>
+                                    <Textarea id="message" placeholder="Tell us about your project..." rows={6} />
+                                </div>
+                                <Button type="submit" size="lg">Send Message</Button>
+                            </form>
+                        </div>
+                        <div className="space-y-8">
+                             <h2 className="text-3xl font-bold font-headline mb-6">Contact Information</h2>
+                             <Card>
+                                <CardContent className="p-6 space-y-6">
+                                    <div className="flex items-start gap-4">
+                                        <Mail className="h-6 w-6 text-primary mt-1" />
+                                        <div>
+                                            <h3 className="font-semibold">Email</h3>
+                                            <a href="mailto:hello@apexagency.com" className="text-muted-foreground hover:text-primary">hello@apexagency.com</a>
+                                        </div>
+                                    </div>
+                                     <div className="flex items-start gap-4">
+                                        <Phone className="h-6 w-6 text-primary mt-1" />
+                                        <div>
+                                            <h3 className="font-semibold">Phone</h3>
+                                            <a href="tel:+1234567890" className="text-muted-foreground hover:text-primary">+1 (234) 567-890</a>
+                                        </div>
+                                    </div>
+                                     <div className="flex items-start gap-4">
+                                        <MapPin className="h-6 w-6 text-primary mt-1" />
+                                        <div>
+                                            <h3 className="font-semibold">Office</h3>
+                                            <p className="text-muted-foreground">123 Creative Lane, Suite 100<br/>Innovation City, 54321</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex items-start gap-4">
+                                        <MessageCircle className="h-6 w-6 text-primary mt-1" />
+                                        <div>
+                                            <h3 className="font-semibold">WhatsApp</h3>
+                                            <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">Chat with us</a>
+                                        </div>
+                                    </div>
+                                </CardContent>
+                             </Card>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </>
+    );
+}
