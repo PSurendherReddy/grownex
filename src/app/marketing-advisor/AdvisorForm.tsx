@@ -116,7 +116,7 @@ export function AdvisorForm() {
         
         {result && (
             <div className="mt-12 border-t pt-8">
-                <h3 className="text-2xl font-bold font-headline text-center mb-6">Your Tailored Marketing Plan</h3>
+                <h3 className="text-2xl font-headline text-center mb-6">Your Tailored Marketing Plan</h3>
                 <div className="grid md:grid-cols-2 gap-8">
                     <Card>
                         <CardHeader>
