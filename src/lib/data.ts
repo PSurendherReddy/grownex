@@ -137,7 +137,6 @@ export const portfolio: PortfolioItem[] = [
     slug: 'brand-refresh-innovatech',
     category: 'Branding',
     description: 'Modernizing a legacy tech brand to reflect its innovative services.',
-    imageUrl: 'https://placehold.co/600x400.png',
     client: 'InnovaTech Solutions',
     challenge: "InnovaTech's dated brand identity failed to communicate its cutting-edge services, losing them business to modern competitors.",
     solution: "We developed a new strategy focused on 'Human-centered Innovation,' creating a clean, bold identity. This was applied to a new website and all marketing materials.",
@@ -146,14 +145,12 @@ export const portfolio: PortfolioItem[] = [
         { metric: '+20%', value: 'Higher contract value', description: 'from improved brand perception.' },
         { metric: '95%', value: 'Positive employee feedback', description: 'on the new identity.' },
     ],
-    images: ['https://placehold.co/800x600.png', 'https://placehold.co/800x600.png', 'https://placehold.co/800x600.png'],
   },
   {
     title: 'SaaS Lead Generation',
     slug: 'lead-gen-for-saas',
     category: 'Digital Marketing',
     description: 'Scaling a B2B SaaS platform from 100 to 1,000 demo requests per month.',
-    imageUrl: 'https://placehold.co/600x400.png',
     client: 'ConnectFlow',
     challenge: 'ConnectFlow had a great product but struggled to generate consistent, high-quality leads. Their marketing efforts were untargeted.',
     solution: "We implemented a multi-channel strategy including targeted LinkedIn Ads, a comprehensive SEO plan, and an automated email nurturing sequence to convert visitors into demo requests.",
@@ -162,14 +159,12 @@ export const portfolio: PortfolioItem[] = [
         { metric: '-30%', value: 'Cost Per Acquisition', description: 'due to optimization.' },
         { metric: '#1', value: 'Google Ranking', description: 'for 5 high-value keywords.' },
     ],
-    images: ['https://placehold.co/800x600.png', 'https://placehold.co/800x600.png', 'https://placehold.co/800x600.png'],
   },
   {
     title: 'Artisan E-commerce Store',
     slug: 'ecommerce-platform-for-artisan',
     category: 'Web Development',
     description: 'Building a beautiful and functional Shopify store for a luxury goods brand.',
-    imageUrl: 'https://placehold.co/600x400.png',
     client: 'The Artisan Collection',
     challenge: "The brand's existing website was clunky, difficult to navigate, and not mobile-friendly, causing a high cart abandonment rate.",
     solution: "We designed and developed a custom Shopify theme reflecting the brand's luxury aesthetic. The new site features a streamlined checkout and is fully optimized for mobile.",
@@ -178,25 +173,24 @@ export const portfolio: PortfolioItem[] = [
         { metric: '-50%', value: 'Cart abandonment rate', description: 'thanks to the new checkout.' },
         { metric: '+80%', value: 'Increase in mobile traffic', description: 'due to responsive design.' },
     ],
-    images: ['https://placehold.co/800x600.png', 'https://placehold.co/800x600.png', 'https://placehold.co/800x600.png'],
   },
 ];
 
 export const testimonials: Testimonial[] = [
-    { name: 'Sarah Johnson', title: 'CEO, InnovaTech', quote: "Grownex transformed our brand with a clear strategy and creative execution. The impact on our business was significant.", avatar: 'https://placehold.co/100x100.png' },
-    { name: 'David Chen', title: 'Founder, ConnectFlow', quote: 'The digital marketing campaign was a game-changer. Our lead flow has never been stronger, and our CPA dropped significantly.', avatar: 'https://placehold.co/100x100.png' },
-    { name: 'Maria Rodriguez', title: 'Owner, The Artisan Collection', quote: "I'm in love with my new website. It perfectly captures my brand's essence and has made a huge difference in online sales.", avatar: 'https://placehold.co/100x100.png' },
-    { name: 'James Williams', title: 'Marketing Director, FutureCorp', quote: "Their team is incredibly knowledgeable and proactive. They feel like an extension of our own department. Highly recommended.", avatar: 'https://placehold.co/100x100.png' },
-    { name: 'Li Wei', title: 'Political Candidate', quote: "The PR campaign was instrumental in my election success. They managed my public image with professionalism and skill.", avatar: 'https://placehold.co/100x100.png' },
+    { name: 'Sarah Johnson', title: 'CEO, InnovaTech', quote: "Grownex transformed our brand with a clear strategy and creative execution. The impact on our business was significant." },
+    { name: 'David Chen', title: 'Founder, ConnectFlow', quote: 'The digital marketing campaign was a game-changer. Our lead flow has never been stronger, and our CPA dropped significantly.' },
+    { name: 'Maria Rodriguez', title: 'Owner, The Artisan Collection', quote: "I'm in love with my new website. It perfectly captures my brand's essence and has made a huge difference in online sales." },
+    { name: 'James Williams', title: 'Marketing Director, FutureCorp', quote: "Their team is incredibly knowledgeable and proactive. They feel like an extension of our own department. Highly recommended." },
+    { name: 'Li Wei', title: 'Political Candidate', quote: "The PR campaign was instrumental in my election success. They managed my public image with professionalism and skill." },
 ];
 
 export const partners: Partner[] = [
-    { name: 'Innovatech', logoUrl: 'https://placehold.co/120x40.png' },
-    { name: 'ConnectFlow', logoUrl: 'https://placehold.co/120x40.png' },
-    { name: 'Artisan', logoUrl: 'https://placehold.co/120x40.png' },
-    { name: 'FutureCorp', logoUrl: 'https://placehold.co/120x40.png' },
-    { name: 'QuantumLeap', logoUrl: 'https://placehold.co/120x40.png' },
-    { name: 'EcoSolutions', logoUrl: 'https://placehold.co/120x40.png' },
+    { name: 'Innovatech' },
+    { name: 'ConnectFlow' },
+    { name: 'Artisan' },
+    { name: 'FutureCorp' },
+    { name: 'QuantumLeap' },
+    { name: 'EcoSolutions' },
 ];
 
 export const blogPosts: BlogPost[] = [
@@ -207,7 +201,6 @@ export const blogPosts: BlogPost[] = [
         date: '2024-07-15',
         category: 'Digital Marketing',
         excerpt: 'SEO is always evolving. Here are the most important ranking factors and strategies you need to know this year.',
-        imageUrl: 'https://placehold.co/800x400.png',
         content: `
 ## Introduction
 The world of SEO is dynamic. What worked last year might not be as effective today. In 2024, the focus has shifted even more towards user experience, AI-driven search, and high-quality, authoritative content.
@@ -240,7 +233,6 @@ Staying ahead in SEO requires a holistic approach that blends technical excellen
         date: '2024-07-10',
         category: 'Branding',
         excerpt: 'A great brand is a promise, a story, and a relationship. Learn the key components of building a resilient and beloved brand.',
-        imageUrl: 'https://placehold.co/800x400.png',
         content: `
 ## The Essence of a Brand
 Your brand is the gut feeling a person has about your product, service, or organization. It's not what you say it is, it's what *they* say it is. To build a lasting brand, you need to focus on three core areas:
@@ -271,7 +263,6 @@ Building a strong brand is an ongoing process of aligning your strategy, identit
         date: '2024-07-05',
         category: 'Advertising',
         excerpt: 'In an age of digital saturation, offline marketing offers a unique opportunity to cut through the noise and create memorable experiences.',
-        imageUrl: 'https://placehold.co/800x400.png',
         content: `
 ## Cutting Through the Clutter
 People are bombarded with digital ads every day, leading to "banner blindness" and ad fatigue. Offline marketing provides a refreshing change of pace and can capture attention in a different way.
@@ -301,24 +292,20 @@ export const team: TeamMember[] = [
     name: "Alex Thompson",
     role: "Founder & CEO",
     bio: "With over 15 years in the industry, Alex is a visionary leader passionate about building brands that make a difference. His strategic mindset is the heart of Grownex.",
-    imageUrl: "https://placehold.co/400x400.png"
   },
   {
     name: "Brenda Chen",
     role: "Creative Director",
     bio: "Brenda is the artistic force behind our most iconic campaigns. She translates brand strategies into stunning visual identities and compelling narratives.",
-    imageUrl: "https://placehold.co/400x400.png"
   },
   {
     name: "Carlos Rodriguez",
     role: "Head of Digital",
     bio: "A data-driven strategist, Carlos excels at navigating the digital landscape. He leads our team of SEO, PPC, and social media experts to deliver measurable results.",
-    imageUrl: "https://placehold.co/400x400.png"
   },
   {
     name: "Diana Miller",
     role: "Lead Developer",
     bio: "Diana combines technical prowess with a keen eye for design. She leads the development of high-performance, user-friendly websites that are both beautiful and functional.",
-    imageUrl: "https://placehold.co/400x400.png"
   }
 ];

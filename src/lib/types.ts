@@ -26,7 +26,6 @@ export interface PortfolioItem {
   slug: string;
   category: string;
   description: string;
-  imageUrl: string;
   client: string;
   challenge: string;
   solution: string;
@@ -35,19 +34,16 @@ export interface PortfolioItem {
     value: string;
     description: string;
   }[];
-  images: string[];
 }
 
 export interface Testimonial {
   name: string;
   title: string;
   quote: string;
-  avatar: string;
 }
 
 export interface Partner {
     name: string;
-    logoUrl: string;
 }
 
 export interface BlogPost {
@@ -57,7 +53,6 @@ export interface BlogPost {
     date: string;
     category: string;
     excerpt: string;
-    imageUrl: string;
     content: string;
 }
 
@@ -65,5 +60,4 @@ export interface TeamMember {
   name: string;
   role: string;
   bio: string;
-  imageUrl: string;
 }

@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import Image from "next/image";
+import { AbstractShape2 } from "@/components/vectors/AbstractShape2";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -77,13 +77,8 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                     <CardTitle className="mt-2">{caseStudy.title}</CardTitle>
                                 </CardHeader>
                                 <CardContent>
-                                    <Image 
-                                        src={caseStudy.imageUrl}
-                                        alt={caseStudy.title}
-                                        width={400}
-                                        height={250}
-                                        className="rounded-md mb-4"
-                                        data-ai-hint={caseStudy.category}
+                                    <AbstractShape2
+                                        className="mb-4"
                                     />
                                     <p className="text-sm text-muted-foreground mb-4">
                                         {caseStudy.description}

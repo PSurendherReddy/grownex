@@ -6,8 +6,7 @@ import { portfolio } from "@/lib/data";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
-import Image from 'next/image';
-import { ArrowRight } from 'lucide-react';
+import { AbstractShape2 } from '@/components/vectors/AbstractShape2';
 
 const categories = ['All', ...Array.from(new Set(portfolio.map(p => p.category)))];
 
@@ -40,7 +39,7 @@ export default function PortfolioPage() {
                                 key={category}
                                 variant={filter === category ? 'default' : 'outline'}
                                 onClick={() => setFilter(category)}
-                                className="rounded-full px-6"
+                                className="px-6"
                             >
                                 {category}
                             </Button>
@@ -52,13 +51,8 @@ export default function PortfolioPage() {
                              <Card key={project.slug} className="overflow-hidden group bg-transparent border-none shadow-none">
                                 <CardHeader className="p-0">
                                 <Link href={`/portfolio/${project.slug}`}>
-                                <Image
-                                    src={project.imageUrl}
-                                    alt={project.title}
-                                    width={600}
-                                    height={400}
-                                    className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105 rounded-lg"
-                                    data-ai-hint={project.category}
+                                <AbstractShape2
+                                    className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
                                 />
                                 </Link>
                                 </CardHeader>

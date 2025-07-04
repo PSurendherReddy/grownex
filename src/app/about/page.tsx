@@ -1,9 +1,10 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { team } from "@/lib/data";
-import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { AbstractShape1 } from "@/components/vectors/AbstractShape1";
+import { PersonVector } from "@/components/vectors/PersonVector";
 
 export default function AboutPage() {
   return (
@@ -25,14 +26,7 @@ export default function AboutPage() {
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <Image
-              src="https://placehold.co/600x400.png"
-              alt="Grownex team collaborating in a minimal environment"
-              width={600}
-              height={400}
-              className="rounded-lg"
-              data-ai-hint="team minimalist"
-            />
+            <AbstractShape1 className="w-full h-auto" />
           </div>
           <div>
             <h2 className="text-3xl font-bold font-headline">Our Story</h2>
@@ -106,14 +100,7 @@ export default function AboutPage() {
             {team.map((member) => (
               <Card key={member.name} className="text-center border-none shadow-none bg-transparent">
                 <CardContent className="p-6">
-                  <Image
-                    src={member.imageUrl}
-                    alt={member.name}
-                    width={150}
-                    height={150}
-                    className="rounded-full mx-auto mb-4"
-                    data-ai-hint="person portrait"
-                  />
+                  <PersonVector className="w-36 h-36 mx-auto mb-4" />
                   <h3 className="text-xl font-bold font-headline">{member.name}</h3>
                   <p className="text-primary font-semibold">{member.role}</p>
                   <p className="mt-2 text-sm text-muted-foreground">{member.bio}</p>

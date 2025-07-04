@@ -3,7 +3,8 @@ import { notFound } from "next/navigation";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import Image from "next/image";
+import { AbstractShape1 } from "@/components/vectors/AbstractShape1";
+import { AbstractShape2 } from "@/components/vectors/AbstractShape2";
 
 export function generateStaticParams() {
     return portfolio.map(item => ({
@@ -38,13 +39,8 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
                 <div className="container mx-auto px-4">
                     <div className="grid lg:grid-cols-3 gap-12">
                         <div className="lg:col-span-2">
-                             <Image
-                                src={project.imageUrl}
-                                alt={project.title}
-                                width={800}
-                                height={500}
-                                className="w-full h-auto object-cover rounded-lg shadow-lg mb-12"
-                                data-ai-hint={project.category}
+                             <AbstractShape2
+                                className="w-full h-auto object-cover shadow-lg mb-12"
                             />
 
                             <div>
@@ -59,7 +55,7 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
                         </div>
 
                         <div className="lg:col-span-1">
-                            <div className="sticky top-24 bg-background p-8 rounded-lg border">
+                            <div className="sticky top-24 bg-background p-8 border">
                                 <h3 className="text-2xl font-bold font-headline">Results</h3>
                                 <div className="mt-6 space-y-6">
                                     {project.results.map((result, index) => (
@@ -79,17 +75,8 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
                     <div className="mt-16">
                         <h2 className="text-3xl font-bold font-headline text-center mb-8">Project Visuals</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            {project.images.map((img, index) => (
-                                <Image
-                                    key={index}
-                                    src={img}
-                                    alt={`${project.title} visual ${index + 1}`}
-                                    width={800}
-                                    height={600}
-                                    className="rounded-lg shadow-md w-full"
-                                    data-ai-hint="project visual"
-                                />
-                            ))}
+                           <AbstractShape1 className="w-full h-auto shadow-md" />
+                           <AbstractShape2 className="w-full h-auto shadow-md" />
                         </div>
                     </div>
                 </div>

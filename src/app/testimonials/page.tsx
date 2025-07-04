@@ -1,9 +1,9 @@
 import { Badge } from "@/components/ui/badge";
 import { testimonials } from "@/lib/data";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { PersonVector } from "@/components/vectors/PersonVector";
 
 export default function TestimonialsPage() {
     return (
@@ -29,7 +29,7 @@ export default function TestimonialsPage() {
                             <Card key={index} className="flex flex-col">
                                 <CardHeader>
                                     <div className="flex items-center">
-                                        <Image src={testimonial.avatar} alt={testimonial.name} width={56} height={56} className="rounded-full" data-ai-hint="person" />
+                                        <PersonVector className="w-14 h-14" />
                                         <div className="ml-4">
                                             <CardTitle className="text-lg">{testimonial.name}</CardTitle>
                                             <CardDescription>{testimonial.title}</CardDescription>

@@ -1,7 +1,7 @@
 import { blogPosts } from "@/lib/data";
 import { notFound } from "next/navigation";
 import { Badge } from "@/components/ui/badge";
-import Image from "next/image";
+import { AbstractShape1 } from "@/components/vectors/AbstractShape1";
 
 import {
   Breadcrumb,
@@ -70,13 +70,8 @@ export default function BlogPostPage({ params }: { params: { slug:string }}) {
                     </div>
                 </header>
 
-                <Image
-                    src={post.imageUrl}
-                    alt={post.title}
-                    width={1200}
-                    height={600}
-                    className="w-full h-auto object-cover rounded-lg shadow-lg mb-8"
-                    data-ai-hint="blog abstract"
+                <AbstractShape1
+                    className="w-full h-auto object-cover shadow-lg mb-8"
                 />
 
                 <div className="prose prose-lg dark:prose-invert max-w-none">

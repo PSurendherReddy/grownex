@@ -1,9 +1,8 @@
 import { Badge } from "@/components/ui/badge";
 import { blogPosts } from "@/lib/data";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import Image from "next/image";
+import { AbstractShape1 } from "@/components/vectors/AbstractShape1";
 
 export default function BlogPage() {
     return (
@@ -29,13 +28,8 @@ export default function BlogPage() {
                             <Card key={post.slug} className="flex flex-col">
                                 <CardHeader className="p-0">
                                     <Link href={`/blog/${post.slug}`}>
-                                        <Image
-                                            src={post.imageUrl}
-                                            alt={post.title}
-                                            width={600}
-                                            height={300}
-                                            className="w-full h-48 object-cover rounded-t-lg"
-                                            data-ai-hint="blog abstract"
+                                        <AbstractShape1
+                                            className="w-full h-48 object-cover"
                                         />
                                     </Link>
                                 </CardHeader>

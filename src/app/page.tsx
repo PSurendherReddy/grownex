@@ -2,7 +2,6 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { serviceGroups, portfolio, testimonials, partners } from "@/lib/data";
-import Image from "next/image";
 import Link from "next/link";
 import {
   Carousel,
@@ -12,6 +11,10 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 import { ServiceCard } from "@/components/ServiceCard";
+import { AbstractShape1 } from "@/components/vectors/AbstractShape1";
+import { AbstractShape2 } from "@/components/vectors/AbstractShape2";
+import { PersonVector } from "@/components/vectors/PersonVector";
+import { PartnerLogoVector } from "@/components/vectors/PartnerLogoVector";
 
 
 export default function Home() {
@@ -20,14 +23,9 @@ export default function Home() {
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative h-[80vh] min-h-[500px] flex items-center justify-center text-center bg-background">
-           <Image
-            src="https://placehold.co/1920x1080.png"
-            alt="Abstract background representing minimalist design"
-            layout="fill"
-            objectFit="cover"
-            className="absolute inset-0 z-0 opacity-5"
-            data-ai-hint="abstract texture"
-          />
+          <div className="absolute inset-0 z-0 opacity-50">
+            <AbstractShape1 className="w-full h-full" />
+          </div>
           <div className="relative z-10 p-4">
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-foreground font-headline">
               Clarity in Design. Impact in Results.
@@ -101,14 +99,7 @@ export default function Home() {
                 </ul>
               </div>
                <div>
-                  <Image
-                    src="https://placehold.co/600x500.png"
-                    alt="Team collaborating in a minimalist office"
-                    width={600}
-                    height={500}
-                    className="rounded-lg"
-                    data-ai-hint="minimalist office"
-                  />
+                  <AbstractShape1 className="w-full h-auto" />
               </div>
             </div>
           </div>
@@ -138,13 +129,8 @@ export default function Home() {
                       <Card className="overflow-hidden group border-none bg-transparent shadow-none">
                         <CardHeader className="p-0">
                            <Link href={`/portfolio/${project.slug}`}>
-                            <Image
-                              src={project.imageUrl}
-                              alt={project.title}
-                              width={600}
-                              height={400}
-                              className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105 rounded-lg"
-                              data-ai-hint={project.category}
+                            <AbstractShape2
+                              className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
                             />
                           </Link>
                         </CardHeader>
@@ -180,7 +166,7 @@ export default function Home() {
                 <Card key={index} className="bg-secondary border-none">
                   <CardContent className="p-6">
                      <div className="flex items-center mb-4">
-                        <Image src={testimonial.avatar} alt={testimonial.name} width={40} height={40} className="rounded-full" data-ai-hint="person" />
+                        <PersonVector className="w-10 h-10" />
                         <div className="ml-4">
                             <CardTitle className="text-base">{testimonial.name}</CardTitle>
                             <CardDescription>{testimonial.title}</CardDescription>
@@ -200,15 +186,12 @@ export default function Home() {
             <h3 className="text-center text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-8">Trusted by leading brands</h3>
             <div className="flex flex-wrap justify-center items-center gap-x-8 md:gap-x-12 gap-y-4">
               {partners.map((partner, index) => (
-                <Image
-                  key={index}
-                  src={partner.logoUrl}
-                  alt={partner.name}
-                  width={100}
-                  height={32}
-                  className="grayscale hover:grayscale-0 transition-all opacity-40 hover:opacity-100"
-                  data-ai-hint="logo"
-                />
+                <div key={index} className="group">
+                  <PartnerLogoVector
+                    name={partner.name}
+                    className="w-[120px] h-[40px] transition-all"
+                  />
+                </div>
               ))}
             </div>
           </div>
