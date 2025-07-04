@@ -65,3 +65,18 @@
     @apply font-headline;
   }
 }
+
+@layer utilities {
+  .nav-link-underline {
+    @apply relative;
+  }
+
+  .nav-link-underline::after {
+    @apply content-[''] absolute bottom-[-2px] left-0 h-[2px] w-full bg-primary scale-x-0 transition-transform duration-300 ease-out;
+    transform-origin: left;
+  }
+
+  .nav-link-underline:hover::after, .nav-link-underline.active::after {
+    @apply scale-x-100;
+  }
+}

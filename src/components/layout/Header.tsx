@@ -62,8 +62,8 @@ export function Header() {
                   <Link
                     href="/services"
                     className={cn(
-                      'flex items-center gap-1 text-sm font-medium transition-colors hover:text-primary focus:outline-none',
-                      pathname.startsWith('/services') ? 'text-primary font-semibold' : 'text-foreground'
+                      'flex items-center gap-1 text-sm font-medium transition-colors hover:text-primary focus:outline-none nav-link-underline',
+                      pathname.startsWith('/services') ? 'text-primary font-semibold active' : 'text-foreground'
                     )}
                   >
                     {label}
@@ -102,8 +102,8 @@ export function Header() {
                 key={href}
                 href={href}
                 className={cn(
-                  'text-sm font-medium transition-colors hover:text-primary',
-                  pathname === href ? 'text-primary font-semibold' : 'text-foreground'
+                  'text-sm font-medium transition-colors hover:text-primary nav-link-underline',
+                  pathname === href ? 'text-primary font-semibold active' : 'text-foreground'
                 )}
               >
                 {label}
