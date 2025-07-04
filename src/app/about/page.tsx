@@ -10,7 +10,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-secondary py-20 md:py-32">
+      <section className="bg-secondary py-20 sm:py-24 md:py-32">
         <div className="container mx-auto px-4 text-center">
           <Badge>About Us</Badge>
           <h1 className="text-4xl md:text-5xl font-bold mt-4 font-headline">
@@ -23,7 +23,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Story & Mission Section */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 sm:py-20 md:py-24">
         <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <AbstractShape1 className="w-full h-auto" />
@@ -42,7 +42,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Approach Section */}
-      <section className="py-16 md:py-24 bg-secondary">
+      <section className="py-16 sm:py-20 md:py-24 bg-secondary">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold font-headline">Our Approach</h2>
@@ -88,7 +88,7 @@ export default function AboutPage() {
       </section>
       
       {/* Meet the Team Section */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 sm:py-20 md:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold font-headline">Our Team</h2>
@@ -112,7 +112,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-primary text-primary-foreground">
+      <section className="py-16 sm:py-20 md:py-24 bg-primary text-primary-foreground">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold font-headline">Work With Us</h2>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-primary-foreground/90">

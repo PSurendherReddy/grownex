@@ -63,7 +63,7 @@ export default function BlogPostPage({ params }: { params: { slug:string }}) {
     const relatedPosts = blogPosts.filter(p => p.slug !== post.slug).slice(0, 2);
 
     return (
-        <div className="container mx-auto px-4 py-12 md:py-24 max-w-4xl">
+        <div className="container mx-auto px-4 py-12 sm:py-16 md:py-24 max-w-4xl">
             <Breadcrumb className="mb-8">
               <BreadcrumbList>
                 <BreadcrumbItem>

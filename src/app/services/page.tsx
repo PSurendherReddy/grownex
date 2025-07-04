@@ -14,7 +14,7 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-secondary py-20 md:py-32">
+      <section className="bg-secondary py-20 sm:py-24 md:py-32">
         <div className="container mx-auto px-4 text-center">
           <Badge>Our Expertise</Badge>
           <h1 className="text-4xl md:text-5xl font-bold mt-4 font-headline">
@@ -27,7 +27,7 @@ export default function ServicesPage() {
       </section>
       
       {/* Interactive Services Section */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 sm:py-20 md:py-24">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-12">
             
@@ -83,7 +83,7 @@ export default function ServicesPage() {
       </section>
       
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-primary text-white">
+      <section className="py-16 sm:py-20 md:py-24 bg-primary text-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold font-headline">Have a Project in Mind?</h2>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-primary-foreground/90">

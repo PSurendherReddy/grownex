@@ -22,7 +22,7 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
     return (
         <>
             {/* Hero Section */}
-            <section className="bg-secondary py-20 md:py-32">
+            <section className="bg-secondary py-20 sm:py-24 md:py-32">
                 <div className="container mx-auto px-4">
                     <Badge>{project.category}</Badge>
                     <h1 className="text-4xl md:text-5xl font-bold mt-4 font-headline max-w-4xl">
@@ -35,7 +35,7 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
             </section>
 
             {/* Main Content */}
-            <section className="py-16 md:py-24">
+            <section className="py-16 sm:py-20 md:py-24">
                 <div className="container mx-auto px-4">
                     <div className="grid lg:grid-cols-3 gap-12">
                         <div className="lg:col-span-2">
@@ -55,7 +55,7 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
                         </div>
 
                         <div className="lg:col-span-1">
-                            <div className="sticky top-24 bg-background p-8 border">
+                            <div className="lg:sticky top-24 bg-background p-8 border">
                                 <h3 className="text-2xl font-bold font-headline">Results</h3>
                                 <div className="mt-6 space-y-6">
                                     {project.results.map((result, index) => (
@@ -83,7 +83,7 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
             </section>
             
             {/* CTA Section */}
-            <section className="py-16 md:py-24 bg-primary text-white">
+            <section className="py-16 sm:py-20 md:py-24 bg-primary text-white">
                 <div className="container mx-auto px-4 text-center">
                     <h2 className="text-3xl md:text-4xl font-bold font-headline">Inspired by Our Work?</h2>
                     <p className="mt-4 max-w-2xl mx-auto text-lg text-primary-foreground/90">

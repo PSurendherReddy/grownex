@@ -32,11 +32,11 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
 
     return (
         <>
-            <div className="container mx-auto px-4 py-16 md:py-24">
+            <div className="container mx-auto px-4 py-16 sm:py-20 md:py-24">
                 {/* Hero Section */}
                 <section className="grid md:grid-cols-2 gap-16 items-center">
                     <div className="flex flex-col gap-4">
-                        <h1 className="text-4xl md:text-6xl font-bold font-headline tracking-tight">
+                        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-headline tracking-tight">
                             {service.title}
                         </h1>
                         <p className="text-lg text-muted-foreground max-w-lg">
@@ -115,7 +115,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
             </div>
              {/* CTA Section */}
             <section className="bg-secondary">
-                <div className="container mx-auto px-4 py-16 md:py-24 text-center">
+                <div className="container mx-auto px-4 py-16 sm:py-20 md:py-24 text-center">
                     <h2 className="text-3xl md:text-4xl font-bold font-headline">Ready to discuss {service.title}?</h2>
                     <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
                         Let's explore how our expertise can be tailored to your specific needs.

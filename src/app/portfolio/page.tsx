@@ -18,7 +18,7 @@ export default function PortfolioPage() {
     return (
         <>
             {/* Hero Section */}
-            <section className="bg-secondary py-20 md:py-32">
+            <section className="bg-secondary py-20 sm:py-24 md:py-32">
                 <div className="container mx-auto px-4 text-center">
                     <Badge>Our Work</Badge>
                     <h1 className="text-4xl md:text-5xl font-bold mt-4 font-headline">
@@ -31,7 +31,7 @@ export default function PortfolioPage() {
             </section>
 
             {/* Portfolio Grid with Filters */}
-            <section className="py-16 md:py-24">
+            <section className="py-16 sm:py-20 md:py-24">
                 <div className="container mx-auto px-4">
                     <div className="flex justify-center mb-12 flex-wrap gap-2">
                         {categories.map(category => (

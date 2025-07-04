@@ -22,12 +22,12 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative h-[80vh] min-h-[500px] flex items-center justify-center text-center bg-background">
+        <section className="relative h-[80vh] min-h-[450px] md:min-h-[500px] flex items-center justify-center text-center bg-background">
           <div className="absolute inset-0 z-0 opacity-50">
             <AbstractShape1 className="w-full h-full" />
           </div>
           <div className="relative z-10 p-4">
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-foreground font-headline">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-foreground font-headline">
               We’re not just marketers. We’re Smarketers.
             </h1>
             <p className="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground">
@@ -45,7 +45,7 @@ export default function Home() {
         </section>
 
         {/* Services Overview Section */}
-        <section id="services" className="py-16 md:py-24 bg-secondary">
+        <section id="services" className="py-16 sm:py-20 md:py-24 bg-secondary">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <Badge variant="outline">Our Focus</Badge>
@@ -66,7 +66,7 @@ export default function Home() {
         </section>
         
         {/* Why Choose Us Section */}
-        <section className="py-16 md:py-24 bg-background">
+        <section className="py-16 sm:py-20 md:py-24 bg-background">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -104,7 +104,7 @@ export default function Home() {
         </section>
 
         {/* Featured Projects Section */}
-        <section className="py-16 md:py-24 bg-secondary">
+        <section className="py-16 sm:py-20 md:py-24 bg-secondary">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <Badge variant="outline">Our Work</Badge>
@@ -153,7 +153,7 @@ export default function Home() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-16 md:py-24 bg-background">
+        <section className="py-16 sm:py-20 md:py-24 bg-background">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <Badge>Testimonials</Badge>
@@ -196,7 +196,7 @@ export default function Home() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 md:py-24 bg-primary text-primary-foreground">
+        <section className="py-16 sm:py-20 md:py-24 bg-primary text-primary-foreground">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold font-headline">Ready to Simplify?</h2>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-primary-foreground/80">
