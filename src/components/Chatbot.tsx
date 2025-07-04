@@ -62,7 +62,7 @@ export function Chatbot() {
 
 
   return (
-    <div className="h-full flex flex-col">
+    <div className="h-full flex flex-col bg-transparent">
       <ScrollArea className="flex-1" viewportRef={scrollAreaViewport}>
         <div className="space-y-6 p-4">
           {messages.map((message, index) => (
@@ -113,13 +113,14 @@ export function Chatbot() {
           )}
         </div>
       </ScrollArea>
-      <div className="p-4 border-t bg-background">
+      <div className="p-4 border-t bg-transparent">
         <form onSubmit={handleSubmit} className="flex gap-2">
           <Input
             value={input}
             onChange={handleInputChange}
             placeholder="Ask about our services..."
             disabled={isLoading}
+            className="bg-background/50"
           />
           <Button type="submit" disabled={isLoading || !input.trim()}>
             Send

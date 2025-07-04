@@ -78,8 +78,8 @@ export function FloatingActionButtons() {
         </div>
       </TooltipProvider>
 
-      <SheetContent className="w-full max-w-lg p-0 flex flex-col" side="right">
-          <SheetHeader className="p-4 border-b">
+      <SheetContent className="w-full max-w-lg p-0 flex flex-col bg-background/80 backdrop-blur-sm" side="right">
+          <SheetHeader className="p-4 border-b bg-transparent">
             <SheetTitle>AI Assistant</SheetTitle>
             <SheetDescription>
               Ask me anything about Grownex services and I'll do my best to help.
