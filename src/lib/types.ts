@@ -8,6 +8,10 @@ export interface Service {
     slug: string;
   };
   caseStudySlug?: string;
+  stats?: {
+    value: string;
+    label: string;
+  }[];
 }
 
 export interface ServiceGroup {

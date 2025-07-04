@@ -1,19 +1,8 @@
-import { services, portfolio } from "@/lib/data";
+import { services } from "@/lib/data";
 import { notFound } from "next/navigation";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { ServiceIllustration } from "@/components/vectors/ServiceIllustration";
 import Link from "next/link";
-import { AbstractShape2 } from "@/components/vectors/AbstractShape2";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb"
-
+import { Button } from "@/components/ui/button";
 
 export function generateStaticParams() {
     return services.map(service => ({
@@ -27,85 +16,63 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
     if (!service) {
         notFound();
     }
-    
-    const caseStudy = portfolio.find(p => p.slug === service.caseStudySlug);
 
     return (
         <>
-            {/* Hero Section */}
-            <section className="bg-secondary py-20 md:py-24">
-                <div className="container mx-auto px-4">
-                    <Breadcrumb className="mb-4">
-                      <BreadcrumbList>
-                        <BreadcrumbItem>
-                          <BreadcrumbLink href="/services">Services</BreadcrumbLink>
-                        </BreadcrumbItem>
-                        <BreadcrumbSeparator />
-                         <BreadcrumbItem>
-                          <BreadcrumbLink href={`/services#${service.category.slug}`}>{service.category.title}</BreadcrumbLink>
-                        </BreadcrumbItem>
-                        <BreadcrumbSeparator />
-                        <BreadcrumbItem>
-                          <BreadcrumbPage>{service.title}</BreadcrumbPage>
-                        </BreadcrumbItem>
-                      </BreadcrumbList>
-                    </Breadcrumb>
-                    <h1 className="text-4xl md:text-5xl font-bold font-headline">
-                        {service.title}
-                    </h1>
-                    <p className="mt-4 max-w-3xl text-lg text-muted-foreground">
-                        {service.description}
-                    </p>
-                </div>
-            </section>
-            
-            {/* Service Details Section */}
-            <section className="py-16 md:py-24">
-                <div className="container mx-auto px-4 grid lg:grid-cols-3 gap-12">
-                    <div className="lg:col-span-2">
-                        <h2 className="text-3xl font-bold font-headline">Our Approach to {service.title}</h2>
-                        <p className="mt-4 text-muted-foreground text-lg">
-                            {service.longDescription}
+            <div className="container mx-auto px-4 py-16 md:py-24">
+                {/* Hero Section */}
+                <section className="grid md:grid-cols-2 gap-16 items-center">
+                    <div className="flex flex-col gap-4">
+                        <h1 className="text-4xl md:text-6xl font-bold font-headline tracking-tight">
+                            {service.title}
+                        </h1>
+                        <p className="text-lg text-muted-foreground max-w-lg">
+                            {service.description}
                         </p>
                     </div>
-
-                    <div className="lg:col-span-1">
-                        {caseStudy && (
-                            <Card className="sticky top-24">
-                                <CardHeader>
-                                    <Badge variant="outline">Case Study</Badge>
-                                    <CardTitle className="mt-2">{caseStudy.title}</CardTitle>
-                                </CardHeader>
-                                <CardContent>
-                                    <AbstractShape2
-                                        className="mb-4"
-                                    />
-                                    <p className="text-sm text-muted-foreground mb-4">
-                                        {caseStudy.description}
-                                    </p>
-                                    <Button asChild variant="default" className="w-full">
-                                        <Link href={`/portfolio/${caseStudy.slug}`}>
-                                            View Full Case Study
-                                        </Link>
-                                    </Button>
-                                </CardContent>
-                            </Card>
-                        )}
+                    <div>
+                        <ServiceIllustration className="w-full h-auto" />
                     </div>
-                </div>
-            </section>
+                </section>
 
+                {/* Stats Section */}
+                {service.stats && service.stats.length > 0 && (
+                    <section className="mt-20 md:mt-32">
+                        <div className="max-w-4xl">
+                           <h2 className="text-3xl font-bold font-headline mb-8">Our Experience & Impact</h2>
+                            <div className="grid md:grid-cols-2 gap-x-12 gap-y-8">
+                                {service.stats.map((stat, index) => (
+                                    <div 
+                                        key={index} 
+                                        className={`flex items-center gap-6 ${index > 0 ? 'md:border-l md:pl-12 border-border' : ''}`}
+                                    >
+                                        <p className="text-5xl md:text-6xl font-bold font-headline text-primary whitespace-nowrap">{stat.value}</p>
+                                        <p className="text-muted-foreground">{stat.label}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </section>
+                )}
+
+                {/* Main Content Section */}
+                <section className="mt-20 md:mt-24">
+                     <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground leading-relaxed lg:columns-2 lg:gap-16">
+                         <p>{service.longDescription}</p>
+                    </div>
+                </section>
+            </div>
              {/* CTA Section */}
-            <section className="py-16 md:py-24 bg-primary text-white">
-                <div className="container mx-auto px-4 text-center">
+            <section className="bg-secondary">
+                <div className="container mx-auto px-4 py-16 md:py-24 text-center">
                     <h2 className="text-3xl md:text-4xl font-bold font-headline">Ready to discuss {service.title}?</h2>
-                    <p className="mt-4 max-w-2xl mx-auto text-lg text-primary-foreground/90">
-                    Let's explore how our expertise can be tailored to your specific needs.
+                    <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
+                        Let's explore how our expertise can be tailored to your specific needs.
                     </p>
                     <div className="mt-8">
-                    <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-                        <Link href="/contact">Book a Free Consultation</Link>
-                    </Button>
+                        <Button asChild size="lg">
+                            <Link href="/contact">Book a Free Consultation</Link>
+                        </Button>
                     </div>
                 </div>
             </section>

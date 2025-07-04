@@ -106,6 +106,50 @@ const createServicePageContent = (group: ServiceGroup, service: { title: string;
             break;
     }
 
+    let stats = [
+        { value: '95%', label: 'Client satisfaction rate on delivered projects.' },
+        { value: '24/7', label: 'Support and consultation available for our partners.' }
+    ];
+
+    switch (service.slug) {
+        case 'logo-design':
+            stats = [
+                { value: '300+', label: 'Logos designed for startups and established enterprises.' },
+                { value: '98%', label: 'Client approval rate on first design drafts.' }
+            ];
+            break;
+        case 'brand-identity-strategy':
+             stats = [
+                { value: '45%', label: 'Average increase in brand recognition for our clients.' },
+                { value: '100%', label: 'Brand consistency achieved across all platforms.' }
+            ];
+            break;
+        case 'seo-aeo':
+            stats = [
+                { value: '50%', label: 'Average increase in organic traffic within 6 months.' },
+                { value: 'Top 3', label: 'Ranking achieved for 80% of our clients\' target keywords.' }
+            ];
+            break;
+        case 'ppc-advertising':
+            stats = [
+                { value: '3x', label: 'Average return on ad spend (ROAS) for our campaigns.' },
+                { value: '25%', label: 'Average reduction in cost-per-acquisition (CPA).' }
+            ];
+            break;
+        case 'shopify-stores':
+            stats = [
+                { value: '40%', label: 'Average conversion rate uplift for our e-commerce clients.' },
+                { value: '100+', label: 'High-performance Shopify stores launched and optimized.' }
+            ];
+            break;
+         case 'custom-coded-websites':
+            stats = [
+                { value: '100', label: 'Score on Google Lighthouse for performance and best practices.' },
+                { value: '100%', label: 'Control over every aspect of design and functionality.' }
+            ];
+            break;
+    }
+
     return {
         title: service.title,
         slug: service.slug,
@@ -116,6 +160,7 @@ const createServicePageContent = (group: ServiceGroup, service: { title: string;
             slug: group.slug,
         },
         caseStudySlug: service.caseStudySlug,
+        stats,
     }
 }
 
