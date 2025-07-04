@@ -10,7 +10,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-import { ServiceCard } from "@/components/ServiceCard";
+import { InteractiveServices } from "@/components/InteractiveServices";
 import { AbstractShape1 } from "@/components/vectors/AbstractShape1";
 import { AbstractShape2 } from "@/components/vectors/AbstractShape2";
 import { PersonVector } from "@/components/vectors/PersonVector";
@@ -51,14 +51,12 @@ export default function Home() {
               <Badge variant="outline">Our Focus</Badge>
               <h2 className="text-3xl md:text-4xl font-bold mt-2 font-headline">What We Do</h2>
               <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
-                We focus on essential services to elevate your brand at every touchpoint.
+                We focus on essential services to elevate your brand at every touchpoint. Select a category to explore.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {serviceGroups.slice(0, 6).map((group) => (
-                <ServiceCard key={group.slug} service={group} />
-              ))}
-            </div>
+            
+            <InteractiveServices serviceGroups={serviceGroups} />
+
             <div className="text-center mt-12">
               <Button asChild variant="link">
                 <Link href="/services">Explore All Services</Link>
