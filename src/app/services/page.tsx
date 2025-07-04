@@ -26,9 +26,6 @@ export default function ServicesPage() {
             {serviceGroups.map((group) => (
                 <div key={group.slug} id={group.slug} className="scroll-mt-24">
                   <div className="flex flex-col items-start gap-2 mb-8 md:flex-row md:items-center md:gap-4">
-                    <div className="bg-primary/10 p-3 rounded-full">
-                       <group.icon className="h-8 w-8 text-primary" />
-                    </div>
                     <div>
                       <h2 className="text-3xl font-bold font-headline">{group.title}</h2>
                       <p className="text-muted-foreground">{group.description}</p>

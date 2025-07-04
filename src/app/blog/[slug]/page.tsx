@@ -2,7 +2,6 @@ import { blogPosts } from "@/lib/data";
 import { notFound } from "next/navigation";
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
-import { Calendar, User } from "lucide-react";
 
 import {
   Breadcrumb,
@@ -66,8 +65,8 @@ export default function BlogPostPage({ params }: { params: { slug:string }}) {
                         {post.title}
                     </h1>
                     <div className="flex items-center gap-4 mt-4 text-sm text-muted-foreground">
-                        <span className="flex items-center gap-2"><User className="h-4 w-4" /> {post.author}</span>
-                        <span className="flex items-center gap-2"><Calendar className="h-4 w-4" /> {post.date}</span>
+                        <span>{post.author}</span>
+                        <span>{post.date}</span>
                     </div>
                 </header>
 

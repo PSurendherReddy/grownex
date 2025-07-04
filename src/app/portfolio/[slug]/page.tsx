@@ -4,7 +4,6 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, BarChart } from "lucide-react";
 
 export function generateStaticParams() {
     return portfolio.map(item => ({
@@ -65,7 +64,6 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
                                 <div className="mt-6 space-y-6">
                                     {project.results.map((result, index) => (
                                         <div key={index} className="flex items-start">
-                                            <BarChart className="h-8 w-8 text-accent mr-4 mt-1 flex-shrink-0" />
                                             <div>
                                                 <p className="text-2xl font-bold text-primary">{result.metric}</p>
                                                 <p className="font-semibold">{result.value}</p>

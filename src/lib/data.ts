@@ -1,12 +1,10 @@
 import type { Service, ServiceGroup, PortfolioItem, Testimonial, Partner, BlogPost, TeamMember } from './types';
-import { Paintbrush, LineChart, Megaphone, Users, BrainCircuit, Code, Camera, Share2 } from 'lucide-react';
 
 export const serviceGroups: ServiceGroup[] = [
   {
     title: 'Graphic Design & Branding',
     slug: 'graphic-design-branding',
     description: 'Creating clear, impactful brand identities.',
-    icon: Paintbrush,
     services: [
         { title: 'Logo Design', slug: 'logo-design', description: 'Simple, memorable logo design.' },
         { title: 'Brand Identity & Strategy', slug: 'brand-identity-strategy', description: 'A complete visual system and growth roadmap.' },
@@ -17,7 +15,6 @@ export const serviceGroups: ServiceGroup[] = [
     title: 'Digital Marketing',
     slug: 'digital-marketing',
     description: 'Driving targeted traffic and generating qualified leads.',
-    icon: LineChart,
     services: [
         { title: 'SEO & AEO', slug: 'seo-aeo', description: 'Improving visibility on search and answer engines.' },
         { title: 'Lead Generation', slug: 'lead-generation', description: 'Filling your sales pipeline with qualified leads.' },
@@ -30,7 +27,6 @@ export const serviceGroups: ServiceGroup[] = [
     title: 'Offline Advertising',
     slug: 'offline-advertising',
     description: 'Making a real-world impact with tangible solutions.',
-    icon: Megaphone,
     services: [
         { title: 'Hoarding Advertising', slug: 'hoarding-advertising', description: 'Large-format ads for maximum visibility.' },
         { title: 'Mall Advertising', slug: 'mall-advertising', description: 'Engaging captive audiences in shopping destinations.' },
@@ -44,7 +40,6 @@ export const serviceGroups: ServiceGroup[] = [
     title: 'Photo & Video',
     slug: 'photo-video-production',
     description: 'Creating stunning visual content that tells your story.',
-    icon: Camera,
     services: [
         { title: 'Product Shoots', slug: 'product-shoots', description: 'Professional photos for e-commerce and marketing.' },
         { title: 'Event Shoots', slug: 'event-photo-video', description: 'Capturing corporate events, sports, and openings.' },
@@ -54,7 +49,6 @@ export const serviceGroups: ServiceGroup[] = [
     title: 'Public Relations',
     slug: 'public-relations',
     description: 'Building credibility and shaping public perception.',
-    icon: Users,
     services: [
         { title: 'Political PR', slug: 'political-pr', description: 'Strategic communications for political figures.' },
         { title: 'Business PR', slug: 'business-pr', description: 'Enhancing corporate reputation and managing media.' },
@@ -66,7 +60,6 @@ export const serviceGroups: ServiceGroup[] = [
     title: 'Business Consulting',
     slug: 'business-consulting',
     description: 'Providing strategic insights for sustainable growth.',
-    icon: BrainCircuit,
     services: [
         { title: 'SOP Creation', slug: 'sop-creation', description: 'Developing procedures to streamline processes.' },
         { title: 'Market Research', slug: 'market-competitor-research', description: 'In-depth analysis of the market and competition.' },
@@ -79,7 +72,6 @@ export const serviceGroups: ServiceGroup[] = [
     title: 'Influencer Marketing',
     slug: 'influencer-marketing',
     description: 'Amplifying your message through trusted voices.',
-    icon: Share2,
     services: [
         { title: 'Influencer Sourcing', slug: 'influencer-sourcing-management', description: 'Connecting with influencers, memers, & celebrities.' },
         { title: 'Campaign Management', slug: 'influencer-campaign-management', description: 'Managing campaigns with performance reporting.' },
@@ -89,7 +81,6 @@ export const serviceGroups: ServiceGroup[] = [
     title: 'Website Development',
     slug: 'website-development',
     description: 'Building high-performance websites that convert.',
-    icon: Code,
     services: [
         { title: 'WordPress Websites', slug: 'wordpress-websites', description: 'Flexible and scalable sites on the world’s most popular CMS.' },
         { title: 'Shopify Stores', slug: 'shopify-stores', description: 'Powerful e-commerce solutions for businesses of all sizes.' },

@@ -2,7 +2,6 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { serviceGroups, portfolio, testimonials, partners } from "@/lib/data";
-import { ArrowRight, CheckCircle, Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -64,7 +63,7 @@ export default function Home() {
             </div>
             <div className="text-center mt-12">
               <Button asChild variant="link">
-                <Link href="/services">Explore All Services <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                <Link href="/services">Explore All Services</Link>
               </Button>
             </div>
           </div>
@@ -82,22 +81,19 @@ export default function Home() {
                 </p>
                 <ul className="mt-6 space-y-4">
                   <li className="flex items-start">
-                    <CheckCircle className="h-6 w-6 text-accent mr-3 mt-1 flex-shrink-0" />
-                    <div>
+                    <div className="mt-1">
                       <h4 className="font-semibold">Focused Strategies</h4>
                       <p className="text-muted-foreground text-sm">Every action is planned to maximize impact and return.</p>
                     </div>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-6 w-6 text-accent mr-3 mt-1 flex-shrink-0" />
-                    <div>
+                     <div className="mt-1">
                       <h4 className="font-semibold">Essential Services</h4>
                       <p className="text-muted-foreground text-sm">We provide a curated suite of services to cover your core needs.</p>
                     </div>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-6 w-6 text-accent mr-3 mt-1 flex-shrink-0" />
-                    <div>
+                    <div className="mt-1">
                       <h4 className="font-semibold">Expert Team</h4>
                       <p className="text-muted-foreground text-sm">Our team consists of industry veterans dedicated to your success.</p>
                     </div>

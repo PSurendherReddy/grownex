@@ -4,7 +4,6 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Calendar, User } from "lucide-react";
 
 export default function BlogPage() {
     return (
@@ -51,8 +50,8 @@ export default function BlogPage() {
                                 </CardContent>
                                 <CardFooter className="p-6 pt-0 flex justify-between items-center text-xs text-muted-foreground">
                                     <div className="flex items-center gap-4">
-                                        <span className="flex items-center gap-1"><User className="h-3 w-3" /> {post.author}</span>
-                                        <span className="flex items-center gap-1"><Calendar className="h-3 w-3" /> {post.date}</span>
+                                        <span>{post.author}</span>
+                                        <span>{post.date}</span>
                                     </div>
                                     <Link href={`/blog/${post.slug}`} className="text-primary font-semibold hover:underline">
                                         Read <span className="hidden sm:inline">More</span>

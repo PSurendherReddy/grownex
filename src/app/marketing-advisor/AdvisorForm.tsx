@@ -19,7 +19,6 @@ import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { getMarketingAdvice } from './actions';
 import { MarketingAdvisorOutput } from '@/ai/flows/marketing-advisor';
-import { Loader2, Sparkles, Lightbulb } from 'lucide-react';
 import { useToast } from "@/hooks/use-toast"
 
 
@@ -109,17 +108,7 @@ export function AdvisorForm() {
             />
             <div className="flex justify-center">
               <Button type="submit" size="lg" disabled={isLoading}>
-                {isLoading ? (
-                  <>
-                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    Generating Advice...
-                  </>
-                ) : (
-                  <>
-                    <Sparkles className="mr-2 h-4 w-4" />
-                    Get My Free Advice
-                  </>
-                )}
+                {isLoading ? 'Generating Advice...' : 'Get My Free Advice'}
               </Button>
             </div>
           </form>
@@ -130,8 +119,7 @@ export function AdvisorForm() {
                 <h3 className="text-2xl font-bold font-headline text-center mb-6">Your Tailored Marketing Plan</h3>
                 <div className="grid md:grid-cols-2 gap-8">
                     <Card>
-                        <CardHeader className="flex flex-row items-center gap-2">
-                            <Lightbulb className="h-6 w-6 text-primary" />
+                        <CardHeader>
                             <CardTitle>Suggested Channels</CardTitle>
                         </CardHeader>
                         <CardContent>
@@ -139,8 +127,7 @@ export function AdvisorForm() {
                         </CardContent>
                     </Card>
                      <Card>
-                        <CardHeader className="flex flex-row items-center gap-2">
-                            <Sparkles className="h-6 w-6 text-primary" />
+                        <CardHeader>
                             <CardTitle>Suggested Strategies</CardTitle>
                         </CardHeader>
                         <CardContent>

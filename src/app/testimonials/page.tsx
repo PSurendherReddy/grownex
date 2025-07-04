@@ -2,7 +2,6 @@ import { Badge } from "@/components/ui/badge";
 import { testimonials } from "@/lib/data";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
-import { Star } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
@@ -38,11 +37,6 @@ export default function TestimonialsPage() {
                                     </div>
                                 </CardHeader>
                                 <CardContent className="flex-grow">
-                                    <div className="flex mb-4">
-                                        {[...Array(5)].map((_, i) => (
-                                            <Star key={i} className="h-5 w-5 text-accent fill-accent" />
-                                        ))}
-                                    </div>
                                     <p className="text-muted-foreground italic">"{testimonial.quote}"</p>
                                 </CardContent>
                             </Card>

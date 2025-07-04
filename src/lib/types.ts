@@ -1,5 +1,3 @@
-import type { LucideIcon } from 'lucide-react';
-
 export interface Service {
   title: string;
   slug: string;
@@ -16,7 +14,6 @@ export interface ServiceGroup {
   title: string;
   slug: string;
   description: string;
-  icon: LucideIcon;
   services: {
     title: string;
     slug: string;

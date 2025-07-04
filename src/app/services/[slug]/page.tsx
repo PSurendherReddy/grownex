@@ -4,7 +4,6 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { ArrowRight, CheckCircle } from "lucide-react";
 import Image from "next/image";
 import {
   Breadcrumb,
@@ -91,7 +90,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                     </p>
                                     <Button asChild variant="default" className="w-full">
                                         <Link href={`/portfolio/${caseStudy.slug}`}>
-                                            View Full Case Study <ArrowRight className="ml-2 h-4 w-4" />
+                                            View Full Case Study
                                         </Link>
                                     </Button>
                                 </CardContent>

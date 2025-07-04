@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Logo } from './Logo';
-import { Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -15,10 +14,10 @@ export function Footer() {
               Clarity in design. Impact in results.
             </p>
             <div className="flex space-x-4">
-              <Link href="#" className="text-muted-foreground hover:text-primary"><Twitter className="h-5 w-5" /></Link>
-              <Link href="#" className="text-muted-foreground hover:text-primary"><Facebook className="h-5 w-5" /></Link>
-              <Link href="#" className="text-muted-foreground hover:text-primary"><Linkedin className="h-5 w-5" /></Link>
-              <Link href="#" className="text-muted-foreground hover:text-primary"><Instagram className="h-5 w-5" /></Link>
+              <Link href="#" className="text-sm text-muted-foreground hover:text-primary">Twitter</Link>
+              <Link href="#" className="text-sm text-muted-foreground hover:text-primary">Facebook</Link>
+              <Link href="#" className="text-sm text-muted-foreground hover:text-primary">LinkedIn</Link>
+              <Link href="#" className="text-sm text-muted-foreground hover:text-primary">Instagram</Link>
             </div>
           </div>
           <div>

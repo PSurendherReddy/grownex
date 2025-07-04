@@ -3,8 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Card, CardContent } from "@/components/ui/card";
-import { Phone, Mail, MapPin } from "lucide-react";
 
 export default function ContactPage() {
     return (
@@ -54,21 +52,18 @@ export default function ContactPage() {
                              <h2 className="text-3xl font-bold font-headline mb-6">Contact Info</h2>
                              <div className="space-y-6">
                                 <div className="flex items-start gap-4">
-                                    <Mail className="h-6 w-6 text-primary mt-1" />
                                     <div>
                                         <h3 className="font-semibold">Email</h3>
                                         <a href="mailto:hello@grownex.com" className="text-muted-foreground hover:text-primary">hello@grownex.com</a>
                                     </div>
                                 </div>
                                  <div className="flex items-start gap-4">
-                                    <Phone className="h-6 w-6 text-primary mt-1" />
                                     <div>
                                         <h3 className="font-semibold">Phone</h3>
                                         <a href="tel:+1234567890" className="text-muted-foreground hover:text-primary">+1 (234) 567-890</a>
                                     </div>
                                 </div>
                                  <div className="flex items-start gap-4">
-                                    <MapPin className="h-6 w-6 text-primary mt-1" />
                                     <div>
                                         <h3 className="font-semibold">Office</h3>
                                         <p className="text-muted-foreground">123 Creative Lane, Suite 100<br/>Innovation City, 54321</p>

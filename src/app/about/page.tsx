@@ -1,7 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { team } from "@/lib/data";
-import { Check, Eye, Heart, Rocket } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -60,7 +59,6 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card className="bg-background">
               <CardHeader>
-                <Eye className="h-8 w-8 text-primary mb-2" />
                 <CardTitle>1. Understand</CardTitle>
               </CardHeader>
               <CardContent>
@@ -69,7 +67,6 @@ export default function AboutPage() {
             </Card>
             <Card className="bg-background">
               <CardHeader>
-                <Check className="h-8 w-8 text-primary mb-2" />
                 <CardTitle>2. Define</CardTitle>
               </CardHeader>
               <CardContent>
@@ -78,7 +75,6 @@ export default function AboutPage() {
             </Card>
             <Card className="bg-background">
               <CardHeader>
-                <Heart className="h-8 w-8 text-primary mb-2" />
                 <CardTitle>3. Execute</CardTitle>
               </CardHeader>
               <CardContent>
@@ -87,7 +83,6 @@ export default function AboutPage() {
             </Card>
             <Card className="bg-background">
               <CardHeader>
-                <Rocket className="h-8 w-8 text-primary mb-2" />
                 <CardTitle>4. Measure</CardTitle>
               </CardHeader>
               <CardContent>

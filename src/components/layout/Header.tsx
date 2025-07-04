@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu, ChevronDown } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { useState, useEffect } from 'react';
@@ -67,7 +66,7 @@ export function Header() {
                       pathname.startsWith('/services') ? 'text-primary font-semibold' : 'text-muted-foreground'
                     )}
                   >
-                    {label} <ChevronDown className={cn("h-4 w-4 transition-transform", isServicesMenuOpen && "rotate-180")} />
+                    {label}
                   </Link>
                   {isServicesMenuOpen && (
                     <div className="absolute left-1/2 -translate-x-1/2 top-full pt-4 w-screen max-w-7xl">
@@ -77,7 +76,6 @@ export function Header() {
                             <div key={group.slug}>
                               <h3 className="font-semibold text-base font-headline mb-4 text-primary">
                                 <Link href={`/services#${group.slug}`} onClick={() => setIsServicesMenuOpen(false)} className="hover:underline flex items-center gap-2">
-                                  <group.icon className="h-5 w-5" />
                                   {group.title}
                                 </Link>
                               </h3>
@@ -121,7 +119,7 @@ export function Header() {
         <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
           <SheetTrigger asChild>
             <Button variant="ghost" size="icon" className="md:hidden">
-              <Menu className="h-6 w-6" />
+              <span className="text-sm">Menu</span>
               <span className="sr-only">Toggle navigation menu</span>
             </Button>
           </SheetTrigger>
@@ -137,7 +135,7 @@ export function Header() {
                       <AccordionItem value="services" className="border-b-0">
                         <AccordionTrigger
                           className={cn(
-                            'py-2 text-lg font-medium hover:no-underline transition-colors hover:text-primary [&[data-state=open]>svg]:text-primary',
+                            'py-2 text-lg font-medium hover:no-underline transition-colors hover:text-primary',
                             pathname.startsWith('/services') ? 'text-primary' : 'text-muted-foreground'
                           )}
                         >
@@ -158,7 +156,7 @@ export function Header() {
                             {serviceGroups.map((group) => (
                               <Accordion type="single" collapsible className="w-full" key={group.slug}>
                                 <AccordionItem value={group.slug} className="border-b-0">
-                                  <AccordionTrigger className="py-2 text-base font-medium hover:no-underline [&[data-state=open]>svg]:text-primary">
+                                  <AccordionTrigger className="py-2 text-base font-medium hover:no-underline">
                                     {group.title}
                                   </AccordionTrigger>
                                   <AccordionContent className="pl-4">
