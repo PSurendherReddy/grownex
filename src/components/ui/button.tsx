@@ -40,14 +40,20 @@ export interface ButtonProps
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
+  ({ className, variant, size, asChild = false, children, ...props }, ref) => {
     const Comp = asChild ? Slot : "button"
+    const showArrow = variant !== 'link' && variant !== 'ghost' && size !== 'icon';
+
     return (
       <Comp
-        className={cn(buttonVariants({ variant, size, className }))}
+        className={cn(buttonVariants({ variant, size, className }), {
+          'btn-arrow-hover': showArrow,
+        })}
         ref={ref}
         {...props}
-      />
+      >
+        {showArrow ? <span className="btn-text-wrapper">{children}</span> : children}
+      </Comp>
     )
   }
 )

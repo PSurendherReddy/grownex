@@ -79,4 +79,25 @@
   .nav-link-underline:hover::after, .nav-link-underline.active::after {
     @apply scale-x-100;
   }
+
+  .btn-arrow-hover {
+    @apply relative overflow-hidden;
+  }
+
+  .btn-arrow-hover .btn-text-wrapper {
+    @apply inline-block transition-transform duration-300 ease-out;
+  }
+  
+  .btn-arrow-hover:hover .btn-text-wrapper {
+    @apply translate-x-[-0.5rem];
+  }
+  
+  .btn-arrow-hover::after {
+    content: '→';
+    @apply absolute right-4 top-1/2 -translate-y-1/2 translate-x-8 transform opacity-0 transition-all duration-300 ease-out;
+  }
+
+  .btn-arrow-hover:hover::after {
+     @apply translate-x-0 opacity-100;
+  }
 }
