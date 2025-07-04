@@ -76,14 +76,14 @@ export function Header() {
                             {serviceGroups.map((group) => (
                               <div key={group.slug}>
                                 <h3 className="font-semibold text-base font-headline mb-4 text-primary">
-                                  <Link href={`/services#${group.slug}`} onClick={() => setIsServicesMenuOpen(false)} className="hover:underline flex items-center gap-2">
+                                  <Link href={`/services#${group.slug}`} onClick={() => setIsServicesMenuOpen(false)} className="hover:text-accent hover:no-underline flex items-center gap-2">
                                     {group.title}
                                   </Link>
                                 </h3>
                                 <ul className="space-y-3">
                                   {group.services.map((service) => (
                                     <li key={service.slug}>
-                                      <Link href={`/services/${service.slug}`} onClick={() => setIsServicesMenuOpen(false)} className="text-foreground hover:text-primary text-sm font-medium">
+                                      <Link href={`/services/${service.slug}`} onClick={() => setIsServicesMenuOpen(false)} className="text-foreground hover:text-accent text-sm font-medium">
                                         {service.title}
                                       </Link>
                                     </li>
