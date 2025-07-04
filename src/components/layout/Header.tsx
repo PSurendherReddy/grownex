@@ -63,7 +63,7 @@ export function Header() {
                     href="/services"
                     className={cn(
                       'flex items-center gap-1 text-sm font-medium transition-colors hover:text-primary focus:outline-none',
-                      pathname.startsWith('/services') ? 'text-primary font-semibold' : 'text-muted-foreground'
+                      pathname.startsWith('/services') ? 'text-primary font-semibold' : 'text-foreground'
                     )}
                   >
                     {label}
@@ -82,7 +82,7 @@ export function Header() {
                               <ul className="space-y-3">
                                 {group.services.map((service) => (
                                   <li key={service.slug}>
-                                    <Link href={`/services/${service.slug}`} onClick={() => setIsServicesMenuOpen(false)} className="text-muted-foreground hover:text-primary text-sm font-medium">
+                                    <Link href={`/services/${service.slug}`} onClick={() => setIsServicesMenuOpen(false)} className="text-foreground hover:text-primary text-sm font-medium">
                                       {service.title}
                                     </Link>
                                   </li>
@@ -103,7 +103,7 @@ export function Header() {
                 href={href}
                 className={cn(
                   'text-sm font-medium transition-colors hover:text-primary',
-                  pathname === href ? 'text-primary font-semibold' : 'text-muted-foreground'
+                  pathname === href ? 'text-primary font-semibold' : 'text-foreground'
                 )}
               >
                 {label}
@@ -136,7 +136,7 @@ export function Header() {
                         <AccordionTrigger
                           className={cn(
                             'py-2 text-lg font-medium hover:no-underline transition-colors hover:text-primary',
-                            pathname.startsWith('/services') ? 'text-primary' : 'text-muted-foreground'
+                            pathname.startsWith('/services') ? 'text-primary' : 'text-foreground'
                           )}
                         >
                           {label}
@@ -148,7 +148,7 @@ export function Header() {
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className={cn(
                                   'text-base font-normal transition-colors hover:text-primary',
-                                  pathname === '/services' ? 'text-primary' : 'text-muted-foreground'
+                                  pathname === '/services' ? 'text-primary' : 'text-foreground'
                                 )}
                               >
                                 All Services
@@ -168,7 +168,7 @@ export function Header() {
                                             onClick={() => setIsMobileMenuOpen(false)}
                                             className={cn(
                                               'text-base font-normal transition-colors hover:text-primary',
-                                              pathname === `/services/${service.slug}` ? 'text-primary' : 'text-muted-foreground'
+                                              pathname === `/services/${service.slug}` ? 'text-primary' : 'text-foreground'
                                             )}
                                           >
                                             {service.title}
@@ -192,7 +192,7 @@ export function Header() {
                     onClick={() => setIsMobileMenuOpen(false)}
                     className={cn(
                       'transition-colors hover:text-primary',
-                      pathname === href ? 'text-primary' : 'text-muted-foreground'
+                      pathname === href ? 'text-primary' : 'text-foreground'
                     )}
                   >
                     {label}
