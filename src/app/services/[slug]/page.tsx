@@ -6,6 +6,15 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import Image from "next/image";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb"
+
 
 export function generateStaticParams() {
     return services.map(service => ({
@@ -25,12 +34,27 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
     return (
         <>
             {/* Hero Section */}
-            <section className="bg-secondary py-20 md:py-32">
-                <div className="container mx-auto px-4 text-center">
+            <section className="bg-secondary py-20 md:py-24">
+                <div className="container mx-auto px-4">
+                    <Breadcrumb className="mb-4">
+                      <BreadcrumbList>
+                        <BreadcrumbItem>
+                          <BreadcrumbLink href="/services">Services</BreadcrumbLink>
+                        </BreadcrumbItem>
+                        <BreadcrumbSeparator />
+                         <BreadcrumbItem>
+                          <BreadcrumbLink href={`/services#${service.category.slug}`}>{service.category.title}</BreadcrumbLink>
+                        </BreadcrumbItem>
+                        <BreadcrumbSeparator />
+                        <BreadcrumbItem>
+                          <BreadcrumbPage>{service.title}</BreadcrumbPage>
+                        </BreadcrumbItem>
+                      </BreadcrumbList>
+                    </Breadcrumb>
                     <h1 className="text-4xl md:text-5xl font-bold font-headline">
                         {service.title}
                     </h1>
-                    <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
+                    <p className="mt-4 max-w-3xl text-lg text-muted-foreground">
                         {service.description}
                     </p>
                 </div>
@@ -40,23 +64,10 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
             <section className="py-16 md:py-24">
                 <div className="container mx-auto px-4 grid lg:grid-cols-3 gap-12">
                     <div className="lg:col-span-2">
-                        <h2 className="text-3xl font-bold font-headline">Our Approach</h2>
+                        <h2 className="text-3xl font-bold font-headline">Our Approach to {service.title}</h2>
                         <p className="mt-4 text-muted-foreground text-lg">
                             {service.longDescription}
                         </p>
-                        
-                        <h3 className="text-2xl font-bold font-headline mt-12">Key Offerings</h3>
-                        <ul className="mt-6 space-y-4">
-                            {service.offerings.map(offering => (
-                                <li key={offering.title} className="flex items-start">
-                                    <CheckCircle className="h-6 w-6 text-accent mr-3 mt-1 flex-shrink-0" />
-                                    <div>
-                                        <h4 className="font-semibold">{offering.title}</h4>
-                                        <p className="text-muted-foreground text-sm">{offering.description}</p>
-                                    </div>
-                                </li>
-                            ))}
-                        </ul>
                     </div>
 
                     <div className="lg:col-span-1">

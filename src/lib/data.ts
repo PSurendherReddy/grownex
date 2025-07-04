@@ -1,113 +1,120 @@
-import type { Service, PortfolioItem, Testimonial, Partner, BlogPost, TeamMember } from './types';
+import type { Service, ServiceGroup, PortfolioItem, Testimonial, Partner, BlogPost, TeamMember } from './types';
 import { Paintbrush, LineChart, Megaphone, Users, BrainCircuit, Code, Camera, Share2 } from 'lucide-react';
 
-export const services: Service[] = [
+export const serviceGroups: ServiceGroup[] = [
   {
     title: 'Graphic Design & Branding',
     slug: 'graphic-design-branding',
     description: 'Crafting powerful brand identities that connect and convert.',
-    longDescription: 'We build memorable brands from the ground up, providing everything you need for a cohesive and compelling brand presence. Our strategic approach ensures your brand not only looks good but also communicates your core values and resonates with your target audience.',
     icon: Paintbrush,
-    offerings: [
-        { title: 'Logo Design', description: 'Unique and memorable logo creation reflecting your brand’s essence.' },
-        { title: 'Brand Identity & Strategy', description: 'Developing a complete brand identity and a roadmap for its growth.' },
-        { title: 'Brand Guidelines', description: 'Comprehensive guidelines to ensure brand consistency across all channels.' },
+    services: [
+        { title: 'Logo Design', slug: 'logo-design', description: 'Unique and memorable logo creation reflecting your brand’s essence.' },
+        { title: 'Brand Identity & Strategy', slug: 'brand-identity-strategy', description: 'Developing a complete brand identity and a roadmap for its growth.' },
+        { title: 'Brand Guidelines', slug: 'brand-guidelines', description: 'Comprehensive guidelines to ensure brand consistency across all channels.' },
     ],
-    caseStudySlug: 'brand-refresh-innovatech'
   },
   {
     title: 'Digital Marketing',
     slug: 'digital-marketing',
     description: 'Driving targeted traffic and generating qualified leads online.',
-    longDescription: 'Our digital marketing services are designed to place your brand in front of the right audience at the right time. We use a data-driven approach to create, manage, and optimize campaigns across various channels, ensuring maximum ROI and sustainable growth.',
     icon: LineChart,
-    offerings: [
-        { title: 'SEO & AEO', description: 'Improving organic visibility on search engines to attract high-intent traffic.' },
-        { title: 'Lead Generation', description: 'Building and executing strategies to fill your sales pipeline with qualified leads.' },
-        { title: 'PPC ADS - Google, Meta, LinkedIn', description: 'Managing paid campaigns for immediate impact.' },
-        { title: 'Email Marketing', description: 'Nurturing leads and customers with targeted email campaigns and automation.' },
-        { title: 'Social Media Management', description: 'Building and engaging your community across social platforms.' },
+    services: [
+        { title: 'SEO & AEO', slug: 'seo-aeo', description: 'Improving organic visibility on search engines to attract high-intent traffic.' },
+        { title: 'Lead Generation', slug: 'lead-generation', description: 'Building and executing strategies to fill your sales pipeline with qualified leads.' },
+        { title: 'PPC ADS', slug: 'ppc-ads', description: 'Managing paid campaigns for immediate impact on Google, Meta, and LinkedIn.' },
+        { title: 'Email Marketing', slug: 'email-marketing', description: 'Nurturing leads and customers with targeted email campaigns and automation.' },
+        { title: 'Social Media Management', slug: 'social-media-management', description: 'Building and engaging your community across social platforms.' },
     ],
-    caseStudySlug: 'lead-gen-for-saas'
   },
   {
     title: 'Offline Advertising',
     slug: 'offline-advertising',
     description: 'Making a real-world impact with tangible advertising solutions.',
-    longDescription: "While digital is crucial, offline advertising creates a powerful, tangible presence that can't be ignored. We specialize in high-impact offline campaigns that capture attention in physical spaces, from bustling city centers to local communities.",
     icon: Megaphone,
-    offerings: [
-        { title: 'Hoardings & Malls', description: 'Large-format ads in high-traffic areas for maximum visibility.' },
-        { title: 'College & Campus Ads', description: 'Targeting specific demographics in their living and learning spaces.' },
-        { title: 'Apartment Complexes', description: 'Reaching residents directly within their communities.' },
-        { title: 'Petrol Pumps', description: 'Engaging a captive audience during their daily commute.' },
-        { title: 'Pamphlet Distribution', description: 'Direct, localized marketing for events, offers, and announcements.' },
-    ]
-  },
-  {
-    title: 'Photography & Video Production',
-    slug: 'photo-video-production',
-    description: 'Creating stunning visual content that tells your brand’s story.',
-    longDescription: "High-quality visuals are non-negotiable in today's market. Our production team specializes in creating compelling photography and videography that captures the essence of your brand, products, and events, making your story unforgettable.",
-    icon: Camera,
-    offerings: [
-        { title: 'Product Shoots', description: 'Crisp, professional photos for e-commerce, catalogs, and marketing materials.' },
-        { title: 'Event Shoots: Sports, Corporate, Opening Events', description: 'Capturing the energy and key moments of your important events.' },
-    ]
-  },
-  {
-    title: 'Public Relations',
-    slug: 'public-relations',
-    description: 'Building credibility and shaping public perception.',
-    longDescription: "Manage your reputation and build trust with our comprehensive public relations services. We craft compelling narratives and secure media coverage to position you or your business as a leader in your field.",
-    icon: Users,
-    offerings: [
-        { title: 'Political PR', description: 'Strategic communications and media management for political campaigns and figures.' },
-        { title: 'Business PR', description: 'Enhancing corporate reputation and managing communications for businesses.' },
-        { title: 'Entrepreneur Features', description: 'Securing media features and interviews for entrepreneurs and thought leaders.' },
-        { title: 'Press Release Handling', description: 'Crafting and distributing effective press releases to the right channels.' },
-    ]
-  },
-  {
-    title: 'Business Consulting',
-    slug: 'business-consulting',
-    description: 'Providing strategic insights for sustainable growth.',
-    longDescription: "Beyond marketing, we offer strategic business consulting to help you build a solid foundation for success. Our experts analyze your market, operations, and competition to provide actionable insights and clear roadmaps for growth and efficiency.",
-    icon: BrainCircuit,
-    offerings: [
-        { title: 'SOP Creation', description: 'Developing Standard Operating Procedures to streamline your business processes.' },
-        { title: 'Market & Competitor Research', description: 'In-depth analysis of the market landscape and your competition.' },
-        { title: 'Architecture Analysis', description: 'Evaluating and optimizing your business or technical architecture.' },
-        { title: 'Data Collection & Surveys', description: 'Gathering crucial data through targeted surveys and research methods.' },
-        { title: 'Government/Private Grants Research', description: 'Identifying and assisting with applications for funding opportunities.' },
-    ]
-  },
-  {
-    title: 'Influencer Marketing',
-    slug: 'influencer-marketing',
-    description: 'Amplifying your message through trusted voices.',
-    longDescription: "Leverage the power of influence to connect with your audience authentically. We design and manage end-to-end influencer marketing campaigns that drive brand awareness, engagement, and conversions.",
-    icon: Share2,
-    offerings: [
-        { title: 'Influencers, Memers, & Celebrities', description: 'Identifying and collaborating with the right voices for your brand.' },
-        { title: 'Campaign Execution & Reporting', description: 'Managing campaigns from start to finish with detailed performance reporting.' },
-    ]
+    services: [
+        { title: 'Hoardings & Mall Ads', slug: 'hoarding-mall-ads', description: 'Large-format ads in high-traffic areas for maximum visibility.' },
+        { title: 'Campus & Apartment Ads', slug: 'campus-apartment-ads', description: 'Targeting specific demographics in their living and learning spaces.' },
+        { title: 'Petrol Pump Advertising', slug: 'petrol-pump-advertising', description: 'Engaging a captive audience during their daily commute.' },
+        { title: 'Pamphlet Distribution', slug: 'pamphlet-distribution', description: 'Direct, localized marketing for events, offers, and announcements.' },
+    ],
   },
   {
     title: 'Website Development',
     slug: 'website-development',
     description: 'Building high-performance websites that convert visitors.',
-    longDescription: "Your website is your digital storefront. We build websites that are not only beautiful but also fast, secure, and optimized for conversion. From e-commerce to custom platforms, we bring your digital vision to life.",
     icon: Code,
-    offerings: [
-        { title: 'WordPress Websites', description: 'Flexible and scalable websites built on the world’s most popular CMS.' },
-        { title: 'Shopify Stores', description: 'Powerful e-commerce solutions for businesses of all sizes.' },
-        { title: 'Webflow Designs', description: 'Visually stunning and highly interactive websites with no-code flexibility.' },
-        { title: 'Custom-Coded Websites', description: 'Bespoke web solutions for unique requirements and maximum performance.' },
+    services: [
+        { title: 'WordPress Websites', slug: 'wordpress-websites', description: 'Flexible and scalable websites built on the world’s most popular CMS.' },
+        { title: 'Shopify Stores', slug: 'shopify-stores', description: 'Powerful e-commerce solutions for businesses of all sizes.' },
+        { title: 'Webflow Designs', slug: 'webflow-designs', description: 'Visually stunning and highly interactive websites with no-code flexibility.' },
+        { title: 'Custom-Coded Websites', slug: 'custom-coded-websites', description: 'Bespoke web solutions for unique requirements and maximum performance.' },
     ],
-    caseStudySlug: 'ecommerce-platform-for-artisan'
-  }
+  },
+  {
+    title: 'PR & Media',
+    slug: 'public-relations-media',
+    description: 'Building credibility and shaping public perception.',
+    icon: Users,
+    services: [
+        { title: 'Political PR', slug: 'political-pr', description: 'Strategic communications and media management for political campaigns and figures.' },
+        { title: 'Business PR', slug: 'business-pr', description: 'Enhancing corporate reputation and managing communications for businesses.' },
+        { title: 'Entrepreneur Features', slug: 'entrepreneur-features', description: 'Securing media features and interviews for entrepreneurs and thought leaders.' },
+        { title: 'Press Release Handling', slug: 'press-release-handling', description: 'Crafting and distributing effective press releases to the right channels.' },
+    ],
+  },
+  {
+    title: 'Business Consulting',
+    slug: 'business-consulting',
+    description: 'Providing strategic insights for sustainable growth.',
+    icon: BrainCircuit,
+    services: [
+        { title: 'SOP Creation', slug: 'sop-creation', description: 'Developing Standard Operating Procedures to streamline your business processes.' },
+        { title: 'Market & Competitor Research', slug: 'market-competitor-research', description: 'In-depth analysis of the market landscape and your competition.' },
+        { title: 'Architecture Analysis', slug: 'architecture-analysis', description: 'Evaluating and optimizing your business or technical architecture.' },
+        { title: 'Data Collection & Surveys', slug: 'data-collection-surveys', description: 'Gathering crucial data through targeted surveys and research methods.' },
+    ],
+  },
+  {
+    title: 'Visual Production',
+    slug: 'visual-production',
+    description: 'Creating stunning visual content that tells your brand’s story.',
+    icon: Camera,
+    services: [
+        { title: 'Product Shoots', slug: 'product-shoots', description: 'Crisp, professional photos for e-commerce, catalogs, and marketing materials.' },
+        { title: 'Event Shoots', slug: 'event-shoots', description: 'Capturing the energy and key moments of your sports, corporate, or opening events.' },
+    ],
+  },
+  {
+    title: 'Influencer Marketing',
+    slug: 'influencer-marketing',
+    description: 'Amplifying your message through trusted voices.',
+    icon: Share2,
+    services: [
+        { title: 'Influencer Collaboration', slug: 'influencer-collaboration', description: 'Identifying and collaborating with influencers, memers, & celebrities for your brand.' },
+        { title: 'Campaign Management', slug: 'influencer-campaign-management', description: 'Managing campaigns from start to finish with detailed performance reporting.' },
+    ],
+  },
 ];
+
+
+const createServicePageContent = (group: ServiceGroup, service: { title: string; slug: string; description: string; }) => {
+    return {
+        title: service.title,
+        slug: service.slug,
+        description: service.description,
+        longDescription: `Detailed information about our ${service.title} service, part of our ${group.title} offering. We focus on delivering tailored solutions to meet your specific needs, ensuring the best outcomes for your business. This service helps you achieve your goals by leveraging our expertise and industry-leading strategies.`,
+        category: {
+            title: group.title,
+            slug: group.slug,
+        },
+    }
+}
+
+// A flattened array of all individual services for generating static pages
+export const services: Service[] = serviceGroups.flatMap(group => 
+    group.services.map(service => createServicePageContent(group, service))
+);
+
 
 export const portfolio: PortfolioItem[] = [
   {

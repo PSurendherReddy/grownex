@@ -1,7 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { services, portfolio, testimonials, partners } from "@/lib/data";
+import { serviceGroups, portfolio, testimonials, partners } from "@/lib/data";
 import { ArrowRight, CheckCircle, Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -58,8 +58,8 @@ export default function Home() {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.slice(0, 6).map((service) => (
-                <ServiceCard key={service.slug} service={service} />
+              {serviceGroups.slice(0, 6).map((group) => (
+                <ServiceCard key={group.slug} service={group} />
               ))}
             </div>
             <div className="text-center mt-12">

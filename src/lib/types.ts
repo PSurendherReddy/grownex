@@ -5,9 +5,23 @@ export interface Service {
   slug: string;
   description: string;
   longDescription: string;
-  icon: LucideIcon;
-  offerings: { title: string; description: string }[];
+  category: {
+    title: string;
+    slug: string;
+  };
   caseStudySlug?: string;
+}
+
+export interface ServiceGroup {
+  title: string;
+  slug: string;
+  description: string;
+  icon: LucideIcon;
+  services: {
+    title: string;
+    slug: string;
+    description: string;
+  }[];
 }
 
 export interface PortfolioItem {

@@ -1,8 +1,8 @@
 import { Badge } from "@/components/ui/badge";
-import { services } from "@/lib/data";
-import { ServiceCard } from "@/components/ServiceCard";
+import { serviceGroups } from "@/lib/data";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function ServicesPage() {
   return (
@@ -22,12 +22,31 @@ export default function ServicesPage() {
       
       {/* Services Grid */}
       <section className="py-16 md:py-24">
-        <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {services.map((service) => (
-                    <ServiceCard key={service.slug} service={service} />
-                ))}
-            </div>
+        <div className="container mx-auto px-4 space-y-20">
+            {serviceGroups.map((group) => (
+                <div key={group.slug} id={group.slug} className="scroll-mt-24">
+                  <div className="flex items-center gap-4 mb-8">
+                    <div className="bg-primary/10 p-3 rounded-full">
+                       <group.icon className="h-8 w-8 text-primary" />
+                    </div>
+                    <h2 className="text-3xl font-bold font-headline">{group.title}</h2>
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                    {group.services.map((service) => (
+                       <Link href={`/services/${service.slug}`} key={service.slug} className="group">
+                        <Card className="h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                          <CardHeader>
+                            <CardTitle className="text-lg">{service.title}</CardTitle>
+                          </CardHeader>
+                          <CardContent>
+                            <p className="text-sm text-muted-foreground">{service.description}</p>
+                          </CardContent>
+                        </Card>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+            ))}
         </div>
       </section>
       

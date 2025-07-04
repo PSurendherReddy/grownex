@@ -1,18 +1,18 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import type { Service } from "@/lib/types";
+import type { ServiceGroup } from "@/lib/types";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 interface ServiceCardProps {
-  service: Service;
+  service: ServiceGroup;
 }
 
 export function ServiceCard({ service }: ServiceCardProps) {
   const Icon = service.icon;
 
   return (
-    <Link href={`/services/${service.slug}`} className="group">
+    <Link href={`/services#${service.slug}`} className="group">
       <Card className="h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
         <CardHeader className="flex flex-row items-center gap-4">
           <div className="bg-primary/10 p-3 rounded-full">

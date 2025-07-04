@@ -3,19 +3,12 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
-import { Menu, Mountain, ChevronDown } from 'lucide-react';
+import { Menu, ChevronDown } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { useState, useEffect } from 'react';
 import { Logo } from './Logo';
-import { services } from '@/lib/data';
+import { serviceGroups } from '@/lib/data';
 import {
   Accordion,
   AccordionContent,
@@ -36,6 +29,7 @@ export function Header() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isServicesMenuOpen, setIsServicesMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -60,27 +54,49 @@ export function Header() {
           {navLinks.map(({ href, label }) => {
             if (href === '/services') {
               return (
-                <DropdownMenu key={href}>
-                  <DropdownMenuTrigger
+                <div 
+                  key={href}
+                  className="relative"
+                  onMouseEnter={() => setIsServicesMenuOpen(true)}
+                  onMouseLeave={() => setIsServicesMenuOpen(false)}
+                >
+                  <Link
+                    href="/services"
                     className={cn(
                       'flex items-center gap-1 text-sm font-medium transition-colors hover:text-primary focus:outline-none',
                       pathname.startsWith('/services') ? 'text-primary font-semibold' : 'text-muted-foreground'
                     )}
                   >
-                    {label} <ChevronDown className="h-4 w-4" />
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent>
-                    <DropdownMenuItem asChild>
-                      <Link href="/services">Services Overview</Link>
-                    </DropdownMenuItem>
-                    <DropdownMenuSeparator />
-                    {services.map((service) => (
-                      <DropdownMenuItem key={service.slug} asChild>
-                        <Link href={`/services/${service.slug}`}>{service.title}</Link>
-                      </DropdownMenuItem>
-                    ))}
-                  </DropdownMenuContent>
-                </DropdownMenu>
+                    {label} <ChevronDown className={cn("h-4 w-4 transition-transform", isServicesMenuOpen && "rotate-180")} />
+                  </Link>
+                  {isServicesMenuOpen && (
+                    <div className="absolute left-1/2 -translate-x-1/2 top-full pt-4 w-screen max-w-7xl">
+                      <div className="bg-background shadow-lg rounded-lg border p-8">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10">
+                          {serviceGroups.map((group) => (
+                            <div key={group.slug}>
+                              <h3 className="font-semibold text-base font-headline mb-4 text-primary">
+                                <Link href={`/services#${group.slug}`} onClick={() => setIsServicesMenuOpen(false)} className="hover:underline flex items-center gap-2">
+                                  <group.icon className="h-5 w-5" />
+                                  {group.title}
+                                </Link>
+                              </h3>
+                              <ul className="space-y-3">
+                                {group.services.map((service) => (
+                                  <li key={service.slug}>
+                                    <Link href={`/services/${service.slug}`} onClick={() => setIsServicesMenuOpen(false)} className="text-muted-foreground hover:text-primary text-sm font-medium">
+                                      {service.title}
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
               );
             }
             return (
@@ -128,29 +144,42 @@ export function Header() {
                           {label}
                         </AccordionTrigger>
                         <AccordionContent className="pl-4">
-                          <div className="flex flex-col gap-4 mt-2">
-                            <Link
-                              href="/services"
-                              onClick={() => setIsMobileMenuOpen(false)}
-                              className={cn(
-                                'text-base font-normal transition-colors hover:text-primary',
-                                pathname === '/services' ? 'text-primary' : 'text-muted-foreground'
-                              )}
-                            >
-                              Services Overview
-                            </Link>
-                            {services.map((service) => (
-                              <Link
-                                key={service.slug}
-                                href={`/services/${service.slug}`}
+                           <div className="flex flex-col gap-4 mt-2">
+                             <Link
+                                href="/services"
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className={cn(
                                   'text-base font-normal transition-colors hover:text-primary',
-                                  pathname === `/services/${service.slug}` ? 'text-primary' : 'text-muted-foreground'
+                                  pathname === '/services' ? 'text-primary' : 'text-muted-foreground'
                                 )}
                               >
-                                {service.title}
+                                All Services
                               </Link>
+                            {serviceGroups.map((group) => (
+                              <Accordion type="single" collapsible className="w-full" key={group.slug}>
+                                <AccordionItem value={group.slug} className="border-b-0">
+                                  <AccordionTrigger className="py-2 text-base font-medium hover:no-underline [&[data-state=open]>svg]:text-primary">
+                                    {group.title}
+                                  </AccordionTrigger>
+                                  <AccordionContent className="pl-4">
+                                      <div className="flex flex-col gap-3 mt-2">
+                                        {group.services.map(service => (
+                                          <Link
+                                            key={service.slug}
+                                            href={`/services/${service.slug}`}
+                                            onClick={() => setIsMobileMenuOpen(false)}
+                                            className={cn(
+                                              'text-base font-normal transition-colors hover:text-primary',
+                                              pathname === `/services/${service.slug}` ? 'text-primary' : 'text-muted-foreground'
+                                            )}
+                                          >
+                                            {service.title}
+                                          </Link>
+                                        ))}
+                                      </div>
+                                  </AccordionContent>
+                                </AccordionItem>
+                              </Accordion>
                             ))}
                           </div>
                         </AccordionContent>
