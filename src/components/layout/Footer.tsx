@@ -12,7 +12,7 @@ export function Footer() {
           <div className="space-y-4">
             <Logo />
             <p className="text-sm text-muted-foreground">
-              A 360° creative & marketing agency driving growth through strategy, creativity, and results.
+              Clarity in design. Impact in results.
             </p>
             <div className="flex space-x-4">
               <Link href="#" className="text-muted-foreground hover:text-primary"><Twitter className="h-5 w-5" /></Link>
@@ -22,17 +22,17 @@ export function Footer() {
             </div>
           </div>
           <div>
-            <h4 className="font-semibold font-headline">Quick Links</h4>
+            <h4 className="font-semibold font-headline">Explore</h4>
             <ul className="mt-4 space-y-2 text-sm">
-              <li><Link href="/about" className="text-muted-foreground hover:text-primary">About Us</Link></li>
+              <li><Link href="/about" className="text-muted-foreground hover:text-primary">About</Link></li>
               <li><Link href="/services" className="text-muted-foreground hover:text-primary">Services</Link></li>
-              <li><Link href="/portfolio" className="text-muted-foreground hover:text-primary">Portfolio</Link></li>
+              <li><Link href="/portfolio" className="text-muted-foreground hover:text-primary">Work</Link></li>
               <li><Link href="/blog" className="text-muted-foreground hover:text-primary">Blog</Link></li>
               <li><Link href="/contact" className="text-muted-foreground hover:text-primary">Contact</Link></li>
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold font-headline">Contact Us</h4>
+            <h4 className="font-semibold font-headline">Contact</h4>
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
               <li>123 Creative Lane, Suite 100</li>
               <li>Innovation City, 54321</li>
@@ -41,10 +41,10 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold font-headline">Newsletter</h4>
-            <p className="mt-4 text-sm text-muted-foreground">Get our latest insights and strategies delivered to your inbox.</p>
+            <h4 className="font-semibold font-headline">Updates</h4>
+            <p className="mt-4 text-sm text-muted-foreground">Subscribe for our latest insights.</p>
             <form className="mt-4 flex gap-2">
-              <Input type="email" placeholder="Enter your email" className="flex-1" />
+              <Input type="email" placeholder="Email address" className="flex-1" />
               <Button type="submit">Subscribe</Button>
             </form>
           </div>

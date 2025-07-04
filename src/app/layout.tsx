@@ -18,9 +18,9 @@ const ptSans = PT_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Grownex - 360° Creative & Marketing',
+  title: 'Grownex - Focused Design & Marketing',
   description:
-    'A premium, full-service agency offering high-end branding, marketing, consulting, advertising, and production services.',
+    'A design and marketing agency building brands with clarity and impact.',
 };
 
 export default function RootLayout({
@@ -36,7 +36,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
       </head>
       <body
-        className={`${poppins.variable} ${ptSans.variable} font-body antialiased`}
+        className={`${poppins.variable} ${ptSans.variable} font-body antialiased bg-background text-foreground`}
       >
         <Header />
         <main>{children}</main>

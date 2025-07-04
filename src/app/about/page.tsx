@@ -12,12 +12,12 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="bg-secondary py-20 md:py-32">
         <div className="container mx-auto px-4 text-center">
-          <Badge>About Grownex</Badge>
+          <Badge>About Us</Badge>
           <h1 className="text-4xl md:text-5xl font-bold mt-4 font-headline">
-            The Architects of Brand Growth
+            Designing with Purpose
           </h1>
           <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
-            We are a collective of strategists, creatives, and innovators dedicated to building brands that not only succeed but also inspire.
+            We are a team dedicated to building brands with clarity and impact.
           </p>
         </div>
       </section>
@@ -28,21 +28,21 @@ export default function AboutPage() {
           <div>
             <Image
               src="https://placehold.co/600x400.png"
-              alt="Grownex team collaborating"
+              alt="Grownex team collaborating in a minimal environment"
               width={600}
               height={400}
-              className="rounded-lg shadow-lg"
-              data-ai-hint="team collaboration"
+              className="rounded-lg"
+              data-ai-hint="team minimalist"
             />
           </div>
           <div>
             <h2 className="text-3xl font-bold font-headline">Our Story</h2>
             <p className="mt-4 text-muted-foreground">
-              Founded on the principle that great marketing is a blend of art and science, Grownex was born from a desire to do things differently. We saw a gap between cookie-cutter solutions and what businesses truly needed: a strategic partner invested in their long-term success.
+              Grownex was founded on a simple principle: that great marketing is a blend of art and science. We saw a need for a partner invested in long-term success, not just cookie-cutter solutions.
             </p>
             <h3 className="text-2xl font-bold font-headline mt-8">Our Mission</h3>
             <p className="mt-4 text-muted-foreground">
-              Our mission is to empower ambitious brands to achieve their full potential. We do this by crafting bespoke strategies, executing with creative excellence, and relentlessly pursuing results that matter. We believe in building partnerships, not just client lists.
+              To empower ambitious brands through focused strategy and creative excellence. We build partnerships, not just client lists.
             </p>
           </div>
         </div>
@@ -54,44 +54,44 @@ export default function AboutPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold font-headline">Our Approach</h2>
             <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
-              Our methodology is strategic, creative, and always ROI-driven.
+              Our methodology is strategic, creative, and always results-driven.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card>
+            <Card className="bg-background">
               <CardHeader>
                 <Eye className="h-8 w-8 text-primary mb-2" />
-                <CardTitle>1. Discover</CardTitle>
+                <CardTitle>1. Understand</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">We dive deep into your brand, market, and audience to uncover key insights and opportunities.</p>
+                <p className="text-muted-foreground">We dive deep to uncover key insights for your brand and market.</p>
               </CardContent>
             </Card>
-            <Card>
+            <Card className="bg-background">
               <CardHeader>
                 <Check className="h-8 w-8 text-primary mb-2" />
-                <CardTitle>2. Strategize</CardTitle>
+                <CardTitle>2. Define</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">We build a data-backed roadmap tailored to your goals, ensuring every action has a purpose.</p>
+                <p className="text-muted-foreground">We build a data-backed roadmap tailored to your specific goals.</p>
               </CardContent>
             </Card>
-            <Card>
+            <Card className="bg-background">
               <CardHeader>
                 <Heart className="h-8 w-8 text-primary mb-2" />
-                <CardTitle>3. Create</CardTitle>
+                <CardTitle>3. Execute</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">Our creative team brings the strategy to life with compelling designs and narratives.</p>
+                <p className="text-muted-foreground">Our team brings the strategy to life with compelling designs and narratives.</p>
               </CardContent>
             </Card>
-            <Card>
+            <Card className="bg-background">
               <CardHeader>
                 <Rocket className="h-8 w-8 text-primary mb-2" />
-                <CardTitle>4. Amplify</CardTitle>
+                <CardTitle>4. Measure</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">We launch, manage, and optimize campaigns to deliver measurable results and drive growth.</p>
+                <p className="text-muted-foreground">We launch, manage, and optimize to deliver measurable results.</p>
               </CardContent>
             </Card>
           </div>
@@ -102,14 +102,14 @@ export default function AboutPage() {
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold font-headline">Meet Our Leadership</h2>
+            <h2 className="text-3xl font-bold font-headline">Our Team</h2>
             <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
-              The masterminds behind our success and yours.
+              The minds behind our success, and yours.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {team.map((member) => (
-              <Card key={member.name} className="text-center">
+              <Card key={member.name} className="text-center border-none shadow-none bg-transparent">
                 <CardContent className="p-6">
                   <Image
                     src={member.imageUrl}
@@ -117,7 +117,7 @@ export default function AboutPage() {
                     width={150}
                     height={150}
                     className="rounded-full mx-auto mb-4"
-                    data-ai-hint="person"
+                    data-ai-hint="person portrait"
                   />
                   <h3 className="text-xl font-bold font-headline">{member.name}</h3>
                   <p className="text-primary font-semibold">{member.role}</p>
@@ -130,11 +130,11 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-primary text-white">
+      <section className="py-16 md:py-24 bg-primary text-primary-foreground">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold font-headline">Join Forces With Us</h2>
+            <h2 className="text-3xl md:text-4xl font-bold font-headline">Work With Us</h2>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-primary-foreground/90">
-              Ready to see what a dedicated, strategic partner can do for your brand? Let's create something exceptional together.
+              Ready to see what a focused, strategic partner can do for your brand?
             </p>
             <div className="mt-8">
               <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">

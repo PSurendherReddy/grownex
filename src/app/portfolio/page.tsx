@@ -23,10 +23,10 @@ export default function PortfolioPage() {
                 <div className="container mx-auto px-4 text-center">
                     <Badge>Our Work</Badge>
                     <h1 className="text-4xl md:text-5xl font-bold mt-4 font-headline">
-                        Crafting Success Stories
+                        Selected Work
                     </h1>
                     <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
-                        We don't just complete projects; we build partnerships that lead to tangible results. Explore our case studies to see the impact we've made.
+                        Explore our case studies to see the impact of focused design and clear strategy.
                     </p>
                 </div>
             </section>
@@ -34,12 +34,13 @@ export default function PortfolioPage() {
             {/* Portfolio Grid with Filters */}
             <section className="py-16 md:py-24">
                 <div className="container mx-auto px-4">
-                    <div className="flex justify-center mb-8 flex-wrap gap-2">
+                    <div className="flex justify-center mb-12 flex-wrap gap-2">
                         {categories.map(category => (
                             <Button
                                 key={category}
                                 variant={filter === category ? 'default' : 'outline'}
                                 onClick={() => setFilter(category)}
+                                className="rounded-full px-6"
                             >
                                 {category}
                             </Button>
@@ -48,24 +49,27 @@ export default function PortfolioPage() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {filteredPortfolio.map(project => (
-                             <Card key={project.slug} className="overflow-hidden group">
+                             <Card key={project.slug} className="overflow-hidden group bg-transparent border-none shadow-none">
                                 <CardHeader className="p-0">
+                                <Link href={`/portfolio/${project.slug}`}>
                                 <Image
                                     src={project.imageUrl}
                                     alt={project.title}
                                     width={600}
                                     height={400}
-                                    className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                                    className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105 rounded-lg"
                                     data-ai-hint={project.category}
                                 />
+                                </Link>
                                 </CardHeader>
-                                <CardContent className="p-6">
+                                <CardContent className="p-4 pl-0">
                                 <Badge variant="outline">{project.category}</Badge>
-                                <CardTitle className="mt-2 text-xl font-bold">{project.title}</CardTitle>
-                                <CardDescription className="mt-2">{project.description}</CardDescription>
-                                <Button asChild variant="link" className="p-0 h-auto mt-4">
-                                    <Link href={`/portfolio/${project.slug}`}>View Case Study <ArrowRight className="ml-2 h-4 w-4" /></Link>
-                                </Button>
+                                <CardTitle className="mt-2 text-xl font-bold">
+                                    <Link href={`/portfolio/${project.slug}`} className="hover:text-primary transition-colors">
+                                        {project.title}
+                                    </Link>
+                                </CardTitle>
+                                <CardDescription className="mt-1">{project.description}</CardDescription>
                                 </CardContent>
                             </Card>
                         ))}

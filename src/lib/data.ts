@@ -5,49 +5,49 @@ export const serviceGroups: ServiceGroup[] = [
   {
     title: 'Graphic Design & Branding',
     slug: 'graphic-design-branding',
-    description: 'Crafting powerful brand identities that connect and convert.',
+    description: 'Creating clear, impactful brand identities.',
     icon: Paintbrush,
     services: [
-        { title: 'Logo Design', slug: 'logo-design', description: 'Unique and memorable logo creation reflecting your brand’s essence.' },
-        { title: 'Brand Identity & Strategy', slug: 'brand-identity-strategy', description: 'Developing a complete brand identity and a roadmap for its growth.' },
-        { title: 'Brand Guidelines', slug: 'brand-guidelines', description: 'Comprehensive guidelines to ensure brand consistency across all channels.' },
+        { title: 'Logo Design', slug: 'logo-design', description: 'Simple, memorable logo design.' },
+        { title: 'Brand Identity & Strategy', slug: 'brand-identity-strategy', description: 'A complete visual system and growth roadmap.' },
+        { title: 'Brand Guidelines', slug: 'brand-guidelines', description: 'Ensuring brand consistency across all touchpoints.' },
     ],
   },
   {
     title: 'Digital Marketing',
     slug: 'digital-marketing',
-    description: 'Driving targeted traffic and generating qualified leads online.',
+    description: 'Driving targeted traffic and generating qualified leads.',
     icon: LineChart,
     services: [
-        { title: 'SEO & AEO', slug: 'seo-aeo', description: 'Improving organic visibility on search and answer engines.' },
-        { title: 'Lead Generation', slug: 'lead-generation', description: 'Building strategies to fill your sales pipeline with qualified leads.' },
-        { title: 'PPC Advertising', slug: 'ppc-advertising', description: 'Paid campaigns on Google, Meta, & LinkedIn for immediate impact.' },
-        { title: 'Email Marketing', slug: 'email-marketing', description: 'Nurturing leads and customers with targeted email campaigns.' },
-        { title: 'Social Media Management', slug: 'social-media-management', description: 'Building and engaging your community across social platforms.' },
+        { title: 'SEO & AEO', slug: 'seo-aeo', description: 'Improving visibility on search and answer engines.' },
+        { title: 'Lead Generation', slug: 'lead-generation', description: 'Filling your sales pipeline with qualified leads.' },
+        { title: 'PPC Advertising', slug: 'ppc-advertising', description: 'Paid campaigns for immediate impact.' },
+        { title: 'Email Marketing', slug: 'email-marketing', description: 'Nurturing leads with targeted campaigns.' },
+        { title: 'Social Media Management', slug: 'social-media-management', description: 'Building and engaging your community.' },
     ],
   },
   {
     title: 'Offline Advertising',
     slug: 'offline-advertising',
-    description: 'Making a real-world impact with tangible advertising solutions.',
+    description: 'Making a real-world impact with tangible solutions.',
     icon: Megaphone,
     services: [
-        { title: 'Hoarding Advertising', slug: 'hoarding-advertising', description: 'Large-format ads in high-traffic areas for maximum visibility.' },
-        { title: 'Mall Advertising', slug: 'mall-advertising', description: 'Engaging a captive audience in popular shopping destinations.' },
-        { title: 'College & Campus Ads', slug: 'college-campus-ads', description: 'Targeting students and faculty in their learning environments.' },
-        { title: 'Apartment Complex Ads', slug: 'apartment-complex-ads', description: 'Reaching residents directly within their community spaces.' },
-        { title: 'Petrol Pump Advertising', slug: 'petrol-pump-advertising', description: 'Capturing attention during refueling stops.' },
-        { title: 'Pamphlet Distribution', slug: 'pamphlet-distribution', description: 'Direct, localized marketing for events, offers, and announcements.' },
+        { title: 'Hoarding Advertising', slug: 'hoarding-advertising', description: 'Large-format ads for maximum visibility.' },
+        { title: 'Mall Advertising', slug: 'mall-advertising', description: 'Engaging captive audiences in shopping destinations.' },
+        { title: 'Campus Ads', slug: 'college-campus-ads', description: 'Targeting students and faculty on campus.' },
+        { title: 'Apartment Ads', slug: 'apartment-complex-ads', description: 'Reaching residents within their communities.' },
+        { title: 'Petrol Pump Ads', slug: 'petrol-pump-advertising', description: 'Capturing attention during refueling stops.' },
+        { title: 'Pamphlet Distribution', slug: 'pamphlet-distribution', description: 'Direct, localized marketing.' },
     ],
   },
     {
-    title: 'Photography & Video Production',
+    title: 'Photo & Video',
     slug: 'photo-video-production',
-    description: 'Creating stunning visual content that tells your brand’s story.',
+    description: 'Creating stunning visual content that tells your story.',
     icon: Camera,
     services: [
-        { title: 'Product Shoots', slug: 'product-shoots', description: 'Crisp, professional photos for e-commerce, catalogs, and marketing.' },
-        { title: 'Event Photography & Video', slug: 'event-photo-video', description: 'Capturing sports, corporate events, and grand openings.' },
+        { title: 'Product Shoots', slug: 'product-shoots', description: 'Professional photos for e-commerce and marketing.' },
+        { title: 'Event Shoots', slug: 'event-photo-video', description: 'Capturing corporate events, sports, and openings.' },
     ],
   },
   {
@@ -56,10 +56,10 @@ export const serviceGroups: ServiceGroup[] = [
     description: 'Building credibility and shaping public perception.',
     icon: Users,
     services: [
-        { title: 'Political PR', slug: 'political-pr', description: 'Strategic communications for political campaigns and figures.' },
-        { title: 'Business PR', slug: 'business-pr', description: 'Enhancing corporate reputation and managing communications.' },
-        { title: 'Entrepreneur Features', slug: 'entrepreneur-features', description: 'Securing media features for entrepreneurs and thought leaders.' },
-        { title: 'Press Release Handling', slug: 'press-release-handling', description: 'Crafting and distributing effective press releases.' },
+        { title: 'Political PR', slug: 'political-pr', description: 'Strategic communications for political figures.' },
+        { title: 'Business PR', slug: 'business-pr', description: 'Enhancing corporate reputation and managing media.' },
+        { title: 'Entrepreneur Features', slug: 'entrepreneur-features', description: 'Securing media features for thought leaders.' },
+        { title: 'Press Releases', slug: 'press-release-handling', description: 'Crafting and distributing effective press releases.' },
     ],
   },
   {
@@ -68,11 +68,11 @@ export const serviceGroups: ServiceGroup[] = [
     description: 'Providing strategic insights for sustainable growth.',
     icon: BrainCircuit,
     services: [
-        { title: 'SOP Creation', slug: 'sop-creation', description: 'Developing Standard Operating Procedures to streamline processes.' },
-        { title: 'Market & Competitor Research', slug: 'market-competitor-research', description: 'In-depth analysis of the market landscape and competition.' },
-        { title: 'Architecture Analysis', slug: 'architecture-analysis', description: 'Evaluating and optimizing your business or technical architecture.' },
-        { title: 'Data Collection & Surveys', slug: 'data-collection-surveys', description: 'Gathering crucial data through targeted surveys and research.' },
-        { title: 'Grant Research', slug: 'grant-research', description: 'Identifying and assisting with applications for government/private grants.' },
+        { title: 'SOP Creation', slug: 'sop-creation', description: 'Developing procedures to streamline processes.' },
+        { title: 'Market Research', slug: 'market-competitor-research', description: 'In-depth analysis of the market and competition.' },
+        { title: 'Architecture Analysis', slug: 'architecture-analysis', description: 'Evaluating your business or technical architecture.' },
+        { title: 'Data & Surveys', slug: 'data-collection-surveys', description: 'Gathering crucial data through targeted research.' },
+        { title: 'Grant Research', slug: 'grant-research', description: 'Identifying and assisting with grant applications.' },
     ],
   },
   {
@@ -81,40 +81,37 @@ export const serviceGroups: ServiceGroup[] = [
     description: 'Amplifying your message through trusted voices.',
     icon: Share2,
     services: [
-        { title: 'Influencer Sourcing & Management', slug: 'influencer-sourcing-management', description: 'Connecting you with influencers, memers, & celebrities.' },
-        { title: 'Campaign Execution & Reporting', slug: 'influencer-campaign-management', description: 'Managing campaigns with detailed performance reporting.' },
+        { title: 'Influencer Sourcing', slug: 'influencer-sourcing-management', description: 'Connecting with influencers, memers, & celebrities.' },
+        { title: 'Campaign Management', slug: 'influencer-campaign-management', description: 'Managing campaigns with performance reporting.' },
     ],
   },
   {
     title: 'Website Development',
     slug: 'website-development',
-    description: 'Building high-performance websites that convert visitors.',
+    description: 'Building high-performance websites that convert.',
     icon: Code,
     services: [
-        { title: 'WordPress Websites', slug: 'wordpress-websites', description: 'Flexible and scalable websites built on the world’s most popular CMS.' },
+        { title: 'WordPress Websites', slug: 'wordpress-websites', description: 'Flexible and scalable sites on the world’s most popular CMS.' },
         { title: 'Shopify Stores', slug: 'shopify-stores', description: 'Powerful e-commerce solutions for businesses of all sizes.' },
-        { title: 'Webflow Designs', slug: 'webflow-designs', description: 'Visually stunning and highly interactive websites with no-code flexibility.' },
-        { title: 'Custom-Coded Websites', slug: 'custom-coded-websites', description: 'Bespoke web solutions for unique requirements and performance.' },
+        { title: 'Webflow Designs', slug: 'webflow-designs', description: 'Visually stunning, highly interactive websites.' },
+        { title: 'Custom-Coded Sites', slug: 'custom-coded-websites', description: 'Bespoke web solutions for unique requirements.' },
     ],
   },
 ];
 
 
 const createServicePageContent = (group: ServiceGroup, service: { title: string; slug: string; description: string; caseStudySlug?: string }) => {
-    let longDescription = `At Grownex, our ${service.title} service is a cornerstone of our ${group.title} offerings. We believe in a bespoke approach, tailoring every aspect of our work to fit your unique business needs and goals. Our team of experts collaborates closely with you to understand your vision and challenges, ensuring that the solutions we provide are not just effective but also innovative and future-proof. 
+    let longDescription = `Our ${service.title} service is a core part of our ${group.title} offerings. We believe in a focused approach, tailoring every aspect of our work to fit your unique business needs. Our team collaborates closely with you to understand your vision, ensuring the solutions we provide are effective, innovative, and clear. We leverage data-driven insights to inform our strategies, focusing on delivering measurable outcomes that contribute to your long-term success.`;
 
-We leverage the latest industry trends and data-driven insights to inform our strategies, whether it's crafting a compelling brand narrative, optimizing your digital footprint, or creating high-impact visual content. Our process is transparent and results-oriented, focusing on delivering measurable outcomes that contribute to your long-term success. From initial concept to final execution, we are your dedicated partners in growth, committed to excellence in every detail.`;
-
-    // Custom descriptions for a few key services to make it more specific
     switch (service.slug) {
         case 'logo-design':
-            longDescription = `A logo is the face of your brand. Our approach to ${service.title} goes beyond just creating a pretty picture; we delve deep into your brand's core values, target audience, and market position to design a logo that is both timeless and impactful. We explore multiple concepts, from minimalist and modern to classic and intricate, ensuring the final design is a true reflection of your brand's identity and resonates powerfully with your customers.`;
+            longDescription = `A logo is the face of your brand. Our approach to ${service.title} goes beyond aesthetics; we explore your brand's core values to design a logo that is both timeless and impactful. The result is a simple, memorable mark that reflects your brand's identity.`;
             break;
         case 'seo-aeo':
-            longDescription = `Visibility is currency in the digital world. Our ${service.title} (Search & Answer Engine Optimization) services are designed to put your brand at the forefront of search engine results. We go beyond traditional keyword stuffing, focusing on a holistic strategy that includes technical SEO, high-quality content creation, authoritative backlink building, and optimizing for voice search and AI-driven answer engines. Our goal is to drive sustainable, high-intent organic traffic that converts.`;
+            longDescription = `Visibility is key. Our ${service.title} (Search & Answer Engine Optimization) services are designed to place your brand at the forefront of search results. We focus on a holistic strategy of technical SEO, quality content, and authority building to drive sustainable, high-intent organic traffic.`;
             break;
         case 'shopify-stores':
-            longDescription = `In the competitive world of e-commerce, a powerful online store is non-negotiable. We specialize in building ${service.title} that are not only visually stunning but also engineered for conversion. From custom theme development to app integration and performance optimization, we create seamless shopping experiences that delight customers and drive sales. We'll help you set up, manage, and scale your e-commerce business effectively on the Shopify platform.`;
+            longDescription = `In e-commerce, a functional online store is non-negotiable. We build ${service.title} that are visually clean and engineered for conversion. From custom theme development to performance optimization, we create seamless shopping experiences that drive sales.`;
             break;
     }
 
@@ -131,9 +128,7 @@ We leverage the latest industry trends and data-driven insights to inform our st
     }
 }
 
-// A flattened array of all individual services for generating static pages
 export const services: Service[] = serviceGroups.flatMap(group => {
-    // Add case study slugs here
     const servicesWithCaseStudies = group.services.map(s => {
         if (s.slug === 'brand-identity-strategy') return { ...s, caseStudySlug: 'brand-refresh-innovatech' };
         if (s.slug === 'lead-generation') return { ...s, caseStudySlug: 'lead-gen-for-saas' };
@@ -150,46 +145,46 @@ export const portfolio: PortfolioItem[] = [
     title: 'InnovaTech Brand Refresh',
     slug: 'brand-refresh-innovatech',
     category: 'Branding',
-    description: 'A complete overhaul of a legacy tech brand for the modern era.',
+    description: 'Modernizing a legacy tech brand to reflect its innovative services.',
     imageUrl: 'https://placehold.co/600x400.png',
     client: 'InnovaTech Solutions',
-    challenge: 'InnovaTech, a 20-year-old IT company, had a dated brand identity that failed to communicate its cutting-edge services. They were losing bids to younger, more modern-looking competitors.',
-    solution: "We conducted a full brand audit and developed a new strategy focused on 'Human-centered Innovation.' This led to a new logo, visual identity, and messaging that was clean, bold, and forward-thinking. We rolled this out across a new website, corporate deck, and all marketing collaterals.",
+    challenge: "InnovaTech's dated brand identity failed to communicate its cutting-edge services, losing them business to modern competitors.",
+    solution: "We developed a new strategy focused on 'Human-centered Innovation,' creating a clean, bold identity. This was applied to a new website and all marketing materials.",
     results: [
-        { metric: '+45%', value: 'Increase in inbound leads', description: 'within the first quarter post-launch.' },
-        { metric: '+20%', value: 'Higher contract value', description: 'attributed to improved brand perception.' },
-        { metric: '95%', value: 'Positive employee feedback', description: 'on the new brand identity.' },
+        { metric: '+45%', value: 'Increase in leads', description: 'post-launch.' },
+        { metric: '+20%', value: 'Higher contract value', description: 'from improved brand perception.' },
+        { metric: '95%', value: 'Positive employee feedback', description: 'on the new identity.' },
     ],
     images: ['https://placehold.co/800x600.png', 'https://placehold.co/800x600.png', 'https://placehold.co/800x600.png'],
   },
   {
-    title: 'SaaS Startup Lead Generation',
+    title: 'SaaS Lead Generation',
     slug: 'lead-gen-for-saas',
     category: 'Digital Marketing',
-    description: 'Scaling a B2B SaaS platform from 10 to 1000 demo requests per month.',
+    description: 'Scaling a B2B SaaS platform from 100 to 1,000 demo requests per month.',
     imageUrl: 'https://placehold.co/600x400.png',
     client: 'ConnectFlow',
-    challenge: 'ConnectFlow had a great product but struggled to generate consistent, high-quality leads. Their existing marketing efforts were sporadic and untargeted.',
-    solution: "We implemented a multi-channel digital marketing strategy. This included targeted LinkedIn Ads campaigns, a comprehensive SEO strategy to capture high-intent keywords, and an automated email nurturing sequence to convert website visitors into demo requests.",
+    challenge: 'ConnectFlow had a great product but struggled to generate consistent, high-quality leads. Their marketing efforts were untargeted.',
+    solution: "We implemented a multi-channel strategy including targeted LinkedIn Ads, a comprehensive SEO plan, and an automated email nurturing sequence to convert visitors into demo requests.",
     results: [
-        { metric: '10x', value: 'Increase in MQLs', description: 'from 100 to 1,000 per month in 6 months.' },
-        { metric: '-30%', value: 'Cost Per Acquisition', description: 'due to campaign optimization and improved targeting.' },
-        { metric: '#1', value: 'Google Ranking', description: 'for 5 high-value commercial keywords.' },
+        { metric: '10x', value: 'Increase in MQLs', description: 'in 6 months.' },
+        { metric: '-30%', value: 'Cost Per Acquisition', description: 'due to optimization.' },
+        { metric: '#1', value: 'Google Ranking', description: 'for 5 high-value keywords.' },
     ],
     images: ['https://placehold.co/800x600.png', 'https://placehold.co/800x600.png', 'https://placehold.co/800x600.png'],
   },
   {
-    title: 'Artisan E-commerce Platform',
+    title: 'Artisan E-commerce Store',
     slug: 'ecommerce-platform-for-artisan',
     category: 'Web Development',
     description: 'Building a beautiful and functional Shopify store for a luxury goods brand.',
     imageUrl: 'https://placehold.co/600x400.png',
     client: 'The Artisan Collection',
-    challenge: "The brand's existing website was clunky, difficult to navigate, and not mobile-friendly, leading to a high cart abandonment rate.",
-    solution: "We designed and developed a custom Shopify theme that reflected the brand's luxury aesthetic. The new site featured high-quality product photography, a streamlined checkout process, and was fully optimized for mobile performance.",
+    challenge: "The brand's existing website was clunky, difficult to navigate, and not mobile-friendly, causing a high cart abandonment rate.",
+    solution: "We designed and developed a custom Shopify theme reflecting the brand's luxury aesthetic. The new site features a streamlined checkout and is fully optimized for mobile.",
     results: [
-        { metric: '+150%', value: 'Increase in online sales', description: 'in the first 3 months.' },
-        { metric: '-50%', value: 'Reduction in cart abandonment', description: 'thanks to the new checkout flow.' },
+        { metric: '+150%', value: 'Increase in sales', description: 'in the first 3 months.' },
+        { metric: '-50%', value: 'Cart abandonment rate', description: 'thanks to the new checkout.' },
         { metric: '+80%', value: 'Increase in mobile traffic', description: 'due to responsive design.' },
     ],
     images: ['https://placehold.co/800x600.png', 'https://placehold.co/800x600.png', 'https://placehold.co/800x600.png'],
@@ -197,11 +192,11 @@ export const portfolio: PortfolioItem[] = [
 ];
 
 export const testimonials: Testimonial[] = [
-    { name: 'Sarah Johnson', title: 'CEO, InnovaTech', quote: "Grownex completely transformed our brand. Their strategic approach and creative execution were second to none. We've seen a significant impact on our business.", avatar: 'https://placehold.co/100x100.png' },
-    { name: 'David Chen', title: 'Founder, ConnectFlow', quote: 'The digital marketing campaign they ran for us was a game-changer. Our lead flow has never been stronger, and our cost per acquisition dropped significantly.', avatar: 'https://placehold.co/100x100.png' },
-    { name: 'Maria Rodriguez', title: 'Owner, The Artisan Collection', quote: 'I am absolutely in love with my new website. It perfectly captures the essence of my brand and has made a huge difference in my online sales. The team was a pleasure to work with.', avatar: 'https://placehold.co/100x100.png' },
-    { name: 'James Williams', title: 'Marketing Director, FutureCorp', quote: "Their team is incredibly knowledgeable and proactive. They feel like an extension of our own marketing department. Highly recommended for any business looking to grow.", avatar: 'https://placehold.co/100x100.png' },
-    { name: 'Li Wei', title: 'Political Candidate', quote: "The PR campaign managed by Grownex was instrumental in my election success. They secured key media placements and managed my public image with professionalism and skill.", avatar: 'https://placehold.co/100x100.png' },
+    { name: 'Sarah Johnson', title: 'CEO, InnovaTech', quote: "Grownex transformed our brand with a clear strategy and creative execution. The impact on our business was significant.", avatar: 'https://placehold.co/100x100.png' },
+    { name: 'David Chen', title: 'Founder, ConnectFlow', quote: 'The digital marketing campaign was a game-changer. Our lead flow has never been stronger, and our CPA dropped significantly.', avatar: 'https://placehold.co/100x100.png' },
+    { name: 'Maria Rodriguez', title: 'Owner, The Artisan Collection', quote: "I'm in love with my new website. It perfectly captures my brand's essence and has made a huge difference in online sales.", avatar: 'https://placehold.co/100x100.png' },
+    { name: 'James Williams', title: 'Marketing Director, FutureCorp', quote: "Their team is incredibly knowledgeable and proactive. They feel like an extension of our own department. Highly recommended.", avatar: 'https://placehold.co/100x100.png' },
+    { name: 'Li Wei', title: 'Political Candidate', quote: "The PR campaign was instrumental in my election success. They managed my public image with professionalism and skill.", avatar: 'https://placehold.co/100x100.png' },
 ];
 
 export const partners: Partner[] = [
@@ -216,11 +211,11 @@ export const partners: Partner[] = [
 export const blogPosts: BlogPost[] = [
     {
         slug: 'the-ultimate-guide-to-seo-in-2024',
-        title: 'The Ultimate Guide to SEO in 2024',
+        title: 'A Guide to SEO in 2024',
         author: 'Jane Doe',
         date: '2024-07-15',
         category: 'Digital Marketing',
-        excerpt: 'Search Engine Optimization is constantly evolving. In this guide, we break down the most important ranking factors and strategies you need to know this year.',
+        excerpt: 'SEO is always evolving. Here are the most important ranking factors and strategies you need to know this year.',
         imageUrl: 'https://placehold.co/800x400.png',
         content: `
 ## Introduction
@@ -252,8 +247,8 @@ Staying ahead in SEO requires a holistic approach that blends technical excellen
         title: 'Beyond the Logo: Building a Brand That Lasts',
         author: 'John Smith',
         date: '2024-07-10',
-        category: 'Branding & Design',
-        excerpt: 'A great brand is more than a logo. It\'s a promise, a story, and a relationship. Learn the key components of building a resilient and beloved brand.',
+        category: 'Branding',
+        excerpt: 'A great brand is a promise, a story, and a relationship. Learn the key components of building a resilient and beloved brand.',
         imageUrl: 'https://placehold.co/800x400.png',
         content: `
 ## The Essence of a Brand
@@ -280,11 +275,11 @@ Building a strong brand is an ongoing process of aligning your strategy, identit
     },
     {
         slug: 'the-power-of-offline-marketing',
-        title: 'Why Offline Marketing Still Matters in a Digital World',
+        title: 'Offline Marketing in a Digital World',
         author: 'Emily White',
         date: '2024-07-05',
-        category: 'Offline Advertising',
-        excerpt: 'In an age of digital saturation, offline marketing offers a unique opportunity to cut through the noise and create memorable, tangible experiences.',
+        category: 'Advertising',
+        excerpt: 'In an age of digital saturation, offline marketing offers a unique opportunity to cut through the noise and create memorable experiences.',
         imageUrl: 'https://placehold.co/800x400.png',
         content: `
 ## Cutting Through the Clutter
@@ -314,24 +309,24 @@ export const team: TeamMember[] = [
   {
     name: "Alex Thompson",
     role: "Founder & CEO",
-    bio: "With over 15 years in the industry, Alex is a visionary leader passionate about building brands that make a difference. His strategic mindset and creative drive are the heart of Grownex.",
+    bio: "With over 15 years in the industry, Alex is a visionary leader passionate about building brands that make a difference. His strategic mindset is the heart of Grownex.",
     imageUrl: "https://placehold.co/400x400.png"
   },
   {
     name: "Brenda Chen",
     role: "Creative Director",
-    bio: "Brenda is the artistic force behind our most iconic campaigns. She translates brand strategies into stunning visual identities and compelling narratives that captivate audiences.",
+    bio: "Brenda is the artistic force behind our most iconic campaigns. She translates brand strategies into stunning visual identities and compelling narratives.",
     imageUrl: "https://placehold.co/400x400.png"
   },
   {
     name: "Carlos Rodriguez",
-    role: "Head of Digital Marketing",
-    bio: "A data-driven strategist, Carlos excels at navigating the complexities of the digital landscape. He leads our team of SEO, PPC, and social media experts to deliver measurable results.",
+    role: "Head of Digital",
+    bio: "A data-driven strategist, Carlos excels at navigating the digital landscape. He leads our team of SEO, PPC, and social media experts to deliver measurable results.",
     imageUrl: "https://placehold.co/400x400.png"
   },
   {
     name: "Diana Miller",
-    role: "Lead Web Developer",
+    role: "Lead Developer",
     bio: "Diana combines technical prowess with a keen eye for design. She leads the development of high-performance, user-friendly websites that are both beautiful and functional.",
     imageUrl: "https://placehold.co/400x400.png"
   }
