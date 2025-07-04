@@ -4,6 +4,7 @@ import './globals.css';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Toaster } from "@/components/ui/toaster"
+import { FloatingActionButtons } from '@/components/FloatingActionButtons';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -41,6 +42,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <FloatingActionButtons />
         <Toaster />
       </body>
     </html>
