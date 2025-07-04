@@ -62,8 +62,8 @@ export function Header() {
                   <Link
                     href="/services"
                     className={cn(
-                      'flex items-center gap-1 text-sm font-medium transition-colors hover:text-primary focus:outline-none nav-link-underline',
-                      pathname.startsWith('/services') ? 'text-primary font-semibold active' : 'text-foreground'
+                      'flex items-center gap-1 text-sm transition-colors hover:text-primary focus:outline-none nav-link-underline',
+                      pathname.startsWith('/services') ? 'text-primary active' : 'text-foreground'
                     )}
                   >
                     {label}
@@ -83,7 +83,7 @@ export function Header() {
                                 <ul className="space-y-3">
                                   {group.services.map((service) => (
                                     <li key={service.slug}>
-                                      <Link href={`/services/${service.slug}`} onClick={() => setIsServicesMenuOpen(false)} className="text-foreground hover:text-accent text-sm font-medium">
+                                      <Link href={`/services/${service.slug}`} onClick={() => setIsServicesMenuOpen(false)} className="text-foreground hover:text-accent text-sm">
                                         {service.title}
                                       </Link>
                                     </li>
@@ -105,8 +105,8 @@ export function Header() {
                 key={href}
                 href={href}
                 className={cn(
-                  'text-sm font-medium transition-colors hover:text-primary nav-link-underline',
-                  pathname === href ? 'text-primary font-semibold active' : 'text-foreground'
+                  'text-sm transition-colors hover:text-primary nav-link-underline',
+                  pathname === href ? 'text-primary active' : 'text-foreground'
                 )}
               >
                 {label}
@@ -127,7 +127,7 @@ export function Header() {
             </Button>
           </SheetTrigger>
           <SheetContent side="left">
-            <nav className="grid gap-6 p-6 text-lg font-medium">
+            <nav className="grid gap-6 p-6 text-lg">
               <Link href="/" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
                 <Logo />
               </Link>
@@ -138,7 +138,7 @@ export function Header() {
                       <AccordionItem value="services" className="border-b-0">
                         <AccordionTrigger
                           className={cn(
-                            'py-2 text-lg font-medium hover:no-underline transition-colors hover:text-primary',
+                            'py-2 text-lg hover:no-underline transition-colors hover:text-primary',
                             pathname.startsWith('/services') ? 'text-primary' : 'text-foreground'
                           )}
                         >
@@ -159,7 +159,7 @@ export function Header() {
                             {serviceGroups.map((group) => (
                               <Accordion type="single" collapsible className="w-full" key={group.slug}>
                                 <AccordionItem value={group.slug} className="border-b-0">
-                                  <AccordionTrigger className="py-2 text-base font-medium hover:no-underline">
+                                  <AccordionTrigger className="py-2 text-base hover:no-underline">
                                     {group.title}
                                   </AccordionTrigger>
                                   <AccordionContent className="pl-4">
