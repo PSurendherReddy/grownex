@@ -39,7 +39,7 @@ export function FloatingActionButtons() {
         <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
           <Tooltip>
             <TooltipTrigger asChild>
-              <Button asChild size="icon" className="rounded-full w-14 h-14 bg-[#25D366] hover:bg-[#128C7E] text-white">
+              <Button asChild size="icon" className="rounded-full w-14 h-14">
                 <Link href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
                   <WhatsAppIcon className="h-7 w-7" />
                 </Link>
@@ -53,7 +53,7 @@ export function FloatingActionButtons() {
           <Tooltip>
             <TooltipTrigger asChild>
                <SheetTrigger asChild>
-                <Button size="icon" className="rounded-full w-14 h-14 bg-accent hover:bg-accent/90 text-accent-foreground" aria-label="Open Chatbot">
+                <Button size="icon" className="rounded-full w-14 h-14" aria-label="Open Chatbot">
                     <Sparkles className="h-7 w-7" />
                 </Button>
                </SheetTrigger>
