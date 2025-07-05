@@ -3,11 +3,11 @@
 const BannerContent = () => (
     <div className="flex items-center justify-around w-full px-4">
         <span className="text-xl md:text-2xl font-bold uppercase tracking-wider">WE ARE CREATIVE</span>
-        <div className="h-6 w-px bg-primary-foreground/50 flex-shrink-0" />
+        <div className="h-6 w-px bg-primary-foreground flex-shrink-0" />
         <span className="text-xl md:text-2xl font-bold uppercase tracking-wider">WE ARE FAST</span>
-        <div className="h-6 w-px bg-primary-foreground/50 flex-shrink-0" />
-        <span className="text-xl md:text-2xl font-bold uppercase tracking-wider">WE GO WITH DATA</span>
-        <div className="h-6 w-px bg-primary-foreground/50 flex-shrink-0" />
+        <div className="h-6 w-px bg-primary-foreground flex-shrink-0" />
+        <span className="text-xl md:text-2xl font-bold uppercase tracking-wider">WE ARE GO WITH DATA</span>
+        <div className="h-6 w-px bg-primary-foreground flex-shrink-0" />
     </div>
 );
 
