@@ -1,15 +1,13 @@
 'use client';
 
-import { Circle } from "lucide-react";
-
 const BannerContent = () => (
     <div className="flex items-center justify-around w-full px-4">
         <span className="text-xl md:text-2xl font-bold uppercase tracking-wider">WE ARE CREATIVE</span>
-        <Circle className="h-8 w-8 flex-shrink-0" fill="currentColor" />
+        <div className="h-6 w-px bg-primary-foreground/50 flex-shrink-0" />
         <span className="text-xl md:text-2xl font-bold uppercase tracking-wider">WE ARE FAST</span>
-        <Circle className="h-8 w-8 flex-shrink-0" fill="currentColor" />
+        <div className="h-6 w-px bg-primary-foreground/50 flex-shrink-0" />
         <span className="text-xl md:text-2xl font-bold uppercase tracking-wider">WE GO WITH DATA</span>
-        <Circle className="h-8 w-8 flex-shrink-0" fill="currentColor" />
+        <div className="h-6 w-px bg-primary-foreground/50 flex-shrink-0" />
     </div>
 );
 
