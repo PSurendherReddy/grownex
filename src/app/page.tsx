@@ -17,7 +17,7 @@ import { PersonVector } from "@/components/vectors/PersonVector";
 import { PartnerLogoVector } from "@/components/vectors/PartnerLogoVector";
 import { ArrowRight } from "lucide-react";
 import { ScrollingBanner } from "@/components/ScrollingBanner";
-import { SphereBackground } from "@/components/vectors/SphereBackground";
+import { HeroVectorBackground } from "@/components/vectors/HeroVectorBackground";
 
 
 export default function Home() {
@@ -26,7 +26,7 @@ export default function Home() {
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative h-[60vh] min-h-[400px] md:h-[80vh] md:min-h-[500px] flex items-center justify-center text-center bg-background overflow-hidden">
-          <SphereBackground />
+          <HeroVectorBackground className="absolute inset-0 w-full h-full object-cover" />
           <div className="relative z-10 p-4">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-foreground font-headline">
               We’re not just marketers. We’re Smarketers.
