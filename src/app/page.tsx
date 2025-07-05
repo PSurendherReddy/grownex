@@ -23,7 +23,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative h-[80vh] min-h-[450px] md:min-h-[500px] flex items-center justify-center text-center bg-background">
+        <section className="relative h-[60vh] min-h-[400px] md:h-[80vh] md:min-h-[500px] flex items-center justify-center text-center bg-background">
           <div className="absolute inset-0 z-0 opacity-50">
             <AbstractShape1 className="w-full h-full" />
           </div>
