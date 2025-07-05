@@ -17,8 +17,8 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
-        headline: ['var(--font-poppins)', 'sans-serif'],
-        body: ['var(--font-pt-sans)', 'sans-serif'],
+        headline: ['Helvetica', 'sans-serif'],
+        body: ['Helvetica', 'sans-serif'],
       },
       colors: {
         border: 'hsl(var(--border))',
