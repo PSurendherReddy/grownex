@@ -204,6 +204,38 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Navigate Section */}
+        <section className="py-16 sm:py-20 md:py-24 bg-primary text-primary-foreground">
+          <div className="container mx-auto px-4">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <div className="grid grid-cols-2 gap-px bg-primary-foreground/20 p-px">
+                <div className="bg-primary p-8 text-center flex items-center justify-center min-h-[120px]">
+                  <h4 className="text-lg font-semibold">Americas</h4>
+                </div>
+                <div className="bg-primary p-8 text-center flex items-center justify-center min-h-[120px]">
+                  <h4 className="text-lg font-semibold">Asia Pacific</h4>
+                </div>
+                <div className="bg-primary p-8 text-center flex items-center justify-center min-h-[120px]">
+                  <h4 className="text-lg font-semibold">Europe</h4>
+                </div>
+                <div className="bg-primary p-8 text-center flex items-center justify-center min-h-[120px]">
+                  <h4 className="text-lg font-semibold">Middle East and Africa</h4>
+                </div>
+              </div>
+              <div className="text-center lg:text-left">
+                <h2 className="text-4xl md:text-5xl font-bold font-headline leading-tight">Let's help you<br />navigate your next</h2>
+                <div className="mt-8">
+                  <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+                    <Link href="/contact">
+                      CONTACT US
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-16 sm:py-20 md:py-24 bg-primary text-primary-foreground">
           <div className="container mx-auto px-4 text-center">
