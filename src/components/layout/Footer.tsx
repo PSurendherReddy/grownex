@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Logo } from './Logo';
+import { ArrowRight } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -33,10 +34,9 @@ export function Footer() {
           <div>
             <h4 className="font-semibold font-headline text-primary-foreground">Contact</h4>
             <ul className="mt-4 space-y-2 text-sm text-primary-foreground/60">
-              <li>123 Creative Lane, Suite 100</li>
-              <li>Innovation City, 54321</li>
-              <li className="pt-2"><a href="mailto:hello@grownex.com" className="transition-colors hover:text-primary-foreground">hello@grownex.com</a></li>
-              <li><a href="tel:+1234567890" className="transition-colors hover:text-primary-foreground">+1 (234) 567-890</a></li>
+              <li>2nd Floor ikeva Coworking Space, Lotus Heights, Kavuri Hills, Madhapur Hyderabad</li>
+              <li className="pt-2"><a href="mailto:info@grownexdigital.com" className="transition-colors hover:text-primary-foreground">info@grownexdigital.com</a></li>
+              <li><a href="tel:+916281981832" className="transition-colors hover:text-primary-foreground">+91 628-198-1832</a></li>
             </ul>
           </div>
           <div>
@@ -48,7 +48,10 @@ export function Footer() {
                 placeholder="Email address" 
                 className="flex-1 bg-transparent border-primary-foreground/30 text-primary-foreground placeholder:text-primary-foreground/60 focus-visible:ring-accent" 
               />
-              <Button type="submit" variant="secondary">Subscribe</Button>
+              <Button type="submit" variant="secondary">
+                Subscribe
+                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+              </Button>
             </form>
           </div>
         </div>

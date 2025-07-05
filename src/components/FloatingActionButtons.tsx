@@ -40,7 +40,7 @@ export function FloatingActionButtons() {
           <Tooltip>
             <TooltipTrigger asChild>
               <Button asChild size="icon" className="rounded-full w-14 h-14">
-                <Link href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+                <Link href="https://wa.me/916281981832" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
                   <WhatsAppIcon className="h-7 w-7" />
                 </Link>
               </Button>
@@ -66,7 +66,7 @@ export function FloatingActionButtons() {
           <Tooltip>
             <TooltipTrigger asChild>
               <Button asChild size="icon" className="rounded-full w-14 h-14">
-                <Link href="tel:+1234567890" aria-label="Call us">
+                <Link href="tel:+916281981832" aria-label="Call us">
                   <Phone className="h-7 w-7" />
                 </Link>
               </Button>

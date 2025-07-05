@@ -58,19 +58,19 @@ export default function ContactPage() {
                                 <div className="flex items-start gap-4">
                                     <div>
                                         <h3 className="font-semibold">Email</h3>
-                                        <a href="mailto:hello@grownex.com" className="text-muted-foreground hover:text-primary">hello@grownex.com</a>
+                                        <a href="mailto:info@grownexdigital.com" className="text-muted-foreground hover:text-primary">info@grownexdigital.com</a>
                                     </div>
                                 </div>
                                  <div className="flex items-start gap-4">
                                     <div>
                                         <h3 className="font-semibold">Phone</h3>
-                                        <a href="tel:+1234567890" className="text-muted-foreground hover:text-primary">+1 (234) 567-890</a>
+                                        <a href="tel:+916281981832" className="text-muted-foreground hover:text-primary">+91 628-198-1832</a>
                                     </div>
                                 </div>
                                  <div className="flex items-start gap-4">
                                     <div>
                                         <h3 className="font-semibold">Office</h3>
-                                        <p className="text-muted-foreground">123 Creative Lane, Suite 100<br/>Innovation City, 54321</p>
+                                        <p className="text-muted-foreground">2nd Floor ikeva Coworking Space, Lotus Heights, Kavuri Hills, Madhapur Hyderabad</p>
                                     </div>
                                 </div>
                             </div>
