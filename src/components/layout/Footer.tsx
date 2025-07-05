@@ -10,7 +10,7 @@ export function Footer() {
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-4">
-            <Logo />
+            <Logo className="h-8" />
             <p className="text-sm text-primary-foreground/80">
               Clarity in design. Impact in results.
             </p>
