@@ -15,6 +15,7 @@ import { AbstractShape1 } from "@/components/vectors/AbstractShape1";
 import { AbstractShape2 } from "@/components/vectors/AbstractShape2";
 import { PersonVector } from "@/components/vectors/PersonVector";
 import { PartnerLogoVector } from "@/components/vectors/PartnerLogoVector";
+import { ArrowRight } from "lucide-react";
 
 
 export default function Home() {
@@ -35,10 +36,16 @@ export default function Home() {
             </p>
             <div className="mt-8 flex justify-center gap-4">
               <Button asChild size="lg">
-                <Link href="/contact">Start a Project</Link>
+                <Link href="/contact">
+                  Start a Project
+                  <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                </Link>
               </Button>
               <Button asChild size="lg" variant="outline">
-                <Link href="/services">Our Services</Link>
+                <Link href="/services">
+                  Our Services
+                  <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                </Link>
               </Button>
             </div>
           </div>
@@ -204,7 +211,10 @@ export default function Home() {
             </p>
             <div className="mt-8">
               <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-                <Link href="/contact">Book a Free Call</Link>
+                <Link href="/contact">
+                  Book a Free Call
+                  <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                </Link>
               </Button>
             </div>
           </div>

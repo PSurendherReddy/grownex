@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { PersonVector } from "@/components/vectors/PersonVector";
+import { ArrowRight } from "lucide-react";
 
 export default function TestimonialsPage() {
     return (
@@ -54,7 +55,10 @@ export default function TestimonialsPage() {
                     </p>
                     <div className="mt-8">
                         <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-                            <Link href="/contact">Schedule Your Free Call</Link>
+                            <Link href="/contact">
+                                Schedule Your Free Call
+                                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                            </Link>
                         </Button>
                     </div>
                 </div>

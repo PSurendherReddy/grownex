@@ -14,7 +14,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-import { Menu } from 'lucide-react';
+import { ArrowRight, Menu } from 'lucide-react';
 
 const navLinks = [
   { href: '/about', label: 'About Us' },
@@ -117,7 +117,10 @@ export function Header() {
         </nav>
         <div className="hidden items-center gap-2 md:flex">
           <Button asChild>
-            <Link href="/contact">Book a Free Call</Link>
+            <Link href="/contact">
+              Book a Free Call
+              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+            </Link>
           </Button>
         </div>
         <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
@@ -206,6 +209,7 @@ export function Header() {
               <Button asChild className="mt-4">
                 <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>
                   Book a Free Call
+                  <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </Link>
               </Button>
             </nav>

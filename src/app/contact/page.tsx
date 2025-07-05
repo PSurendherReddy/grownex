@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { ArrowRight } from "lucide-react";
 
 export default function ContactPage() {
     return (
@@ -45,7 +46,10 @@ export default function ContactPage() {
                                     <Label htmlFor="message">Message</Label>
                                     <Textarea id="message" placeholder="Tell us about your project..." rows={6} />
                                 </div>
-                                <Button type="submit" size="lg">Send Message</Button>
+                                <Button type="submit" size="lg">
+                                    Send Message
+                                    <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                                </Button>
                             </form>
                         </div>
                         <div className="space-y-8">

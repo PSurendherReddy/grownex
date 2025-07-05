@@ -7,6 +7,7 @@ import { ServiceIllustration } from "@/components/vectors/ServiceIllustration";
 import { BrandingIllustration } from "@/components/vectors/BrandingIllustration";
 import { DigitalMarketingIllustration } from "@/components/vectors/DigitalMarketingIllustration";
 import { WebDevIllustration } from "@/components/vectors/WebDevIllustration";
+import { ArrowRight } from "lucide-react";
 
 const illustrationComponents: Record<string, React.ElementType> = {
     ServiceIllustration,
@@ -122,7 +123,10 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                     </p>
                     <div className="mt-8">
                         <Button asChild size="lg">
-                            <Link href="/contact">Book a Free Consultation</Link>
+                            <Link href="/contact">
+                                Book a Free Consultation
+                                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                            </Link>
                         </Button>
                     </div>
                 </div>

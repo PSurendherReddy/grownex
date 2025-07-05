@@ -7,6 +7,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { cn } from '@/lib/utils';
+import { ArrowRight } from 'lucide-react';
 
 export default function ServicesPage() {
   const [selectedGroup, setSelectedGroup] = useState(serviceGroups[0]);
@@ -91,7 +92,10 @@ export default function ServicesPage() {
             </p>
             <div className="mt-8">
               <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-                <Link href="/contact">Book a Free Call</Link>
+                <Link href="/contact">
+                  Book a Free Call
+                  <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                </Link>
               </Button>
             </div>
           </div>

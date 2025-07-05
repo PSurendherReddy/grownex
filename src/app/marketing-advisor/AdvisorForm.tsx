@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
+import { ArrowRight } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -109,6 +110,7 @@ export function AdvisorForm() {
             <div className="flex justify-center">
               <Button type="submit" size="lg" disabled={isLoading}>
                 {isLoading ? 'Generating Advice...' : 'Get My Free Advice'}
+                {!isLoading && <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />}
               </Button>
             </div>
           </form>

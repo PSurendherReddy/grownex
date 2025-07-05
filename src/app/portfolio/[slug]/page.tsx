@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { AbstractShape1 } from "@/components/vectors/AbstractShape1";
 import { AbstractShape2 } from "@/components/vectors/AbstractShape2";
+import { ArrowRight } from "lucide-react";
 
 export function generateStaticParams() {
     return portfolio.map(item => ({
@@ -91,7 +92,10 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
                     </p>
                     <div className="mt-8">
                     <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-                        <Link href="/contact">Start Your Project</Link>
+                        <Link href="/contact">
+                            Start Your Project
+                            <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                        </Link>
                     </Button>
                     </div>
                 </div>
