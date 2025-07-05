@@ -48,7 +48,7 @@ export function Header() {
     >
       <div className="container mx-auto flex h-20 items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2">
-          <Logo className="h-10" />
+          <Logo className="h-8" />
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
           {navLinks.map(({ href, label }) => {
@@ -133,7 +133,7 @@ export function Header() {
           <SheetContent side="top" className="w-full p-0">
             <nav className="grid gap-6 p-6 text-lg max-h-[80vh] overflow-y-auto">
               <Link href="/" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
-                <Logo className="h-10" />
+                <Logo className="h-8" />
               </Link>
               {navLinks.map(({ href, label }) => {
                 if (href === '/services') {
