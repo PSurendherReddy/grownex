@@ -20,6 +20,17 @@ const config: Config = {
         headline: ['Helvetica', 'sans-serif'],
         body: ['Helvetica', 'sans-serif'],
       },
+      fontSize: {
+        'xs': '0.75rem',    // 12px
+        'sm': '0.875rem',   // 14px
+        'base': '1rem',     // 16px (Body)
+        'lg': '1.125rem',   // 18px (Large Body / Subtitle)
+        'xl': '1.25rem',    // 20px (Small Heading)
+        '2xl': '1.618rem',  // ~26px (H3) - Golden Ratio Start
+        '3xl': '2.618rem',  // ~42px (H2)
+        '4xl': '4.236rem',  // ~68px (H1)
+        '5xl': '6.854rem',  // ~110px (Display)
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',

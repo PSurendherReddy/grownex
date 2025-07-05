@@ -37,7 +37,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                 {/* Hero Section */}
                 <section className="grid md:grid-cols-2 gap-16 items-center">
                     <div className="flex flex-col gap-4">
-                        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-headline tracking-tight">
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-headline tracking-tight">
                             {service.title}
                         </h1>
                         <p className="text-lg text-muted-foreground max-w-lg">
@@ -53,14 +53,14 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                 {service.stats && service.stats.length > 0 && (
                     <section className="mt-20 md:mt-32">
                         <div className="max-w-4xl">
-                           <h2 className="text-3xl font-bold font-headline mb-8">Our Experience & Impact</h2>
+                           <h2 className="text-2xl font-bold font-headline mb-8">Our Experience & Impact</h2>
                             <div className="grid md:grid-cols-2 gap-x-12 gap-y-8">
                                 {service.stats.map((stat, index) => (
                                     <div 
                                         key={index} 
                                         className={`flex items-center gap-6 ${index > 0 ? 'md:border-l md:pl-12 border-border' : ''}`}
                                     >
-                                        <p className="text-5xl md:text-6xl font-bold font-headline text-primary whitespace-nowrap">{stat.value}</p>
+                                        <p className="text-4xl md:text-5xl font-bold font-headline text-primary whitespace-nowrap">{stat.value}</p>
                                         <p className="text-muted-foreground">{stat.label}</p>
                                     </div>
                                 ))}
@@ -117,7 +117,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
              {/* CTA Section */}
             <section className="bg-secondary">
                 <div className="container mx-auto px-4 py-16 sm:py-20 md:py-24 text-center">
-                    <h2 className="text-3xl md:text-4xl font-bold font-headline">Ready to discuss {service.title}?</h2>
+                    <h2 className="text-2xl md:text-3xl font-bold font-headline">Ready to discuss {service.title}?</h2>
                     <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
                         Let's explore how our expertise can be tailored to your specific needs.
                     </p>

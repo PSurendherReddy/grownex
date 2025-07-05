@@ -14,7 +14,7 @@ export default function AboutPage() {
       <section className="bg-secondary py-20 sm:py-24 md:py-32">
         <div className="container mx-auto px-4 text-center">
           <Badge>About Us</Badge>
-          <h1 className="text-4xl md:text-5xl font-bold mt-4 font-headline">
+          <h1 className="text-3xl md:text-4xl font-bold mt-4 font-headline">
             Designing with Purpose
           </h1>
           <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
@@ -30,11 +30,11 @@ export default function AboutPage() {
             <AbstractShape1 className="w-full h-auto" />
           </div>
           <div>
-            <h2 className="text-3xl font-bold font-headline">Our Story</h2>
+            <h2 className="text-2xl font-bold font-headline">Our Story</h2>
             <p className="mt-4 text-muted-foreground">
               Grownex was founded on a simple principle: that great marketing is a blend of art and science. We saw a need for a partner invested in long-term success, not just cookie-cutter solutions.
             </p>
-            <h3 className="text-2xl font-bold font-headline mt-8">Our Mission</h3>
+            <h3 className="text-xl font-bold font-headline mt-8">Our Mission</h3>
             <p className="mt-4 text-muted-foreground">
               To empower ambitious brands through focused strategy and creative excellence. We build partnerships, not just client lists.
             </p>
@@ -46,7 +46,7 @@ export default function AboutPage() {
       <section className="py-16 sm:py-20 md:py-24 bg-secondary">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold font-headline">Our Approach</h2>
+            <h2 className="text-2xl font-bold font-headline">Our Approach</h2>
             <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
               Our methodology is strategic, creative, and always results-driven.
             </p>
@@ -92,7 +92,7 @@ export default function AboutPage() {
       <section className="py-16 sm:py-20 md:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold font-headline">Our Team</h2>
+            <h2 className="text-2xl font-bold font-headline">Our Team</h2>
             <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
               The minds behind our success, and yours.
             </p>
@@ -115,7 +115,7 @@ export default function AboutPage() {
       {/* CTA Section */}
       <section className="py-16 sm:py-20 md:py-24 bg-primary text-primary-foreground">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold font-headline">Work With Us</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-headline">Work With Us</h2>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-primary-foreground/90">
               Ready to see what a focused, strategic partner can do for your brand?
             </p>

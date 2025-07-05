@@ -12,7 +12,7 @@ export default function ContactPage() {
             <section className="bg-secondary py-20 sm:py-24 md:py-32">
                 <div className="container mx-auto px-4 text-center">
                     <Badge>Contact</Badge>
-                    <h1 className="text-4xl md:text-5xl font-bold mt-4 font-headline">
+                    <h1 className="text-3xl md:text-4xl font-bold mt-4 font-headline">
                         Let's Talk
                     </h1>
                     <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
@@ -26,7 +26,7 @@ export default function ContactPage() {
                 <div className="container mx-auto px-4">
                     <div className="grid lg:grid-cols-2 gap-16">
                         <div>
-                            <h2 className="text-3xl font-bold font-headline mb-6">Send a Message</h2>
+                            <h2 className="text-2xl font-bold font-headline mb-6">Send a Message</h2>
                             <form className="space-y-6">
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                     <div className="space-y-2">
@@ -53,7 +53,7 @@ export default function ContactPage() {
                             </form>
                         </div>
                         <div className="space-y-8">
-                             <h2 className="text-3xl font-bold font-headline mb-6">Contact Info</h2>
+                             <h2 className="text-2xl font-bold font-headline mb-6">Contact Info</h2>
                              <div className="space-y-6">
                                 <div className="flex items-start gap-4">
                                     <div>

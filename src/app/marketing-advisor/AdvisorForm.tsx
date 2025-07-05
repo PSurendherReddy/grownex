@@ -62,7 +62,7 @@ export function AdvisorForm() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="text-2xl font-headline text-center">Let's build your marketing plan</CardTitle>
+        <CardTitle className="text-xl font-headline text-center">Let's build your marketing plan</CardTitle>
       </CardHeader>
       <CardContent>
         <Form {...form}>
@@ -118,7 +118,7 @@ export function AdvisorForm() {
         
         {result && (
             <div className="mt-12 border-t pt-8">
-                <h3 className="text-2xl font-headline text-center mb-6">Your Tailored Marketing Plan</h3>
+                <h3 className="text-xl font-headline text-center mb-6">Your Tailored Marketing Plan</h3>
                 <div className="grid md:grid-cols-2 gap-8">
                     <Card>
                         <CardHeader>

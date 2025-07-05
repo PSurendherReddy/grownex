@@ -29,10 +29,10 @@ const Markdown = ({ content }: { content: string }) => {
     const html = content
         .split('\n\n').map(paragraph => {
             if (paragraph.startsWith('## ')) {
-                return `<h2 class="text-3xl font-bold font-headline mt-12 mb-4 text-foreground">${processLine(paragraph.substring(3))}</h2>`;
+                return `<h2 class="text-2xl font-bold font-headline mt-12 mb-4 text-foreground">${processLine(paragraph.substring(3))}</h2>`;
             }
             if (paragraph.startsWith('### ')) {
-                return `<h3 class="text-2xl font-bold font-headline mt-8 mb-4 text-foreground">${processLine(paragraph.substring(4))}</h3>`;
+                return `<h3 class="text-xl font-bold font-headline mt-8 mb-4 text-foreground">${processLine(paragraph.substring(4))}</h3>`;
             }
             if (paragraph.startsWith('- ')) {
                 const items = paragraph.split('\n').map(item => `<li class="mb-3 leading-relaxed">${processLine(item.substring(2))}</li>`).join('');
@@ -79,7 +79,7 @@ export default function BlogPostPage({ params }: { params: { slug:string }}) {
             <article>
                 <header className="mb-8 text-center">
                     <Badge variant="default" className="mb-4">{post.category}</Badge>
-                    <h1 className="text-4xl md:text-5xl font-bold font-headline leading-tight">
+                    <h1 className="text-3xl md:text-4xl font-bold font-headline leading-tight">
                         {post.title}
                     </h1>
                     <div className="flex items-center justify-center gap-4 mt-6 text-sm text-muted-foreground">
@@ -100,7 +100,7 @@ export default function BlogPostPage({ params }: { params: { slug:string }}) {
 
             {relatedPosts.length > 0 && (
                 <aside className="mt-16 pt-12 border-t">
-                    <h2 className="text-3xl font-bold font-headline mb-8 text-center">Related Articles</h2>
+                    <h2 className="text-2xl font-bold font-headline mb-8 text-center">Related Articles</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {relatedPosts.map(relatedPost => (
                             <Link href={`/blog/${relatedPost.slug}`} key={relatedPost.slug} className="group block">

@@ -28,7 +28,7 @@ export default function Home() {
         <section className="relative h-[60vh] min-h-[400px] md:h-[80vh] md:min-h-[500px] flex items-center justify-center text-center bg-background overflow-hidden">
           <HeroVectorBackground className="absolute inset-0 w-full h-full object-cover" />
           <div className="relative z-10 p-4">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-foreground font-headline">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-foreground font-headline">
               We’re not just marketers. We’re Smarketers.
             </h1>
             <p className="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground">
@@ -58,7 +58,7 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <Badge variant="outline">Our Focus</Badge>
-              <h2 className="text-3xl md:text-4xl font-bold mt-2 font-headline">What We Do</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mt-2 font-headline">What We Do</h2>
               <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
                 We focus on essential services to elevate your brand at every touchpoint. Select a category to explore.
               </p>
@@ -80,7 +80,7 @@ export default function Home() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <Badge>Why Grownex</Badge>
-                <h2 className="text-3xl md:text-4xl font-bold mt-2 font-headline">Purposeful Design</h2>
+                <h2 className="text-2xl md:text-3xl font-bold mt-2 font-headline">Purposeful Design</h2>
                 <p className="mt-4 text-muted-foreground">
                   Our approach is built on clarity, purpose, and a commitment to measurable results. We focus on what's essential to deliver exceptional work.
                 </p>
@@ -117,7 +117,7 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <Badge variant="outline">Our Work</Badge>
-              <h2 className="text-3xl md:text-4xl font-bold mt-2 font-headline">Selected Projects</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mt-2 font-headline">Selected Projects</h2>
               <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
                 We're proud of the work we do. Here are a few examples.
               </p>
@@ -166,7 +166,7 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <Badge>Testimonials</Badge>
-              <h2 className="text-3xl md:text-4xl font-bold mt-2 font-headline">What Our Clients Say</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mt-2 font-headline">What Our Clients Say</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {testimonials.slice(0,3).map((testimonial, index) => (
@@ -223,7 +223,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="text-center lg:text-left">
-                <h2 className="text-4xl md:text-5xl font-bold font-headline leading-tight">Let's help you<br />navigate your next</h2>
+                <h2 className="text-3xl md:text-4xl font-bold font-headline leading-tight">Let's help you<br />navigate your next</h2>
                 <div className="mt-8">
                   <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
                     <Link href="/contact">
@@ -239,7 +239,7 @@ export default function Home() {
         {/* CTA Section */}
         <section className="py-16 sm:py-20 md:py-24 bg-primary text-primary-foreground">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold font-headline">Ready to Simplify?</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-headline">Ready to Simplify?</h2>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-primary-foreground/80">
               Let's discuss how focused design and clear strategy can benefit your brand.
             </p>
