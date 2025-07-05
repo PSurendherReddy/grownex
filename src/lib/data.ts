@@ -1,6 +1,36 @@
 import type { Service, ServiceGroup, PortfolioItem, Testimonial, Partner, BlogPost, TeamMember } from './types';
 
 const serviceDetails: Record<string, { about: string; whenToChoose: string; whoIsItFor: string }> = {
+  'ai-chatbots': {
+    about: "We build intelligent, conversational AI chatbots for your website, WhatsApp, and Messenger. These bots can handle customer inquiries, qualify leads, and provide instant support 24/7, improving customer satisfaction and freeing up your team.",
+    whenToChoose: "If your team is overwhelmed with repetitive questions, you're missing leads outside of business hours, or you want to provide instant, scalable customer support, an AI chatbot is the perfect solution.",
+    whoIsItFor: "Ideal for e-commerce sites, service-based businesses, real estate, and any company looking to improve customer engagement and operational efficiency."
+  },
+  'custom-ai-agents': {
+    about: "We design and deploy custom AI agents that integrate seamlessly into your existing workflows. These agents can perform specific tasks like data entry, sales outreach, customer support ticket routing, and internal process management, tailored precisely to your business needs.",
+    whenToChoose: "When you have specific, repetitive tasks that consume valuable employee time. Custom agents are perfect for scaling operations without a proportional increase in headcount.",
+    whoIsItFor: "Businesses with unique operational workflows, sales teams looking to automate outreach, and support centers aiming to improve response times and accuracy."
+  },
+  'business-process-automation': {
+    about: "Our Business Process Automation (BPA) service combines the intelligence of AI with the efficiency of Robotic Process Automation (RPA). We identify and automate complex, multi-step business processes, from invoice processing to employee onboarding.",
+    whenToChoose: "When you need to automate end-to-end processes that involve multiple systems and decision points. This is for deep operational transformation that cuts costs and reduces errors.",
+    whoIsItFor: "Enterprises in finance, HR, and logistics, or any organization looking to achieve significant efficiency gains and reduce manual data handling."
+  },
+  'voice-ai-solutions': {
+    about: "Revolutionize your telephony with our Voice AI solutions. We build intelligent call assistants and modern IVR bots that can understand natural language, route calls intelligently, answer common questions, and even handle appointments or payments over the phone.",
+    whenToChoose: "If your call center is facing high call volumes, you want to improve the customer experience over the phone, or you want to offer 24/7 voice support without the high cost of a round-the-clock call center.",
+    whoIsItFor: "Companies in telecommunications, healthcare, banking, and any business with a high volume of inbound or outbound customer calls."
+  },
+  'ai-email-lead-automation': {
+    about: "Supercharge your sales and marketing with AI-powered email and lead automation. Our systems can analyze incoming leads, score them based on qualification criteria, and trigger personalized email nurture sequences to move them through the sales funnel automatically.",
+    whenToChoose: "When your sales team is spending too much time on unqualified leads or your email marketing isn't personalized enough. This system ensures high-quality leads are nurtured effectively and automatically.",
+    whoIsItFor: "Marketing and sales teams in B2B and high-value B2C industries who want to scale their lead nurturing efforts and improve conversion rates."
+  },
+  'ai-knowledge-base': {
+    about: "Empower your team with an AI-driven internal knowledge base. Our solution allows employees to ask questions in natural language and get instant, accurate answers from your company documents, wikis, and databases. It's like having an internal expert on-call 24/7.",
+    whenToChoose: "When your company knowledge is siloed in different documents and systems, making it hard for employees to find information. This is key for improving onboarding, training, and day-to-day productivity.",
+    whoIsItFor: "Growing companies, large enterprises, and remote-first organizations that need to ensure all team members have fast and easy access to consistent, accurate company information."
+  },
   'logo-design': {
     about: "Our Logo Design service focuses on creating a powerful, memorable visual identity. We go beyond aesthetics to develop a logo that encapsulates your brand's essence, values, and mission. The process involves in-depth research, conceptualization, and refinement to produce a timeless mark that works across all media.",
     whenToChoose: "Choose this when you're launching a new business, rebranding an existing one, or feel your current logo no longer represents your company. A strong logo is the foundation of your brand identity and crucial for making a lasting first impression.",
@@ -227,6 +257,19 @@ export const serviceGroups: ServiceGroup[] = [
     ],
   },
   {
+    title: 'AI Services',
+    slug: 'ai-services',
+    description: 'Leveraging artificial intelligence to automate tasks and drive growth.',
+    services: [
+        { title: 'AI Chatbots (Web, WhatsApp, Messenger)', slug: 'ai-chatbots', description: 'Engage customers 24/7 on your website and messaging apps.' },
+        { title: 'Custom AI Agents for Sales, Support & Internal Tasks', slug: 'custom-ai-agents', description: 'Automate workflows with intelligent agents tailored to your needs.' },
+        { title: 'Business Process Automation (AI + RPA)', slug: 'business-process-automation', description: 'Streamline operations by combining AI with Robotic Process Automation.' },
+        { title: 'Voice AI Solutions (Call Assistants & IVR Bots)', slug: 'voice-ai-solutions', description: 'Modernize your customer calls with intelligent voice assistants.' },
+        { title: 'AI-Powered Email & Lead Automation', slug: 'ai-email-lead-automation', description: 'Automatically qualify leads and send personalized email campaigns.' },
+        { title: 'AI Knowledge Base & Internal Search Assistants', slug: 'ai-knowledge-base', description: 'Empower your team with instant access to company information.' },
+    ],
+  },
+  {
     title: 'Influencer Marketing',
     slug: 'influencer-marketing',
     description: 'Amplifying your message through trusted voices.',
@@ -317,6 +360,8 @@ const createServicePageContent = (group: ServiceGroup, service: { title: string;
         illustration = 'DigitalMarketingIllustration';
     } else if (group.slug === 'website-development') {
         illustration = 'WebDevIllustration';
+    } else if (group.slug === 'ai-services') {
+        illustration = 'DigitalMarketingIllustration'; // Using a relevant existing illustration
     }
 
     return {
