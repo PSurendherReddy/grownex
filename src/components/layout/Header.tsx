@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { useState, useEffect } from 'react';
@@ -123,14 +123,14 @@ export function Header() {
             </Link>
           </Button>
         </div>
-        <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
-          <SheetTrigger asChild>
+        <Dialog open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
+          <DialogTrigger asChild>
             <Button variant="ghost" size="icon" className="md:hidden">
               <Menu className="h-6 w-6" />
               <span className="sr-only">Toggle navigation menu</span>
             </Button>
-          </SheetTrigger>
-          <SheetContent side="left">
+          </DialogTrigger>
+          <DialogContent className="w-full max-w-sm p-0">
             <nav className="grid gap-6 p-6 text-lg">
               <Link href="/" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
                 <Logo />
@@ -213,8 +213,8 @@ export function Header() {
                 </Link>
               </Button>
             </nav>
-          </SheetContent>
-        </Sheet>
+          </DialogContent>
+        </Dialog>
       </div>
     </header>
   );
