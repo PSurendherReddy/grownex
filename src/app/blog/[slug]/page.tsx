@@ -79,7 +79,7 @@ export default function BlogPostPage({ params }: { params: { slug:string }}) {
             <article>
                 <header className="mb-8 text-center">
                     <Badge variant="default" className="mb-4">{post.category}</Badge>
-                    <h1 className="text-3xl md:text-4xl font-bold font-headline leading-tight">
+                    <h1 className="text-2xl md:text-3xl font-bold font-headline leading-tight">
                         {post.title}
                     </h1>
                     <div className="flex items-center justify-center gap-4 mt-6 text-sm text-muted-foreground">

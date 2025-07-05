@@ -28,7 +28,7 @@ export default function Home() {
         <section className="relative h-[60vh] min-h-[400px] md:h-[80vh] md:min-h-[500px] flex items-center justify-center text-center bg-background overflow-hidden">
           <HeroVectorBackground className="absolute inset-0 w-full h-full object-cover" />
           <div className="relative z-10 p-4">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-foreground font-headline">
+            <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground font-headline">
               We’re not just marketers. We’re Smarketers.
             </h1>
             <p className="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground">
@@ -223,7 +223,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="text-center lg:text-left">
-                <h2 className="text-3xl md:text-4xl font-bold font-headline leading-tight">Let's help you<br />navigate your next</h2>
+                <h2 className="text-2xl md:text-3xl font-bold font-headline leading-tight">Let's help you<br />navigate your next</h2>
                 <div className="mt-8">
                   <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
                     <Link href="/contact">

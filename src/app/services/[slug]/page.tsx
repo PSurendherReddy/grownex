@@ -37,7 +37,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                 {/* Hero Section */}
                 <section className="grid md:grid-cols-2 gap-16 items-center">
                     <div className="flex flex-col gap-4">
-                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-headline tracking-tight">
+                        <h1 className="text-2xl md:text-3xl font-bold font-headline tracking-tight">
                             {service.title}
                         </h1>
                         <p className="text-lg text-muted-foreground max-w-lg">

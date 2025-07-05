@@ -13,7 +13,7 @@ export default function TestimonialsPage() {
             <section className="bg-secondary py-20 sm:py-24 md:py-32">
                 <div className="container mx-auto px-4 text-center">
                     <Badge>Client Success</Badge>
-                    <h1 className="text-3xl md:text-4xl font-bold mt-4 font-headline">
+                    <h1 className="text-2xl md:text-3xl font-bold mt-4 font-headline">
                         Voices of Our Partners
                     </h1>
                     <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">

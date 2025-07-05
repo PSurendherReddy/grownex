@@ -26,7 +26,7 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
             <section className="bg-secondary py-20 sm:py-24 md:py-32">
                 <div className="container mx-auto px-4">
                     <Badge>{project.category}</Badge>
-                    <h1 className="text-3xl md:text-4xl font-bold mt-4 font-headline max-w-4xl">
+                    <h1 className="text-2xl md:text-3xl font-bold mt-4 font-headline max-w-4xl">
                         {project.title}
                     </h1>
                     <p className="mt-4 max-w-3xl text-lg text-muted-foreground">
