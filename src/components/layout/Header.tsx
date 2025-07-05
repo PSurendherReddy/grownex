@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { useState, useEffect } from 'react';
@@ -14,6 +13,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { ArrowRight, Menu } from 'lucide-react';
 
 const navLinks = [
@@ -63,8 +63,8 @@ export function Header() {
                   <Link
                     href="/services"
                     className={cn(
-                      'flex items-center gap-1 text-sm transition-colors hover:text-primary focus:outline-none nav-link-underline',
-                      pathname.startsWith('/services') ? 'text-primary active' : 'text-foreground'
+                      'flex items-center gap-1 text-sm transition-colors hover:text-primary focus:outline-none',
+                      pathname.startsWith('/services') ? 'text-primary' : 'text-foreground'
                     )}
                   >
                     {label}
@@ -106,8 +106,8 @@ export function Header() {
                 key={href}
                 href={href}
                 className={cn(
-                  'text-sm transition-colors hover:text-primary nav-link-underline',
-                  pathname === href ? 'text-primary active' : 'text-foreground'
+                  'text-sm transition-colors hover:text-primary',
+                  pathname === href ? 'text-primary' : 'text-foreground'
                 )}
               >
                 {label}
@@ -123,15 +123,15 @@ export function Header() {
             </Link>
           </Button>
         </div>
-        <Dialog open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
-          <DialogTrigger asChild>
+        <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
+          <SheetTrigger asChild>
             <Button variant="ghost" size="icon" className="md:hidden">
               <Menu className="h-6 w-6" />
               <span className="sr-only">Toggle navigation menu</span>
             </Button>
-          </DialogTrigger>
-          <DialogContent className="w-full max-w-sm p-0">
-            <nav className="grid gap-6 p-6 text-lg">
+          </SheetTrigger>
+          <SheetContent side="top" className="w-full p-0">
+            <nav className="grid gap-6 p-6 text-lg max-h-[80vh] overflow-y-auto">
               <Link href="/" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
                 <Logo />
               </Link>
@@ -213,8 +213,8 @@ export function Header() {
                 </Link>
               </Button>
             </nav>
-          </DialogContent>
-        </Dialog>
+          </SheetContent>
+        </Sheet>
       </div>
     </header>
   );
