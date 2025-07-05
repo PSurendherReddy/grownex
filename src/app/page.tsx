@@ -16,6 +16,7 @@ import { AbstractShape2 } from "@/components/vectors/AbstractShape2";
 import { PersonVector } from "@/components/vectors/PersonVector";
 import { PartnerLogoVector } from "@/components/vectors/PartnerLogoVector";
 import { ArrowRight } from "lucide-react";
+import { ScrollingBanner } from "@/components/ScrollingBanner";
 
 
 export default function Home() {
@@ -50,6 +51,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <ScrollingBanner />
 
         {/* Services Overview Section */}
         <section id="services" className="py-16 sm:py-20 md:py-24 bg-secondary">
