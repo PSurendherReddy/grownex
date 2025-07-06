@@ -1,192 +1,229 @@
 import type { Service, ServiceGroup, PortfolioItem, Testimonial, Partner, BlogPost, TeamMember } from './types';
 
-const serviceDetails: Record<string, { about: string; whenToChoose: string; whoIsItFor: string }> = {
-  'ai-chatbots': {
-    about: "We build intelligent, conversational AI chatbots for your website, WhatsApp, and Messenger. These bots can handle customer inquiries, qualify leads, and provide instant support 24/7, improving customer satisfaction and freeing up your team.",
-    whenToChoose: "If your team is overwhelmed with repetitive questions, you're missing leads outside of business hours, or you want to provide instant, scalable customer support, an AI chatbot is the perfect solution.",
-    whoIsItFor: "Ideal for e-commerce sites, service-based businesses, real estate, and any company looking to improve customer engagement and operational efficiency."
+export const services: Service[] = [
+  // AI Services
+  {
+    title: 'AI Chatbots',
+    slug: 'ai-chatbots',
+    category: { title: 'AI Services', slug: 'ai-services' },
+    hero: {
+      description: 'Engage customers 24/7 with intelligent, automated conversations on your website, WhatsApp, and Messenger. Convert visitors into qualified leads, day or night.',
+      illustration: 'DigitalMarketingIllustration',
+    },
+    introduction: {
+      title: 'Never Miss a Lead Again',
+      content: 'In today\'s market, instant answers win customers. Our AI Chatbots act as your tireless digital receptionists, providing immediate support, answering questions, and capturing lead information around the clock. Stop losing customers to slow response times and empower your website to be a lead-generation machine.',
+    },
+    keyFeatures: {
+      title: 'What Our AI Chatbots Offer',
+      items: [
+        {
+          title: '24/7 Lead Capture',
+          description: 'Our bots qualify leads based on your criteria and collect contact details, even when your team is offline.',
+        },
+        {
+          title: 'Multi-Platform Support',
+          description: 'Deploy seamlessly on your website, WhatsApp, Facebook Messenger, and other platforms for a unified customer experience.',
+        },
+        {
+          title: 'Instant Customer Support',
+          description: 'Provide immediate answers to frequently asked questions, reducing the load on your support team and improving satisfaction.',
+        },
+        {
+          title: 'Seamless Handoff',
+          description: 'The chatbot can intelligently route complex queries or high-value leads directly to your human agents.',
+        },
+        {
+          title: 'Appointment Booking',
+          description: 'Allow customers to schedule demos, consultations, or appointments directly within the chat interface.',
+        },
+        {
+          title: 'Easy Integration',
+          description: 'We connect the chatbot to your existing CRM and marketing tools for a smooth, automated workflow.',
+        },
+      ],
+    },
+    process: {
+      title: 'Our Chatbot Implementation Process',
+      steps: [
+        { step: 1, title: 'Discovery & Strategy', description: 'We analyze your business goals, customer queries, and lead qualification process to design the optimal conversation flow.' },
+        { step: 2, title: 'Development & Training', description: 'Our team builds the chatbot and trains it on your specific business data to ensure accurate and context-aware responses.' },
+        { step: 3, title: 'Integration & Deployment', description: 'We deploy the chatbot on your chosen platforms and integrate it with your key business systems, like your CRM.' },
+        { step: 4, title: 'Optimization & Reporting', description: 'We continuously monitor performance, refine conversation flows, and provide you with detailed reports on leads and interactions.' },
+      ],
+    },
   },
-  'custom-ai-agents': {
-    about: "We design and deploy custom AI agents that integrate seamlessly into your existing workflows. These agents can perform specific tasks like data entry, sales outreach, customer support ticket routing, and internal process management, tailored precisely to your business needs.",
-    whenToChoose: "When you have specific, repetitive tasks that consume valuable employee time. Custom agents are perfect for scaling operations without a proportional increase in headcount.",
-    whoIsItFor: "Businesses with unique operational workflows, sales teams looking to automate outreach, and support centers aiming to improve response times and accuracy."
+  // Branding
+  {
+    title: 'Logo Design',
+    slug: 'logo-design',
+    category: { title: 'Graphic Design & Branding', slug: 'graphic-design-branding' },
+    hero: {
+      description: 'Forge a memorable identity with a professionally crafted logo that tells your unique story and captures instant attention.',
+      illustration: 'BrandingIllustration',
+    },
+    introduction: {
+      title: 'Your Brand\'s First Impression, Perfected',
+      content: 'A logo is more than just a picture; it\'s the face of your company. It\'s the single most powerful visual asset for establishing brand recognition and communicating your core values. We design logos that are not only beautiful but also strategic, ensuring they are memorable, timeless, and effective across all platforms.',
+    },
+    keyFeatures: {
+      title: 'Features of Our Logo Design Service',
+      items: [
+        {
+          title: 'Strategic Design',
+          description: 'Our designs are based on a deep understanding of your brand, audience, and competitive landscape.',
+        },
+        {
+          title: 'Multiple Concepts',
+          description: 'We provide a range of initial design concepts to explore different creative directions for your brand.',
+        },
+        {
+          title: 'Versatile Formats',
+          description: 'Receive your final logo in all necessary formats for web, print, and social media applications.',
+        },
+        {
+          title: 'Full Ownership',
+          description: 'You get complete copyright ownership of the final logo design for unlimited, unrestricted use.',
+        },
+        {
+          title: 'Brand Guideline Snippet',
+          description: 'We provide basic guidelines on logo usage, color codes, and fonts to ensure initial consistency.',
+        },
+        {
+          title: 'Timeless Quality',
+          description: 'We focus on creating simple, memorable designs that will stand the test of time and not feel dated in a few years.',
+        },
+      ],
+    },
+    process: {
+      title: 'Our Collaborative Design Process',
+      steps: [
+        { step: 1, title: 'Discovery & Research', description: 'We start by learning everything about your business, target market, and vision for the future.' },
+        { step: 2, title: 'Conceptualization', description: 'Our designers explore various creative directions and develop initial logo concepts that align with the strategy.' },
+        { step: 3, title: 'Refinement & Feedback', description: 'We work closely with you to refine the chosen concept, incorporating your feedback to achieve the perfect result.' },
+        { step: 4, title: 'Finalization & Delivery', description: 'Once approved, we prepare and deliver a complete package of logo files and basic usage guidelines.' },
+      ],
+    },
+    stats: [
+      { value: '300+', label: 'Logos designed for startups and established enterprises.' },
+      { value: '98%', label: 'Client approval rate on first design drafts.' },
+    ],
   },
-  'business-process-automation': {
-    about: "Our Business Process Automation (BPA) service combines the intelligence of AI with the efficiency of Robotic Process Automation (RPA). We identify and automate complex, multi-step business processes, from invoice processing to employee onboarding.",
-    whenToChoose: "When you need to automate end-to-end processes that involve multiple systems and decision points. This is for deep operational transformation that cuts costs and reduces errors.",
-    whoIsItFor: "Enterprises in finance, HR, and logistics, or any organization looking to achieve significant efficiency gains and reduce manual data handling."
+  // Digital Marketing
+  {
+    title: 'SEO & AEO',
+    slug: 'seo-aeo',
+    category: { title: 'Digital Marketing', slug: 'digital-marketing' },
+    hero: {
+      description: 'Dominate search results and become the definitive answer for your customers. Our advanced SEO & AEO strategies drive sustainable organic traffic and establish you as a market leader.',
+      illustration: 'DigitalMarketingIllustration',
+    },
+    introduction: {
+      title: 'Be Seen Where It Matters Most',
+      content: 'In today\'s digital economy, visibility is currency. If your customers can\'t find you on Google, you don\'t exist. Our SEO (Search Engine Optimization) & AEO (Answer Engine Optimization) service is a holistic approach to not just ranking higher, but owning the conversation in your industry. We turn your website into a powerful magnet for high-intent customers.',
+    },
+    keyFeatures: {
+      title: 'Our Comprehensive SEO Approach',
+      items: [
+        {
+          title: 'Technical SEO Audit',
+          description: 'We ensure your website is perfectly optimized for speed, mobile performance, and crawlability with a deep technical audit.',
+        },
+        {
+          title: 'Keyword & Topic Strategy',
+          description: 'We identify the high-value keywords and topics your audience is searching for and build a content strategy around them.',
+        },
+        {
+          title: 'Content Optimization',
+          description: 'We create and refine content to be authoritative, trustworthy, and structured to appear in featured snippets and answer boxes.',
+        },
+        {
+          title: 'Authority Building',
+          description: 'Our team executes strategic outreach to earn high-quality backlinks and mentions from reputable sites in your industry.',
+        },
+        {
+          title: 'Local SEO',
+          description: 'For brick-and-mortar businesses, we optimize your Google Business Profile and local citations to dominate local search.',
+        },
+        {
+          title: 'Performance Tracking',
+          description: 'We provide transparent, detailed reports on rankings, traffic, and conversions, so you can see the direct impact of our work.',
+        },
+      ],
+    },
+    process: {
+      title: 'Our Path to Page One',
+      steps: [
+        { step: 1, title: 'Comprehensive Audit', description: 'We begin with a full analysis of your website, competitors, and market to identify the biggest opportunities.' },
+        { step: 2, title: 'Strategic Roadmap', description: 'We develop a clear, prioritized 6-12 month roadmap outlining all on-page, off-page, and technical initiatives.' },
+        { step: 3, title: 'Execution & Content Creation', description: 'Our team gets to work, implementing technical fixes, optimizing existing content, and creating new, authoritative articles.' },
+        { step: 4, title: 'Reporting & Refinement', description: 'We track progress monthly, providing insights and adjusting our strategy based on performance data and algorithm changes.' },
+      ],
+    },
+    stats: [
+      { value: '50%', label: 'Average increase in organic traffic within 6 months.' },
+      { value: 'Top 3', label: 'Ranking achieved for 80% of our clients\' target keywords.' },
+    ],
   },
-  'voice-ai-solutions': {
-    about: "Revolutionize your telephony with our Voice AI solutions. We build intelligent call assistants and modern IVR bots that can understand natural language, route calls intelligently, answer common questions, and even handle appointments or payments over the phone.",
-    whenToChoose: "If your call center is facing high call volumes, you want to improve the customer experience over the phone, or you want to offer 24/7 voice support without the high cost of a round-the-clock call center.",
-    whoIsItFor: "Companies in telecommunications, healthcare, banking, and any business with a high volume of inbound or outbound customer calls."
-  },
-  'ai-email-lead-automation': {
-    about: "Supercharge your sales and marketing with AI-powered email and lead automation. Our systems can analyze incoming leads, score them based on qualification criteria, and trigger personalized email nurture sequences to move them through the sales funnel automatically.",
-    whenToChoose: "When your sales team is spending too much time on unqualified leads or your email marketing isn't personalized enough. This system ensures high-quality leads are nurtured effectively and automatically.",
-    whoIsItFor: "Marketing and sales teams in B2B and high-value B2C industries who want to scale their lead nurturing efforts and improve conversion rates."
-  },
-  'ai-knowledge-base': {
-    about: "Empower your team with an AI-driven internal knowledge base. Our solution allows employees to ask questions in natural language and get instant, accurate answers from your company documents, wikis, and databases. It's like having an internal expert on-call 24/7.",
-    whenToChoose: "When your company knowledge is siloed in different documents and systems, making it hard for employees to find information. This is key for improving onboarding, training, and day-to-day productivity.",
-    whoIsItFor: "Growing companies, large enterprises, and remote-first organizations that need to ensure all team members have fast and easy access to consistent, accurate company information."
-  },
-  'logo-design': {
-    about: "Our Logo Design service focuses on creating a powerful, memorable visual identity. We go beyond aesthetics to develop a logo that encapsulates your brand's essence, values, and mission. The process involves in-depth research, conceptualization, and refinement to produce a timeless mark that works across all media.",
-    whenToChoose: "Choose this when you're launching a new business, rebranding an existing one, or feel your current logo no longer represents your company. A strong logo is the foundation of your brand identity and crucial for making a lasting first impression.",
-    whoIsItFor: "Ideal for startups needing a strong market entry, established businesses looking to modernize their image, and organizations aiming to improve brand recognition and stand out in a crowded marketplace."
-  },
-  'brand-identity-strategy': {
-    about: 'This comprehensive service aligns your business goals with a cohesive brand identity. We develop a complete visual and verbal system, including your mission, vision, voice, and a strategic roadmap for implementation, ensuring every brand touchpoint is consistent and impactful.',
-    whenToChoose: 'Select this service when you need more than just a logo. It’s for times of significant business transformation, market repositioning, or when you need to unify a fragmented brand message to build equity and drive growth.',
-    whoIsItFor: 'Perfect for businesses seeking to establish a strong, unified market presence, companies undergoing a merger or acquisition, and established brands aiming to reconnect with their audience on a deeper level.'
-  },
-  'brand-guidelines': {
-    about: 'We create a comprehensive rulebook that defines how your brand presents itself. This document covers everything from logo usage and color palettes to typography and tone of voice, ensuring absolute consistency across all internal and external communications.',
-    whenToChoose: 'This is essential after a rebrand or if you find your brand is being represented inconsistently. It’s crucial when working with multiple teams, partners, or agencies to maintain a cohesive and professional brand image.',
-    whoIsItFor: 'A must-have for any organization with more than one employee. It is especially critical for marketing teams, design departments, and companies that use freelancers or external agencies.'
-  },
-  'seo-aeo': {
-    about: 'Our SEO & AEO (Answer Engine Optimization) service is designed to increase your visibility where it matters most. We focus on a holistic strategy of technical optimization, high-quality content, and authority building to rank for high-intent keywords and directly answer user questions.',
-    whenToChoose: 'Engage this service when your website isn’t generating enough organic traffic, your competitors are outranking you, or you’re launching a new website. It’s a long-term strategy for sustainable growth.',
-    whoIsItFor: 'Beneficial for any business with an online presence, from local stores wanting to attract nearby customers to global B2B companies looking to capture a niche audience.'
-  },
-  'lead-generation': {
-    about: 'This service is focused on one thing: filling your sales pipeline with qualified, high-intent leads. We implement and manage targeted campaigns across various channels, using data-driven methods to attract, engage, and convert potential customers.',
-    whenToChoose: 'If your sales team needs more prospects, your growth has stalled, or your current lead generation efforts are too expensive or ineffective, this service provides a direct path to acquiring new customers.',
-    whoIsItFor: 'Primarily for B2B companies, high-value B2C services (e.g., real estate, finance), and any business that relies on a consistent flow of new customer inquiries to fuel growth.'
-  },
-  'ppc-advertising': {
-    about: 'Our Pay-Per-Click advertising service offers immediate visibility and targeted traffic. We manage campaigns on platforms like Google Ads and social media, focusing on maximizing your return on ad spend (ROAS) through meticulous keyword research, ad copy testing, and landing page optimization.',
-    whenToChoose: 'Use PPC for quick results, to promote a specific offer, enter a new market, or to complement your long-term SEO efforts. It’s ideal for testing market response and driving traffic while your organic presence grows.',
-    whoIsItFor: 'Excellent for e-commerce brands, lead generation campaigns, and any business that wants to control its advertising budget precisely and see immediate, measurable results.'
-  },
-  'email-marketing': {
-    about: 'We help you build and nurture direct relationships with your audience through strategic email campaigns. From automated welcome series to targeted promotional newsletters, we create content that engages subscribers and drives conversions.',
-    whenToChoose: 'If you have a list of contacts you aren’t engaging or want to improve customer retention and lifetime value, email marketing is one of the most cost-effective channels available.',
-    whoIsItFor: 'Essential for e-commerce businesses, content creators, and any company looking to build a loyal community and drive repeat business from its existing customer base.'
-  },
-  'social-media-management': {
-    about: 'Our team manages your social media presence, creating and curating content that builds your brand and engages your community. We develop a platform-specific strategy to grow your following and drive meaningful interactions.',
-    whenToChoose: "If you lack the time or expertise to maintain an active, professional social media presence, or if your current efforts aren't yielding results, it's time to bring in experts.",
-    whoIsItFor: 'Crucial for B2C brands, personality-driven businesses, and any organization looking to build brand awareness and connect with its audience on a daily basis.'
-  },
-  'hoarding-advertising': {
-    about: 'Make a big statement with large-format hoarding (billboard) advertising. We secure prime locations and design eye-catching visuals to ensure your message captures the attention of thousands of commuters and pedestrians daily.',
-    whenToChoose: 'Ideal for broad brand awareness campaigns, event promotions, or announcing a new store opening. Hoardings are powerful for dominating a specific geographic area with your message.',
-    whoIsItFor: 'Best for businesses targeting a mass local audience, such as retail stores, real estate developers, event organizers, and major consumer brands.'
-  },
-  'mall-advertising': {
-    about: 'Engage a captive audience of shoppers in a high-traffic environment. We place your brand across various formats within malls, from digital screens to static posters, targeting consumers when they are in a buying mindset.',
-    whenToChoose: 'Choose this to drive foot traffic to your retail store within the mall, launch a new product, or to target specific consumer demographics that frequent shopping centers.',
-    whoIsItFor: 'Retailers, restaurants, entertainment venues, and brands targeting families, teens, or affluent shoppers who frequent malls.'
-  },
-  'college-campus-ads': {
-    about: 'Directly target the valuable student and faculty demographic through on-campus advertising. We utilize posters, digital screens, and event sponsorships to integrate your brand into the daily life of the campus community.',
-    whenToChoose: "When your product or service is specifically tailored to young adults or academics. It's perfect for recruitment, brand loyalty building, and promoting student-focused offers.",
-    whoIsItFor: 'Companies in tech, banking (student accounts), food and beverage, apparel, and entertainment looking to capture the next generation of consumers.'
-  },
-  'apartment-complex-ads': {
-    about: 'Reach residents where they live. We place advertisements in common areas of apartment complexes, such as lobbies, elevators, and clubhouses, providing a highly targeted way to reach a specific neighborhood.',
-    whenToChoose: 'This is a great strategy for local businesses like restaurants, gyms, cleaners, and service providers who want to become the go-to choice for a specific residential community.',
-    whoIsItFor: 'Local service providers, furniture stores, internet service providers, and any business looking to target new movers or a concentrated local population.'
-  },
-  'petrol-pump-advertising': {
-    about: 'Capture the undivided attention of drivers during the few minutes they spend refueling. We use nozzles, pump toppers, and digital screens to deliver your message to a broad, captive audience.',
-    whenToChoose: 'An excellent choice for general brand awareness and targeting a wide demographic of vehicle owners. It’s particularly effective for automotive products, insurance, and local radio stations.',
-    whoIsItFor: 'Auto-related businesses, insurance companies, convenience stores, and major consumer brands seeking high-frequency exposure.'
-  },
-  'pamphlet-distribution': {
-    about: 'Our targeted pamphlet and flyer distribution service gets your message directly into the hands of potential customers. We plan strategic distribution in residential areas, business districts, and at events to maximize reach and impact.',
-    whenToChoose: 'When you need to promote a local event, a special offer, or a new business opening with a geographically focused, cost-effective method. It provides a tangible reminder of your brand.',
-    whoIsItFor: 'Local businesses, restaurants, real estate agents, event organizers, and political campaigns that require deep penetration in a specific geographic area.'
-  },
-  'product-shoots': {
-    about: 'High-quality product photography is essential for e-commerce success. We create clean, professional, and appealing images of your products for use on your website, social media, and marketing materials, making your items look their absolute best.',
-    whenToChoose: "This is a must when launching a new product, updating your e-commerce store, or creating a print catalog. Professional photos significantly increase conversion rates.",
-    whoIsItFor: 'E-commerce businesses, retailers, Amazon sellers, and anyone who sells a physical product online or in print.'
-  },
-  'event-photo-video': {
-    about: 'We capture the energy and key moments of your corporate events, conferences, sports tournaments, or grand openings. Our professional photo and video coverage provides you with valuable assets for marketing, PR, and internal use.',
-    whenToChoose: 'Any time you are hosting a significant event that you want to document for promotional purposes or to share with those who couldn’t attend. It immortalizes the success of your event.',
-    whoIsItFor: 'Corporate event planners, marketing departments, PR agencies, sports organizations, and businesses hosting launch parties or conferences.'
-  },
-  'political-pr': {
-    about: 'We provide strategic communications and media relations for political figures and campaigns. Our service focuses on shaping public perception, managing messaging, and securing positive media coverage to build a strong, electable profile.',
-    whenToChoose: 'Crucial during an election cycle, when announcing a candidacy, or when a public figure needs to manage their reputation and communicate their platform effectively to voters and the media.',
-    whoIsItFor: 'Political candidates, elected officials, political action committees (PACs), and public affairs organizations.'
-  },
-  'business-pr': {
-    about: 'Our Business PR service works to enhance your corporate reputation and build credibility. We craft compelling stories and secure placements in relevant media outlets to position your company as a leader in its industry.',
-    whenToChoose: 'Choose this when you are launching a major product, announcing a partnership, sharing company milestones, or want to build long-term brand authority and trust in your market.',
-    whoIsItFor: 'Startups seeking credibility, established companies looking to enhance their reputation, and any business that wants to be seen as a thought leader.'
-  },
-  'entrepreneur-features': {
-    about: 'We help founders and entrepreneurs build their personal brand by securing feature articles and interviews in prominent media outlets. This service positions you as a thought leader and expert in your field.',
-    whenToChoose: 'When you want to elevate your personal profile beyond your company, attract speaking opportunities, or build a following as an industry expert. It adds significant credibility to both you and your business.',
-    whoIsItFor: 'Founders, CEOs, authors, consultants, and any expert looking to build their personal brand and industry influence.'
-  },
-  'press-release-handling': {
-    about: 'We handle the entire press release process, from crafting a newsworthy announcement to distributing it to our network of journalists and media outlets. We focus on getting your news in front of the right people to maximize coverage.',
-    whenToChoose: "This is the standard procedure for announcing company news, such as a funding round, a new executive hire, a product launch, or a significant partnership. It's the official way to communicate with the press.",
-    whoIsItFor: 'Any business with newsworthy information to share. It is a foundational tool for all corporate communications departments and PR agencies.'
-  },
-  'sop-creation': {
-    about: 'We develop clear and effective Standard Operating Procedures (SOPs) to streamline your business processes. This ensures consistency, reduces errors, improves efficiency, and makes it easier to train new employees.',
-    whenToChoose: 'When your business is scaling and processes are becoming inconsistent, or if you find recurring errors in your operations. SOPs are essential for building a scalable and efficient organization.',
-    whoIsItFor: 'Growing businesses, startups looking to establish processes, and established companies aiming to optimize their operations and improve quality control.'
-  },
-  'market-competitor-research': {
-    about: 'Gain a competitive edge with our in-depth market and competitor research. We provide detailed analysis of market trends, consumer behavior, and your competitors\' strategies, strengths, and weaknesses to inform your business decisions.',
-    whenToChoose: 'Before entering a new market, launching a new product, or when you are losing market share. This research is foundational to any sound business or marketing strategy.',
-    whoIsItFor: 'Strategic planners, marketing teams, product managers, and startups looking to validate their business idea and understand the competitive landscape.'
-  },
-  'architecture-analysis': {
-    about: 'We evaluate your business or technical architecture to identify inefficiencies, risks, and opportunities for improvement. Our analysis provides a roadmap for optimizing your systems and structures for better performance and scalability.',
-    whenToChoose: 'When you are experiencing scalability issues, high operational costs, or planning a major technological transformation. It helps ensure your foundation can support future growth.',
-    whoIsItFor: 'CTOs, IT departments, and business leaders of tech-enabled companies who need to ensure their infrastructure is robust, scalable, and cost-effective.'
-  },
-  'data-collection-surveys': {
-    about: 'Gather crucial insights directly from your target audience through professionally designed and executed surveys. We handle everything from question design to data collection and analysis, providing you with actionable data.',
-    whenToChoose: 'When you need to validate a hypothesis, understand customer satisfaction, gauge market demand for a new feature, or gather any form of quantitative or qualitative feedback from a specific group.',
-    whoIsItFor: 'Product managers, marketing teams, researchers, and any business that wants to make data-driven decisions based on direct audience feedback.'
-  },
-  'grant-research': {
-    about: 'We help you navigate the complex world of grants by identifying relevant funding opportunities from foundations, government bodies, and corporations. Our service assists in finding grants that align with your mission and projects.',
-    whenToChoose: 'If your organization is seeking funding for a specific project or operational support and lacks the resources to constantly search for and evaluate grant opportunities.',
-    whoIsItFor: 'Non-profit organizations, educational institutions, research labs, and startups in specific industries (like clean tech or biotech) that are eligible for grant funding.'
-  },
-  'influencer-sourcing-management': {
-    about: 'We connect your brand with the right influencers, content creators, and celebrities to amplify your message. We handle the sourcing, vetting, negotiation, and relationship management to ensure a seamless partnership.',
-    whenToChoose: 'When you want to leverage the trust and reach of established voices to promote your product. It’s an effective way to reach a new, engaged audience with an authentic endorsement.',
-    whoIsItFor: 'B2C brands, especially in fashion, beauty, gaming, and lifestyle, looking for authentic ways to reach and influence their target demographic.'
-  },
-  'influencer-campaign-management': {
-    about: 'This is a full-service offering where we manage your entire influencer marketing campaign from start to finish. This includes strategy development, creative briefs, execution, and detailed performance reporting to measure ROI.',
-    whenToChoose: 'When you want to run a coordinated, multi-influencer campaign but lack the in-house expertise to manage the complexity. We ensure the campaign is cohesive, on-brand, and results-driven.',
-    whoIsItFor: 'Brands that are serious about investing in influencer marketing and want a strategic, professionally managed campaign with clear objectives and measurable outcomes.'
-  },
-  'wordpress-websites': {
-    about: 'We build flexible, scalable, and easy-to-manage websites on WordPress, the world’s most popular CMS. Our service includes custom theme development and plugin configuration to meet your specific business needs.',
-    whenToChoose: 'WordPress is an excellent choice for content-heavy websites like blogs, news sites, and corporate websites that require flexibility and a user-friendly backend for non-technical users to manage content.',
-    whoIsItFor: 'Businesses of all sizes, from bloggers and small businesses to large enterprises, who need a powerful, customizable, and scalable web presence.'
-  },
-  'shopify-stores': {
-    about: 'We design and develop powerful e-commerce solutions on the Shopify platform. Our focus is on creating visually stunning, high-converting online stores that provide a seamless shopping experience for your customers.',
-    whenToChoose: 'If you are selling products online, Shopify is the industry-leading platform. Choose this service to launch a new e-commerce store or to redesign and optimize an existing one for better performance.',
-    whoIsItFor: 'E-commerce businesses of all sizes, from small artisan shops to large multi-channel retailers, who want a robust, secure, and scalable platform to sell their products.'
-  },
-  'webflow-designs': {
-    about: 'We create visually stunning, highly interactive, and pixel-perfect websites using Webflow. This platform allows for advanced design and animation possibilities without sacrificing performance or a clean codebase.',
-    whenToChoose: 'When design and user experience are your top priorities. Webflow is perfect for marketing sites, creative portfolios, and brands that want to make a bold visual statement with rich animations and interactions.',
-    whoIsItFor: 'Design-forward companies, creative agencies, and startups that want a high-end, custom-looking website without the need for extensive custom development.'
-  },
-  'custom-coded-websites': {
-    about: 'For projects with unique requirements, we offer fully custom-coded web solutions. We build bespoke websites and web applications from the ground up, giving you complete control over every aspect of design and functionality.',
-    whenToChoose: 'When your project has complex functional requirements, needs to integrate with specific APIs, or requires a level of performance and security that off-the-shelf solutions cannot provide.',
-    whoIsItFor: 'Tech startups building a web application, businesses with highly specific needs, and companies that require a unique, high-performance web platform tailored exactly to their specifications.'
+  // Web Development
+  {
+    title: 'Shopify Stores',
+    slug: 'shopify-stores',
+    category: { title: 'Website Development', slug: 'website-development' },
+    hero: {
+      description: 'Launch a high-converting, beautifully designed e-commerce store. We build powerful Shopify websites that offer a seamless shopping experience and drive sales.',
+      illustration: 'WebDevIllustration',
+    },
+    introduction: {
+      title: 'Turn Clicks into Customers',
+      content: 'Your online store is your digital flagship. It needs to be more than just a product catalog; it must be a conversion-focused experience that is fast, intuitive, and trustworthy. We specialize in building custom Shopify and Shopify Plus stores that not only look incredible but are also engineered to maximize sales and customer loyalty.',
+    },
+    keyFeatures: {
+      title: 'Everything You Need to Sell Online',
+      items: [
+        {
+          title: 'Custom Theme Design',
+          description: 'We create a unique, on-brand design that makes your products shine and sets you apart from the competition.',
+        },
+        {
+          title: 'Conversion Rate Optimization',
+          description: 'From product page layouts to a streamlined checkout, every element is designed to increase your conversion rate.',
+        },
+        {
+          title: 'Mobile-First Experience',
+          description: 'With most shoppers on mobile, we ensure your store provides a flawless experience on any device.',
+        },
+        {
+          title: 'App Integration',
+          description: 'We integrate the best Shopify apps for reviews, loyalty programs, subscriptions, and more to enhance functionality.',
+        },
+        {
+          title: 'Performance Optimization',
+          description: 'A slow store kills sales. We optimize images, code, and server requests for lightning-fast load times.',
+        },
+        {
+          title: 'Training & Support',
+          description: 'We provide comprehensive training so your team can easily manage products, orders, and content.',
+        },
+      ],
+    },
+    process: {
+      title: 'Our E-commerce Development Workflow',
+      steps: [
+        { step: 1, title: 'Strategy & Planning', description: 'We map out your customer journey, technical requirements, and business goals to create a detailed project plan.' },
+        { step: 2, title: 'Design & Prototyping', description: 'Our design team creates wireframes and high-fidelity mockups of your new store for your approval.' },
+        { step: 3, title: 'Development & Integration', description: 'Our developers bring the designs to life, building a custom Shopify theme and integrating necessary apps.' },
+        { step: 4, title: 'Launch & Post-Launch Support', description: 'After rigorous testing, we manage the launch process and provide ongoing support to ensure a smooth transition.' },
+      ],
+    },
+    stats: [
+      { value: '40%', label: 'Average conversion rate uplift for our e-commerce clients.' },
+      { value: '100+', label: 'High-performance Shopify stores launched and optimized.' },
+    ],
+    caseStudySlug: 'ecommerce-platform-for-artisan',
   }
-};
+];
+
 
 export const serviceGroups: ServiceGroup[] = [
   {
@@ -290,108 +327,6 @@ export const serviceGroups: ServiceGroup[] = [
     ],
   },
 ];
-
-
-const createServicePageContent = (group: ServiceGroup, service: { title: string; slug: string; description: string; caseStudySlug?: string }) => {
-    let longDescription = `Our ${service.title} service is a core part of our ${group.title} offerings. We believe in a focused approach, tailoring every aspect of our work to fit your unique business needs. Our team collaborates closely with you to understand your vision, ensuring the solutions we provide are effective, innovative, and clear. We leverage data-driven insights to inform our strategies, focusing on delivering measurable outcomes that contribute to your long-term success.`;
-
-    switch (service.slug) {
-        case 'logo-design':
-            longDescription = `A logo is the face of your brand. Our approach to ${service.title} goes beyond aesthetics; we explore your brand's core values to design a logo that is both timeless and impactful. The result is a simple, memorable mark that reflects your brand's identity.`;
-            break;
-        case 'seo-aeo':
-            longDescription = `Visibility is key. Our ${service.title} (Search & Answer Engine Optimization) services are designed to place your brand at the forefront of search results. We focus on a holistic strategy of technical SEO, quality content, and authority building to drive sustainable, high-intent organic traffic.`;
-            break;
-        case 'shopify-stores':
-            longDescription = `In e-commerce, a functional online store is non-negotiable. We build ${service.title} that are visually clean and engineered for conversion. From custom theme development to performance optimization, we create seamless shopping experiences that drive sales.`;
-            break;
-    }
-
-    let stats = [
-        { value: '95%', label: 'Client satisfaction rate on delivered projects.' },
-        { value: '24/7', label: 'Support and consultation available for our partners.' }
-    ];
-
-    switch (service.slug) {
-        case 'logo-design':
-            stats = [
-                { value: '300+', label: 'Logos designed for startups and established enterprises.' },
-                { value: '98%', label: 'Client approval rate on first design drafts.' }
-            ];
-            break;
-        case 'brand-identity-strategy':
-             stats = [
-                { value: '45%', label: 'Average increase in brand recognition for our clients.' },
-                { value: '100%', label: 'Brand consistency achieved across all platforms.' }
-            ];
-            break;
-        case 'seo-aeo':
-            stats = [
-                { value: '50%', label: 'Average increase in organic traffic within 6 months.' },
-                { value: 'Top 3', label: 'Ranking achieved for 80% of our clients\' target keywords.' }
-            ];
-            break;
-        case 'ppc-advertising':
-            stats = [
-                { value: '3x', label: 'Average return on ad spend (ROAS) for our campaigns.' },
-                { value: '25%', label: 'Average reduction in cost-per-acquisition (CPA).' }
-            ];
-            break;
-        case 'shopify-stores':
-            stats = [
-                { value: '40%', label: 'Average conversion rate uplift for our e-commerce clients.' },
-                { value: '100+', label: 'High-performance Shopify stores launched and optimized.' }
-            ];
-            break;
-         case 'custom-coded-websites':
-            stats = [
-                { value: '100', label: 'Score on Google Lighthouse for performance and best practices.' },
-                { value: '100%', label: 'Control over every aspect of design and functionality.' }
-            ];
-            break;
-    }
-
-    const details = serviceDetails[service.slug];
-
-    let illustration = 'ServiceIllustration';
-    if (group.slug === 'graphic-design-branding') {
-        illustration = 'BrandingIllustration';
-    } else if (group.slug === 'digital-marketing') {
-        illustration = 'DigitalMarketingIllustration';
-    } else if (group.slug === 'website-development') {
-        illustration = 'WebDevIllustration';
-    } else if (group.slug === 'ai-services') {
-        illustration = 'DigitalMarketingIllustration'; // Using a relevant existing illustration
-    }
-
-    return {
-        title: service.title,
-        slug: service.slug,
-        description: service.description,
-        longDescription: longDescription,
-        category: {
-            title: group.title,
-            slug: group.slug,
-        },
-        caseStudySlug: service.caseStudySlug,
-        stats,
-        aboutService: details?.about,
-        whenToChoose: details?.whenToChoose,
-        whoIsItFor: details?.whoIsItFor,
-        illustration,
-    }
-}
-
-export const services: Service[] = serviceGroups.flatMap(group => {
-    const servicesWithCaseStudies = group.services.map(s => {
-        if (s.slug === 'brand-identity-strategy') return { ...s, caseStudySlug: 'brand-refresh-innovatech' };
-        if (s.slug === 'lead-generation') return { ...s, caseStudySlug: 'lead-gen-for-saas' };
-        if (s.slug === 'shopify-stores') return { ...s, caseStudySlug: 'ecommerce-platform-for-artisan' };
-        return s;
-    });
-
-    return servicesWithCaseStudies.map(service => createServicePageContent(group, service));
-});
 
 
 export const portfolio: PortfolioItem[] = [

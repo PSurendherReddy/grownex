@@ -1,21 +1,38 @@
 export interface Service {
   title: string;
   slug: string;
-  description: string;
-  longDescription: string;
   category: {
     title: string;
     slug: string;
   };
-  caseStudySlug?: string;
+  hero: {
+    description: string;
+    illustration: string;
+  };
+  introduction: {
+    title: string;
+    content: string;
+  };
+  keyFeatures: {
+    title: string;
+    items: {
+      title: string;
+      description: string;
+    }[];
+  };
+  process: {
+    title: string;
+    steps: {
+      step: number;
+      title: string;
+      description: string;
+    }[];
+  };
   stats?: {
     value: string;
     label: string;
   }[];
-  aboutService?: string;
-  whenToChoose?: string;
-  whoIsItFor?: string;
-  illustration?: string;
+  caseStudySlug?: string;
 }
 
 export interface ServiceGroup {
