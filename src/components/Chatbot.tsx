@@ -44,7 +44,7 @@ export function Chatbot() {
       console.error('Error fetching chatbot response:', error);
       setMessages((prevMessages) => [
         ...prevMessages,
-        { role: 'model', content: 'Sorry, something went wrong. Please try again.' },
+        { role: 'model', content: "I seem to be having a little trouble right now. Please try rephrasing your question, or feel free to use the WhatsApp or phone buttons to contact us directly." },
       ]);
     } finally {
       setIsLoading(false);
