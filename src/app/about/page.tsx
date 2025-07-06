@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { team } from "@/lib/data";
@@ -6,6 +7,11 @@ import { Button } from "@/components/ui/button";
 import { AbstractShape1 } from "@/components/vectors/AbstractShape1";
 import { PersonVector } from "@/components/vectors/PersonVector";
 import { ArrowRight } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: 'About Us',
+  description: 'Meet the team at Grownex. We are a passionate group of strategists, designers, and developers dedicated to building brands with clarity and impact through purposeful design.',
+};
 
 export default function AboutPage() {
   return (

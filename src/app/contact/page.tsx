@@ -1,9 +1,15 @@
+import type { Metadata } from 'next';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { ArrowRight } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: 'Contact Us',
+  description: 'Ready to start a project? Get in touch with the Grownex team. We\'re here to discuss your branding, marketing, or web development needs and help you grow.',
+};
 
 export default function ContactPage() {
     return (

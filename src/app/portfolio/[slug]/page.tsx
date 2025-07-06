@@ -1,11 +1,33 @@
 import { portfolio } from "@/lib/data";
 import { notFound } from "next/navigation";
+import type { Metadata } from 'next';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { AbstractShape1 } from "@/components/vectors/AbstractShape1";
 import { AbstractShape2 } from "@/components/vectors/AbstractShape2";
 import { ArrowRight } from "lucide-react";
+
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const project = portfolio.find(p => p.slug === params.slug);
+
+  if (!project) {
+    return {
+      title: "Project Not Found"
+    }
+  }
+
+  return {
+    title: `${project.title} - Case Study`,
+    description: project.challenge,
+    openGraph: {
+        title: `${project.title} - Grownex Case Study`,
+        description: project.challenge,
+        type: 'article',
+        url: `/portfolio/${project.slug}`,
+    },
+  }
+}
 
 export function generateStaticParams() {
     return portfolio.map(item => ({

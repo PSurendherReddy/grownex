@@ -1,5 +1,6 @@
 'use client';
 
+import type { Metadata } from 'next';
 import { useState } from 'react';
 import { Badge } from "@/components/ui/badge";
 import { serviceGroups } from "@/lib/data";
@@ -8,6 +9,11 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { cn } from '@/lib/utils';
 import { ArrowRight } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'Our Services',
+  description: 'Explore our focused suite of services, including branding, digital marketing, web development, AI solutions, and offline advertising, all designed to grow your brand.',
+};
 
 export default function ServicesPage() {
   const [selectedGroup, setSelectedGroup] = useState(serviceGroups[0]);

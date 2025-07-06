@@ -1,6 +1,7 @@
 import { services } from "@/lib/data";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import type { Metadata } from 'next';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ServiceIllustration } from "@/components/vectors/ServiceIllustration";
@@ -28,6 +29,27 @@ const illustrationComponents: Record<string, React.ElementType> = {
     PhotoVideoIllustration,
     PublicRelationsIllustration,
     ContentMarketingIllustration,
+}
+
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const service = services.find(s => s.slug === params.slug);
+
+  if (!service) {
+    return {
+      title: "Service Not Found"
+    }
+  }
+
+  return {
+    title: service.title,
+    description: service.hero.description,
+    openGraph: {
+        title: service.title,
+        description: service.hero.description,
+        type: 'article',
+        url: `/services/${service.slug}`,
+    },
+  }
 }
 
 export function generateStaticParams() {

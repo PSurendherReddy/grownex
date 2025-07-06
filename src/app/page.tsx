@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -19,6 +20,10 @@ import { ArrowRight } from "lucide-react";
 import { ScrollingBanner } from "@/components/ScrollingBanner";
 import { HeroVectorBackground } from "@/components/vectors/HeroVectorBackground";
 
+export const metadata: Metadata = {
+  title: 'Grownex - Focused Design & Marketing Agency',
+  description: 'We blend design, data, and direction for brands that mean business. Explore our services in branding, digital marketing, web development, and AI solutions.',
+};
 
 export default function Home() {
   return (

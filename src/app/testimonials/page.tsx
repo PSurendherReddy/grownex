@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { Badge } from "@/components/ui/badge";
 import { testimonials } from "@/lib/data";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -5,6 +6,11 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { PersonVector } from "@/components/vectors/PersonVector";
 import { ArrowRight } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: 'Client Testimonials',
+  description: 'See what our clients have to say. Read testimonials from our partners about their experience with Grownex and the results we delivered for their brands.',
+};
 
 export default function TestimonialsPage() {
     return (

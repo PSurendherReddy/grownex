@@ -1,5 +1,11 @@
+import type { Metadata } from 'next';
 import { Badge } from "@/components/ui/badge";
 import { AdvisorForm } from "./AdvisorForm";
+
+export const metadata: Metadata = {
+  title: 'AI Marketing Advisor',
+  description: 'Get instant, tailored marketing advice powered by AI. Describe your business and goals to receive optimal channel and strategy recommendations for free.',
+};
 
 export default function MarketingAdvisorPage() {
     return (

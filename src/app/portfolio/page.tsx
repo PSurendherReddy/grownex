@@ -1,5 +1,6 @@
 'use client';
 
+import type { Metadata } from 'next';
 import { useState } from 'react';
 import { Badge } from "@/components/ui/badge";
 import { portfolio } from "@/lib/data";
@@ -7,6 +8,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 import { AbstractShape2 } from '@/components/vectors/AbstractShape2';
+
+export const metadata: Metadata = {
+  title: 'Our Work & Portfolio',
+  description: 'Explore our case studies and selected work. See the impact of focused design and clear strategy on businesses in branding, marketing, and web development.',
+};
 
 const categories = ['All', ...Array.from(new Set(portfolio.map(p => p.category)))];
 

@@ -1,5 +1,6 @@
 'use client';
 
+import type { Metadata } from 'next';
 import { useState } from 'react';
 import { Badge } from "@/components/ui/badge";
 import { blogPosts } from "@/lib/data";
@@ -9,6 +10,14 @@ import { AbstractShape1 } from "@/components/vectors/AbstractShape1";
 import { ArrowRight, Search } from "lucide-react";
 import { Input } from '@/components/ui/input';
 import { motion } from 'framer-motion';
+
+// Note: Metadata for client components is managed in the nearest parent server component, typically layout.tsx or a parent page.tsx.
+// For this page, we can define it statically here for simplicity, but for dynamic client pages, this would be handled differently.
+export const metadata: Metadata = {
+  title: 'Our Blog & Insights',
+  description: 'Stay ahead of the curve with our latest articles, insights, and analysis on branding, marketing strategy, business growth, and AI from our team of experts.',
+};
+
 
 export default function BlogPage() {
     const [searchQuery, setSearchQuery] = useState('');

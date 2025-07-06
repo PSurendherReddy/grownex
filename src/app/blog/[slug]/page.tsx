@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { AbstractShape1 } from "@/components/vectors/AbstractShape1";
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import type { Metadata } from 'next';
 
 import {
   Breadcrumb,
@@ -13,6 +14,33 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
+
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+    const post = blogPosts.find(p => p.slug === params.slug);
+
+    if (!post) {
+        return {
+            title: 'Post Not Found',
+        }
+    }
+
+    return {
+        title: post.title,
+        description: post.excerpt,
+        openGraph: {
+            title: post.title,
+            description: post.excerpt,
+            type: 'article',
+            url: `/blog/${post.slug}`,
+            authors: [post.author],
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title: post.title,
+            description: post.excerpt,
+        },
+    }
+}
 
 // Enhanced markdown to HTML renderer
 const Markdown = ({ content }: { content: string }) => {
