@@ -1,7 +1,7 @@
 'use client';
 
 const BannerContent = () => (
-    <div className="flex items-center justify-around w-full px-4">
+    <div className="flex items-center justify-center w-full gap-x-4 px-4 md:gap-x-8">
         <span className="text-lg md:text-xl font-bold uppercase tracking-wider">WE ARE CREATIVE</span>
         <div className="h-6 w-px bg-primary-foreground flex-shrink-0" />
         <span className="text-lg md:text-xl font-bold uppercase tracking-wider">WE ARE FAST</span>
