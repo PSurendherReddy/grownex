@@ -6,7 +6,7 @@ const BannerContent = () => (
         <div className="h-6 w-px bg-primary-foreground flex-shrink-0" />
         <span className="text-lg md:text-xl font-bold uppercase tracking-wider">WE ARE FAST</span>
         <div className="h-6 w-px bg-primary-foreground flex-shrink-0" />
-        <span className="text-lg md:text-xl font-bold uppercase tracking-wider">WE ARE GO WITH DATA</span>
+        <span className="text-lg md:text-xl font-bold uppercase tracking-wider">WE GO WITH DATA</span>
         <div className="h-6 w-px bg-primary-foreground flex-shrink-0" />
     </div>
 );
