@@ -82,54 +82,45 @@ When asked about services, briefly mention the relevant category and a few examp
 Keep your answers helpful and not too long. If you don't know an answer, say that you are an AI assistant and don't have that information.
 Do not make up information about pricing or specific project timelines unless the user provides them in the context of a hypothetical question.`;
 
-  const response = await ai.generate({
-    prompt: {
-      system: systemPrompt,
-      messages: history,
-    },
-    model: 'googleai/gemini-2.0-flash',
-    tools: [captureLeadDetails],
-  });
-
-  // If the model asks to use a tool, we execute it and send the result back.
-  if (response.toolRequests.length > 0) {
-    const toolRequest = response.toolRequests[0];
-    let toolResult;
-
-    if (toolRequest.name === 'captureLeadDetails') {
-        toolResult = await captureLeadDetails(toolRequest.input);
-    } else {
-        throw new Error(`Unknown tool: ${toolRequest.name}`);
-    }
-
-    // Add the model's request and the tool's response to the history
-    const newHistory: Message[] = [
-        ...history,
-        response.message, // The model's turn with the tool request
-        {
-            role: 'tool',
-            content: [{
-                id: toolRequest.id,
-                tool: {
-                    name: toolRequest.name,
-                    response: toolResult,
-                }
-            }]
-        }
-    ];
-
-    // Call the model again with the new history
-    const finalResponse = await ai.generate({
-        prompt: {
-            system: systemPrompt,
-            messages: newHistory,
-        },
-        model: 'googleai/gemini-2.0-flash',
-        tools: [captureLeadDetails],
+  while (true) {
+    const response = await ai.generate({
+      prompt: {
+        system: systemPrompt,
+        messages: history,
+      },
+      model: 'googleai/gemini-2.0-flash',
+      tools: [captureLeadDetails],
     });
 
-    return finalResponse.text;
-  }
+    history.push(response.message);
 
-  return response.text;
+    if (response.toolRequests.length === 0) {
+      return response.text;
+    }
+
+    const toolResponses = [];
+    for (const toolRequest of response.toolRequests) {
+      let toolResult;
+      if (toolRequest.name === 'captureLeadDetails') {
+        toolResult = await captureLeadDetails(toolRequest.input);
+      } else {
+        // Gracefully handle unknown tools to prevent crashes
+        toolResult = {
+          success: false,
+          message: `I'm sorry, I cannot perform the action '${toolRequest.name}'. I can only answer questions and capture contact details.`,
+        };
+      }
+      
+      toolResponses.push({
+        id: toolRequest.id,
+        tool: {
+          name: toolRequest.name,
+          response: toolResult,
+        },
+      });
+    }
+
+    history.push({ role: 'tool', content: toolResponses });
+    // The loop continues to the next iteration to get the final text response from the model.
+  }
 }
