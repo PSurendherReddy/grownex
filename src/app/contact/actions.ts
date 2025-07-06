@@ -1,6 +1,11 @@
 'use server';
 
 import { z } from 'zod';
+import { Resend } from 'resend';
+import { ContactFormEmail } from '@/components/emails/ContactFormEmail';
+import * as React from 'react';
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 const ContactFormSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -41,19 +46,36 @@ export async function submitContactForm(
 
   const { name, email, subject, message } = validatedFields.data;
 
-  // In a real application, this would go to a CRM or database.
-  // For now, we're logging it to the server console.
-  console.log('--- New Contact Form Lead ---');
-  console.log(`Name: ${name}`);
-  console.log(`Email: ${email}`);
-  console.log(`Subject: ${subject}`);
-  console.log(`Message: ${message}`);
-  console.log('-----------------------------');
-  // You can view these logs in the terminal where you ran `npm run dev`.
+  try {
+    const { data, error } = await resend.emails.send({
+      from: 'Grownex Contact Form <noreply@your-verified-domain.com>', // IMPORTANT: Replace with your verified domain from Resend
+      to: ['connect@grownexdigital.com'],
+      subject: `New Contact Form Lead: ${subject}`,
+      reply_to: email,
+      react: ContactFormEmail({ name, email, subject, message }) as React.ReactElement,
+    });
 
-  return {
-    message: 'Thank you for your message! We will get back to you shortly.',
-    success: true,
-    errors: {},
-  };
+    if (error) {
+      console.error('Resend error:', error);
+      return {
+        message: 'Sorry, we had a problem sending your message. Please try again later.',
+        success: false,
+        errors: {},
+      };
+    }
+    
+    return {
+      message: 'Thank you for your message! We will get back to you shortly.',
+      success: true,
+      errors: {},
+    };
+
+  } catch (exception) {
+    console.error('Email sending exception:', exception);
+    return {
+      message: 'An unexpected error occurred. Please try again later.',
+      success: false,
+      errors: {},
+    };
+  }
 }
