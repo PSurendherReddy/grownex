@@ -1,10 +1,6 @@
 import type { Metadata } from 'next';
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
-import { ArrowRight } from "lucide-react";
+import { ContactForm } from './ContactForm';
 
 export const metadata: Metadata = {
   title: 'Contact Us',
@@ -33,30 +29,7 @@ export default function ContactPage() {
                     <div className="grid lg:grid-cols-2 gap-16">
                         <div>
                             <h2 className="text-2xl font-bold font-headline mb-6">Send a Message</h2>
-                            <form className="space-y-6">
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                                    <div className="space-y-2">
-                                        <Label htmlFor="name">Full Name</Label>
-                                        <Input id="name" placeholder="John Doe" />
-                                    </div>
-                                    <div className="space-y-2">
-                                        <Label htmlFor="email">Email</Label>
-                                        <Input id="email" type="email" placeholder="john.doe@example.com" />
-                                    </div>
-                                </div>
-                                <div className="space-y-2">
-                                    <Label htmlFor="subject">Subject</Label>
-                                    <Input id="subject" placeholder="e.g., Branding Inquiry" />
-                                </div>
-                                <div className="space-y-2">
-                                    <Label htmlFor="message">Message</Label>
-                                    <Textarea id="message" placeholder="Tell us about your project..." rows={6} />
-                                </div>
-                                <Button type="submit" size="lg">
-                                    Send Message
-                                    <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                                </Button>
-                            </form>
+                            <ContactForm />
                         </div>
                         <div className="space-y-8">
                              <h2 className="text-2xl font-bold font-headline mb-6">Contact Info</h2>
