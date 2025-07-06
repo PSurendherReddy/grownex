@@ -14,7 +14,7 @@ export function Chatbot() {
   const [messages, setMessages] = useState<ChatMessage[]>([
     {
       role: 'model',
-      content: "Hello! I'm the AI assistant for Grownex. How can I help you today?",
+      content: "Hello! I'm the Grownex AI assistant, powered by Gemini. How can I help you today?",
     },
   ]);
   const [input, setInput] = useState('');

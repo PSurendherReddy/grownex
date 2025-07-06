@@ -1,7 +1,7 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
-import { Phone, Sparkles } from 'lucide-react';
+import { Phone, Sparkles, X } from 'lucide-react';
 import Link from 'next/link';
 import {
   Tooltip,
@@ -10,14 +10,12 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip"
 import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet"
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover"
 import { Chatbot } from './Chatbot';
+import { useState } from 'react';
 
 
 const WhatsAppIcon = (props: React.SVGProps<SVGSVGElement>) => (
@@ -33,8 +31,10 @@ const WhatsAppIcon = (props: React.SVGProps<SVGSVGElement>) => (
 )
 
 export function FloatingActionButtons() {
+  const [isChatOpen, setIsChatOpen] = useState(false);
+
   return (
-    <Sheet>
+    <Popover open={isChatOpen} onOpenChange={setIsChatOpen}>
       <TooltipProvider>
         <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
           <Tooltip>
@@ -52,11 +52,11 @@ export function FloatingActionButtons() {
 
           <Tooltip>
             <TooltipTrigger asChild>
-               <SheetTrigger asChild>
+               <PopoverTrigger asChild>
                 <Button size="icon" className="rounded-full w-14 h-14" aria-label="Open Chatbot">
                     <Sparkles className="h-7 w-7" />
                 </Button>
-               </SheetTrigger>
+               </PopoverTrigger>
             </TooltipTrigger>
             <TooltipContent side="left">
               <p>Talk to AI Assistant</p>
@@ -78,15 +78,25 @@ export function FloatingActionButtons() {
         </div>
       </TooltipProvider>
 
-      <SheetContent className="w-full max-w-lg p-0 flex flex-col bg-background/80 backdrop-blur-sm" side="right">
-          <SheetHeader className="p-4 border-b bg-transparent">
-            <SheetTitle>AI Assistant</SheetTitle>
-            <SheetDescription>
-              Ask me anything about Grownex services and I'll do my best to help.
-            </SheetDescription>
-          </SheetHeader>
+      <PopoverContent 
+        sideOffset={16} 
+        align="end" 
+        className="w-[calc(100vw-32px)] h-[70vh] sm:w-[400px] sm:h-[600px] rounded-2xl p-0 flex flex-col shadow-2xl border-none bg-background/80 backdrop-blur-md"
+      >
+          <header className="p-4 border-b bg-transparent flex justify-between items-center">
+            <div className="space-y-1">
+              <h3 className="text-lg font-semibold">AI Assistant</h3>
+              <p className="text-sm text-muted-foreground">
+                Powered by Gemini
+              </p>
+            </div>
+             <Button variant="ghost" size="icon" className="rounded-full" onClick={() => setIsChatOpen(false)}>
+                <X className="h-5 w-5" />
+                <span className="sr-only">Close</span>
+            </Button>
+          </header>
           <Chatbot />
-      </SheetContent>
-    </Sheet>
+      </PopoverContent>
+    </Popover>
   );
 }
