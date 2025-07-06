@@ -14,6 +14,7 @@ import { InfluencerMarketingIllustration } from "@/components/vectors/Influencer
 import { OfflineAdvertisingIllustration } from "@/components/vectors/OfflineAdvertisingIllustration";
 import { PhotoVideoIllustration } from "@/components/vectors/PhotoVideoIllustration";
 import { PublicRelationsIllustration } from "@/components/vectors/PublicRelationsIllustration";
+import { ContentMarketingIllustration } from "@/components/vectors/ContentMarketingIllustration";
 
 const illustrationComponents: Record<string, React.ElementType> = {
     ServiceIllustration,
@@ -26,6 +27,7 @@ const illustrationComponents: Record<string, React.ElementType> = {
     OfflineAdvertisingIllustration,
     PhotoVideoIllustration,
     PublicRelationsIllustration,
+    ContentMarketingIllustration,
 }
 
 export function generateStaticParams() {

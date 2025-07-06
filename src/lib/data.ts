@@ -421,6 +421,39 @@ export const services: Service[] = [
       ],
     },
   },
+   {
+    title: 'Content Marketing',
+    slug: 'content-marketing',
+    category: { title: 'Digital Marketing', slug: 'digital-marketing' },
+    hero: {
+      description: 'Fuel your brand with high-quality content that attracts, engages, and converts. From blog posts to in-depth case studies.',
+      illustration: 'ContentMarketingIllustration',
+    },
+    introduction: {
+      title: 'Content is King, and a Full-Funnel Strategy is its Kingdom',
+      content: 'In today\'s market, content isn\'t just about blogs. It\'s about building trust and guiding customers through their entire journey. We create strategic content, including compelling case studies and articles, that establishes your authority and drives business growth.',
+    },
+    keyFeatures: {
+      title: 'Our Content Marketing Services',
+      items: [
+        { title: 'Content Strategy', description: 'Developing a data-driven plan that maps content to your customer\'s journey and business goals.' },
+        { title: 'Blog & Article Writing', description: 'Engaging, SEO-optimized articles that attract organic traffic and establish you as a thought leader.' },
+        { title: 'Case Study Writing', description: 'Powerful success stories that provide social proof and help close deals by showcasing your impact.' },
+        { title: 'Website Copywriting', description: 'Persuasive copy for your website pages that communicates your value and drives action.' },
+        { title: 'Content Distribution', description: 'Promoting your content across relevant channels to maximize its reach and impact.' },
+        { title: 'Performance Analytics', description: 'Tracking content performance to understand what resonates with your audience and refine your strategy.' },
+      ],
+    },
+    process: {
+      title: 'Our Content Creation Workflow',
+      steps: [
+        { step: 1, title: 'Strategy & Ideation', description: 'We work with you to understand your audience and brainstorm content topics that align with their needs.' },
+        { step: 2, title: 'Research & Writing', description: 'Our writers conduct in-depth research and craft high-quality content, including detailed case studies.' },
+        { step: 3, title: 'Review & Optimization', description: 'You review the content, and we optimize it for SEO and readability based on your feedback.' },
+        { step: 4, title: 'Publication & Promotion', description: 'We publish the content on your site and promote it across key channels to drive traffic.' },
+      ],
+    },
+  },
   {
     title: 'WordPress Websites',
     slug: 'wordpress-websites',
@@ -830,7 +863,7 @@ export const services: Service[] = [
         { step: 1, title: 'Discovery & Story Mining', description: 'We dig deep into your business to find compelling stories that the media will want to cover.' },
         { step: 2, title: 'Strategy & Target Media List', description: 'We develop a PR strategy and build a targeted list of relevant publications and journalists.' },
         { step: 3, title: 'Outreach & Pitching', description: 'Our team crafts personalized pitches and reaches out to our media contacts.' },
-        { step: 4, title: 'Coverage Reporting & Analysis', description: 'We track all media mentions and provide you with monthly reports on the impact of our PR efforts.' },
+        { step: 4, title: 'Coverage Reporting & Analysis', description: 'We track all media mentions and provide you with a monthly report on the impact of our PR efforts.' },
       ],
     },
   },
@@ -1048,6 +1081,7 @@ export const serviceGroups: ServiceGroup[] = [
         { title: 'PPC Advertising', slug: 'ppc-advertising', description: 'Paid campaigns for immediate impact.' },
         { title: 'Email Marketing', slug: 'email-marketing', description: 'Nurturing leads with targeted campaigns.' },
         { title: 'Social Media Management', slug: 'social-media-management', description: 'Building and engaging your community.' },
+        { title: 'Content Marketing', slug: 'content-marketing', description: 'Attracting and converting with articles and case studies.' },
     ],
   },
   {
@@ -1309,4 +1343,5 @@ export const team: TeamMember[] = [
     bio: "Diana combines technical prowess with a keen eye for design. She leads the development of high-performance, user-friendly websites that are both beautiful and functional.",
   }
 ];
+
 
