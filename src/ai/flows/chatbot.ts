@@ -112,8 +112,8 @@ Do not make up information about pricing or specific project timelines unless th
       }
       
       toolResponses.push({
-        id: toolRequest.id,
-        tool: {
+        toolResponse: {
+          id: toolRequest.id,
           name: toolRequest.name,
           response: toolResult,
         },
