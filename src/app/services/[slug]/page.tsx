@@ -17,10 +17,7 @@ const illustrationComponents: Record<string, React.ElementType> = {
 }
 
 export function generateStaticParams() {
-    // We are only generating detailed pages for a subset of services for this example.
-    // In a real app, you would generate a page for every service.
-    const detailedServices = services.filter(s => ['ai-chatbots', 'logo-design', 'seo-aeo', 'shopify-stores'].includes(s.slug));
-    return detailedServices.map(service => ({
+    return services.map(service => ({
         slug: service.slug
     }));
 }

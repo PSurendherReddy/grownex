@@ -221,7 +221,305 @@ export const services: Service[] = [
       { value: '100+', label: 'High-performance Shopify stores launched and optimized.' },
     ],
     caseStudySlug: 'ecommerce-platform-for-artisan',
-  }
+  },
+  {
+    title: 'Brand Identity & Strategy',
+    slug: 'brand-identity-strategy',
+    category: { title: 'Graphic Design & Branding', slug: 'graphic-design-branding' },
+    hero: {
+      description: 'Build a brand that resonates. We define your core message and craft a cohesive visual identity that connects with your audience.',
+      illustration: 'BrandingIllustration',
+    },
+    introduction: {
+      title: 'More Than a Look, It\'s a Foundation',
+      content: 'A strong brand is your most valuable asset. Our brand strategy and identity service goes deep to uncover your unique story, define your market position, and build a comprehensive visual and verbal system. This is the strategic foundation for all your marketing efforts, ensuring consistency and building long-term brand equity.',
+    },
+    keyFeatures: {
+      title: 'Our Brand-Building Framework',
+      items: [
+        { title: 'Brand Discovery Workshop', description: 'We facilitate a deep-dive session to uncover your brand’s purpose, vision, values, and personality.' },
+        { title: 'Market & Audience Analysis', description: 'Understand your competitive landscape and define your ideal customer profiles to ensure your brand connects.' },
+        { title: 'Core Messaging & Positioning', description: 'We craft your mission statement, value propositions, and tagline to clearly communicate your unique value.' },
+        { title: 'Complete Visual Identity', description: 'This includes your logo, color palette, typography, and imagery style to create a cohesive look and feel.' },
+        { title: 'Verbal Identity & Tone of Voice', description: 'Defining how your brand speaks is as important as how it looks. We establish clear guidelines for your communications.' },
+        { title: 'Brand Identity Guidelines', description: 'A comprehensive rulebook on how to use your new brand assets, ensuring consistency across all channels.' },
+      ],
+    },
+    process: {
+      title: 'Our Strategic Branding Process',
+      steps: [
+        { step: 1, title: 'Research & Discovery', description: 'We immerse ourselves in your world through workshops, research, and analysis.' },
+        { step: 2, title: 'Strategy & Positioning', description: 'We distill our findings into a clear, actionable brand strategy document.' },
+        { step: 3, title: 'Creative Development', description: 'Our designers and writers bring the strategy to life, creating your visual and verbal identity.' },
+        { step: 4, title: 'Finalization & Rollout Plan', description: 'We finalize all assets and provide a plan for implementing the new brand across your organization.' },
+      ],
+    },
+  },
+  {
+    title: 'Brand Guidelines',
+    slug: 'brand-guidelines',
+    category: { title: 'Graphic Design & Branding', slug: 'graphic-design-branding' },
+    hero: {
+      description: 'Ensure consistency and protect your brand integrity with a comprehensive set of brand guidelines for your team and partners.',
+      illustration: 'BrandingIllustration',
+    },
+    introduction: {
+      title: 'Your Brand\'s Rulebook for Success',
+      content: 'A brand is only as strong as its weakest link. Brand guidelines are essential for ensuring that everyone who communicates on behalf of your brand does so with a unified voice and visual style. Our service provides a clear, easy-to-use document that empowers your team to maintain brand consistency everywhere.',
+    },
+    keyFeatures: {
+      title: 'What\'s Inside Your Brand Book',
+      items: [
+        { title: 'Logo Usage', description: 'Clear rules on logo variations, clear space, minimum size, and what not to do.' },
+        { title: 'Color Palette', description: 'Primary, secondary, and tertiary color values for print (CMYK) and digital (RGB, HEX).' },
+        { title: 'Typography', description: 'Defined font families, sizes, and weights for headings, body copy, and other text elements.' },
+        { title: 'Imagery Style', description: 'Guidelines on photography and illustration style to ensure a consistent visual mood.' },
+        { title: 'Tone of Voice', description: 'Instructions on how to write as your brand, including personality, grammar, and key messaging.' },
+        { title: 'Application Examples', description: 'Mockups showing how the brand assets should be applied to common materials like business cards or presentations.' },
+      ],
+    },
+    process: {
+      title: 'Creating Your Guidelines',
+      steps: [
+        { step: 1, title: 'Asset Collection', description: 'We gather and review all your existing brand assets and strategic documents.' },
+        { step: 2, title: 'Structure & Content Creation', description: 'We organize the guidelines into a logical structure and write clear, concise instructions.' },
+        { step: 3, title: 'Design & Layout', description: 'The guidelines are laid out in a beautifully designed, easy-to-navigate document.' },
+        { step: 4, title: 'Delivery & Training', description: 'We deliver the final brand book and can provide a training session for your team on how to use it.' },
+      ],
+    },
+  },
+  {
+    title: 'Lead Generation',
+    slug: 'lead-generation',
+    category: { title: 'Digital Marketing', slug: 'digital-marketing' },
+    hero: {
+      description: 'Fill your sales pipeline with a steady stream of high-quality, qualified leads. We build and manage targeted campaigns that convert.',
+      illustration: 'DigitalMarketingIllustration',
+    },
+    introduction: {
+      title: 'The Engine of Your Sales Growth',
+      content: 'Growth doesn\'t happen by chance. It requires a predictable, scalable system for generating qualified leads. Our lead generation service combines strategy, technology, and compelling content to attract your ideal customers and guide them into your sales funnel, providing your sales team with a consistent flow of opportunities.',
+    },
+    keyFeatures: {
+      title: 'Our Lead Generation Toolkit',
+      items: [
+        { title: 'Multi-Channel Campaigns', description: 'We use a mix of channels like LinkedIn, Google Ads, SEO, and email to reach your audience where they are.' },
+        { title: 'High-Value Content Offers', description: 'We create compelling lead magnets like ebooks, webinars, and case studies that your audience will trade their contact info for.' },
+        { title: 'Landing Page Optimization', description: 'Our landing pages are meticulously designed and A/B tested to maximize conversion rates.' },
+        { title: 'Lead Nurturing Sequences', description: 'Automated email workflows to educate and build trust with new leads, moving them closer to a sale.' },
+        { title: 'CRM Integration', description: 'Seamlessly pass new leads and their data directly into your CRM for your sales team to follow up.' },
+        { title: 'Analytics & Reporting', description: 'Track every aspect of your funnel, from cost per lead to conversion rates, with our detailed dashboards.' },
+      ],
+    },
+    process: {
+      title: 'How We Build Your Lead Machine',
+      steps: [
+        { step: 1, title: 'Strategy & Ideal Customer Profile', description: 'We define your target audience and map out the entire lead generation and nurturing journey.' },
+        { step: 2, title: 'Campaign & Asset Creation', description: 'We build the landing pages, create the content offers, and set up the ad campaigns.' },
+        { step: 3, title: 'Launch & Monitoring', description: 'We launch the campaigns and closely monitor initial performance, making quick optimizations.' },
+        { step: 4, title: 'Ongoing Optimization & Scaling', description: 'We continually test and refine every part of the funnel to lower your CPA and scale your lead volume.' },
+      ],
+    },
+    caseStudySlug: 'lead-gen-for-saas',
+  },
+  {
+    title: 'PPC Advertising',
+    slug: 'ppc-advertising',
+    category: { title: 'Digital Marketing', slug: 'digital-marketing' },
+    hero: {
+      description: 'Get immediate, targeted traffic and measurable results with expertly managed Pay-Per-Click campaigns on Google, Meta, and LinkedIn.',
+      illustration: 'DigitalMarketingIllustration',
+    },
+    introduction: {
+      title: 'Instant Visibility, Measurable ROI',
+      content: 'When you need to drive traffic and generate leads *now*, PPC advertising is the answer. It offers unparalleled control, speed, and measurability. Our certified PPC specialists build, manage, and optimize campaigns that don\'t just get clicks—they deliver conversions, ensuring your ad spend translates directly into business growth.',
+    },
+    keyFeatures: {
+      title: 'Our PPC Management Services',
+      items: [
+        { title: 'Strategic Keyword Research', description: 'We target high-intent keywords to capture users actively searching for your solution.' },
+        { title: 'Compelling Ad Copy', description: 'We write persuasive, A/B tested ad copy that maximizes click-through rates.' },
+        { title: 'Landing Page Optimization', description: 'We ensure your landing pages are designed to convert visitors into leads or customers.' },
+        { title: 'Audience Targeting', description: 'We go beyond keywords, using demographics, interests, and remarketing to reach the right people.' },
+        { title: 'Budget Management', description: 'Meticulous budget allocation and bid management to maximize your return on ad spend (ROAS).' },
+        { title: 'Transparent Reporting', description: 'Receive clear, concise reports that show you exactly how your campaigns are performing and what we\'re doing to improve.' },
+      ],
+    },
+    process: {
+      title: 'Our Approach to PPC',
+      steps: [
+        { step: 1, title: 'Account Audit & Strategy', description: 'We analyze your goals and existing accounts (if any) to create a data-driven strategy.' },
+        { step: 2, title: 'Campaign Build & Launch', description: 'We structure your campaigns, write ad copy, and set up conversion tracking.' },
+        { step: 3, title: 'Daily Monitoring & Optimization', description: 'Our team monitors performance daily, adjusting bids, budgets, and targeting to improve results.' },
+        { step: 4, title: 'Reporting & Scaling', description: 'We provide monthly reports and strategic recommendations for scaling your successful campaigns.' },
+      ],
+    },
+  },
+  {
+    title: 'Email Marketing',
+    slug: 'email-marketing',
+    category: { title: 'Digital Marketing', slug: 'digital-marketing' },
+    hero: {
+      description: 'Nurture leads, engage customers, and drive repeat business with powerful, automated email marketing campaigns.',
+      illustration: 'DigitalMarketingIllustration',
+    },
+    introduction: {
+      title: 'The Highest ROI in Digital Marketing',
+      content: 'Email isn\'t dead; it\'s more powerful than ever. It\'s your direct line to your most engaged audience. We help you leverage email marketing to build lasting customer relationships, automate your sales process, and generate revenue on autopilot. From newsletters to complex nurturing sequences, we handle it all.',
+    },
+    keyFeatures: {
+      title: 'What Our Email Marketing Includes',
+      items: [
+        { title: 'Strategy & Segmentation', description: 'We develop a strategy based on your customer lifecycle and segment your audience for personalized messaging.' },
+        { title: 'Automated Nurturing Funnels', description: 'Create "set it and forget it" email sequences that welcome new subscribers, nurture leads, and onboard new customers.' },
+        { title: 'Engaging Newsletter Management', description: 'We\'ll design, write, and send regular newsletters that your audience actually wants to read.' },
+        { title: 'Template Design', description: 'Beautiful, on-brand, and mobile-responsive email templates that look great in any inbox.' },
+        { title: 'List Management & Health', description: 'We keep your email lists clean and engaged to maximize deliverability and open rates.' },
+        { title: 'A/B Testing & Optimization', description: 'Continuously testing subject lines, content, and calls-to-action to improve performance.' },
+      ],
+    },
+    process: {
+      title: 'Our Email Campaign Process',
+      steps: [
+        { step: 1, title: 'Platform Setup & Strategy', description: 'We help you choose the right email platform and map out your automation and campaign strategy.' },
+        { step: 2, title: 'Content & Design', description: 'Our team creates the email templates, writes the copy, and builds out the automated flows.' },
+        { step: 3, title: 'Implementation & Testing', description: 'We set up everything in your email platform and rigorously test every link and trigger.' },
+        { step: 4, title: 'Launch & Reporting', description: 'We launch the campaigns and provide regular reports on key metrics like open rates, click-through rates, and conversions.' },
+      ],
+    },
+  },
+  {
+    title: 'Social Media Management',
+    slug: 'social-media-management',
+    category: { title: 'Digital Marketing', slug: 'digital-marketing' },
+    hero: {
+      description: 'Build a thriving community and an authentic brand presence on the social media platforms that matter most to your business.',
+      illustration: 'DigitalMarketingIllustration',
+    },
+    introduction: {
+      title: 'Go Beyond Likes and Followers',
+      content: 'Effective social media is about building relationships, not just broadcasting messages. We manage your social media presence with a focus on authentic engagement and community building. We create and curate content that resonates with your audience, sparks conversations, and supports your broader business goals.',
+    },
+    keyFeatures: {
+      title: 'Our Social Media Services',
+      items: [
+        { title: 'Platform-Specific Strategy', description: 'We develop a unique strategy for each platform (e.g., LinkedIn, Instagram, X) tailored to its audience and format.' },
+        { title: 'Content Creation & Curation', description: 'We create a mix of original content, curated articles, and user-generated content to keep your feed fresh and engaging.' },
+        { title: 'Community Management', description: 'We actively engage with your audience by responding to comments, messages, and mentions in a timely and on-brand manner.' },
+        { title: 'Monthly Content Calendar', description: 'You\'ll get a detailed content calendar each month for review and approval, so you always know what\'s being posted.' },
+        { title: 'Social Listening', description: 'We monitor conversations about your brand and industry to identify opportunities and manage your reputation.' },
+        { title: 'Performance Analytics', description: 'Monthly reports detailing growth, engagement, and how social media is contributing to your business objectives.' },
+      ],
+    },
+    process: {
+      title: 'How We Manage Your Social Presence',
+      steps: [
+        { step: 1, title: 'Strategy & Profile Optimization', description: 'We start with a deep dive into your brand and audience, then optimize your profiles for maximum impact.' },
+        { step: 2, title: 'Content Planning & Creation', description: 'We develop a content strategy and create the first month\'s content calendar.' },
+        { step: 3, title: 'Daily Management & Engagement', description: 'Our team handles daily posting, scheduling, and community interaction.' },
+        { step: 4, title: 'Monthly Reporting & Strategy Review', description: 'We analyze performance and refine our strategy each month to ensure continuous improvement.' },
+      ],
+    },
+  },
+  {
+    title: 'WordPress Websites',
+    slug: 'wordpress-websites',
+    category: { title: 'Website Development', slug: 'website-development' },
+    hero: {
+      description: 'Get a powerful, flexible, and easy-to-manage website built on the world\'s most popular content management system.',
+      illustration: 'WebDevIllustration',
+    },
+    introduction: {
+      title: 'The Ultimate in Flexibility and Control',
+      content: 'WordPress powers over 40% of the web for a reason: it offers an unmatched combination of flexibility, power, and ease of use. Whether you need a corporate website, a blog, or a complex membership site, our team designs and develops custom WordPress solutions that are secure, scalable, and tailored to your specific business needs.',
+    },
+    keyFeatures: {
+      title: 'Why Choose Our WordPress Development',
+      items: [
+        { title: 'Custom Theme Development', description: 'We build your site from the ground up with a custom theme—no bloated, off-the-shelf templates. This means better performance and security.' },
+        { title: 'User-Friendly Page Builders', description: 'We use flexible content editors like the Block Editor (Gutenberg) or ACF, making it easy for your team to update content.' },
+        { title: 'Plugin Expertise', description: 'We select and configure only the most reliable and secure plugins to add functionality without compromising performance.' },
+        { title: 'Performance Optimization', description: 'We implement advanced caching, image optimization, and clean coding practices to ensure your site is lightning-fast.' },
+        { title: 'Security Hardening', description: 'We take security seriously, implementing best practices to protect your site from threats.' },
+        { title: 'Comprehensive Training', description: 'We provide detailed training videos and documentation so you can manage your new website with confidence.' },
+      ],
+    },
+    process: {
+      title: 'Our WordPress Build Process',
+      steps: [
+        { step: 1, title: 'Discovery & Architecture', description: 'We map out your site structure, content requirements, and technical needs.' },
+        { step: 2, title: 'Design & Prototyping', description: 'We create wireframes and visual designs for your review and approval.' },
+        { step: 3, title: 'Development & Content Entry', description: 'Our developers build the custom theme and functionality, and we assist with initial content migration.' },
+        { step: 4, title: 'Launch & Support', description: 'After thorough testing, we handle the migration to your live server and provide ongoing maintenance and support.' },
+      ],
+    },
+  },
+  {
+    title: 'Webflow Designs',
+    slug: 'webflow-designs',
+    category: { title: 'Website Development', slug: 'website-development' },
+    hero: {
+      description: 'Launch visually stunning, highly interactive websites with pixel-perfect animations and a powerful, client-friendly CMS.',
+      illustration: 'WebDevIllustration',
+    },
+    introduction: {
+      title: 'Where Design and Development Collide',
+      content: 'Webflow empowers us to build complex, visually rich websites with the creative freedom of a design tool and the power of a modern development framework. The result is a website with stunning interactions and a CMS that\'s incredibly easy for your team to use, all without the maintenance headaches of traditional platforms.',
+    },
+    keyFeatures: {
+      title: 'The Webflow Advantage',
+      items: [
+        { title: 'Pixel-Perfect Design', description: 'We can build exactly what we design, without the constraints of templates, for a truly custom look.' },
+        { title: 'Advanced Interactions & Animations', description: 'Create rich, engaging user experiences with scroll-based animations, micro-interactions, and more.' },
+        { title: 'Client-Friendly CMS', description: 'The Webflow Editor makes it incredibly simple for your team to edit text, swap images, and manage content on the live site.' },
+        { title: 'Blazing-Fast Hosting', description: 'Webflow\'s managed hosting is powered by AWS and Fastly, ensuring top-tier speed, security, and reliability.' },
+        { title: 'No Plugins, No Updates', description: 'Say goodbye to security patches and plugin maintenance. Webflow handles all the technical upkeep for you.' },
+        { title: 'SEO-Ready', description: 'We have full control over SEO settings, from meta tags to structured data, to ensure your site is optimized for search.' },
+      ],
+    },
+    process: {
+      title: 'Building Your Vision in Webflow',
+      steps: [
+        { step: 1, title: 'Strategy & Wireframing', description: 'We plan the site structure and user flow before diving into visual design.' },
+        { step: 2, title: 'Visual Design in Figma', description: 'We create a full visual prototype of the website for your approval.' },
+        { step: 3, title: 'Webflow Development', description: 'Our Webflow experts translate the approved design into a fully functional, responsive website.' },
+        { step: 4, title: 'CMS Setup & Launch', description: 'We build out your CMS collections, provide training, and manage the seamless launch of your new site.' },
+      ],
+    },
+  },
+  {
+    title: 'Custom-Coded Sites',
+    slug: 'custom-coded-websites',
+    category: { title: 'Website Development', slug: 'website-development' },
+    hero: {
+      description: 'For unique challenges that require maximum performance and scalability, we build bespoke web applications from the ground up.',
+      illustration: 'WebDevIllustration',
+    },
+    introduction: {
+      title: 'Unlimited Possibilities, Unmatched Performance',
+      content: 'When off-the-shelf solutions won\'t cut it, a custom-coded website or web application is the answer. Built with modern frameworks like Next.js and React, our custom solutions offer unparalleled performance, security, and scalability. This is the choice for ambitious businesses building unique digital products and platforms.',
+    },
+    keyFeatures: {
+      title: 'Why Go Custom?',
+      items: [
+        { title: 'Maximum Performance', description: 'By writing clean, optimized code and eliminating bloat, we achieve the fastest possible load times.' },
+        { title: 'Infinite Scalability', description: 'Our applications are built on serverless architectures that can handle traffic spikes and growth without a hitch.' },
+        { title: 'Tailored Functionality', description: 'We build the exact features you need, perfectly tailored to your business logic and user workflows.' },
+        { title: 'API Integration', description: 'Seamlessly connect with any third-party service, API, or internal data source.' },
+        { title: 'Enhanced Security', description: 'A custom build reduces the attack surface area common in platform-based sites, offering superior security.' },
+        { title: 'Full Ownership', description: 'You own the codebase and the intellectual property, giving you complete freedom and control.' },
+      ],
+    },
+    process: {
+      title: 'Our Application Development Process',
+      steps: [
+        { step: 1, title: 'Technical Scoping & Architecture', description: 'We conduct a deep technical discovery to define the project scope and design the system architecture.' },
+        { step: 2, title: 'Agile Development Sprints', description: 'We work in two-week sprints, delivering testable increments of the application for your review.' },
+        { step: 3, title: 'Rigorous Testing & QA', description: 'We perform automated and manual testing throughout the development process to ensure a bug-free product.' },
+        { step: 4, title: 'Deployment & DevOps', description: 'We manage the deployment process using modern CI/CD pipelines and provide ongoing support and maintenance.' },
+      ],
+    },
+  },
 ];
 
 
