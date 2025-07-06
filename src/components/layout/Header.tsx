@@ -13,8 +13,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { ArrowRight, Menu } from 'lucide-react';
+import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
+import { ArrowRight, Menu, X } from 'lucide-react';
 
 const navLinks = [
   { href: '/about', label: 'About Us' },
@@ -131,10 +131,18 @@ export function Header() {
             </Button>
           </SheetTrigger>
           <SheetContent side="top" className="w-full p-0">
-            <nav className="grid gap-6 p-6 text-lg max-h-[80vh] overflow-y-auto">
-              <Link href="/" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
-                <Logo className="h-8" />
-              </Link>
+            <div className="flex items-center justify-between p-4 border-b">
+                <Link href="/" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Logo className="h-8" />
+                </Link>
+                <SheetClose asChild>
+                    <Button variant="ghost" size="icon">
+                        <X className="h-6 w-6" />
+                        <span className="sr-only">Close</span>
+                    </Button>
+                </SheetClose>
+            </div>
+            <nav className="grid gap-6 p-6 pt-4 text-lg max-h-[calc(90vh-80px)] overflow-y-auto">
               {navLinks.map(({ href, label }) => {
                 if (href === '/services') {
                   return (
