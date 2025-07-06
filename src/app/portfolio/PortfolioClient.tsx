@@ -2,11 +2,12 @@
 
 import { useState } from 'react';
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
-import { AbstractShape2 } from '@/components/vectors/AbstractShape2';
+import Image from 'next/image';
 import type { PortfolioItem } from '@/lib/types';
+import { ArrowRight } from 'lucide-react';
 
 
 export function PortfolioClient({ portfolio }: { portfolio: PortfolioItem[] }) {
@@ -34,23 +35,33 @@ export function PortfolioClient({ portfolio }: { portfolio: PortfolioItem[] }) {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {filteredPortfolio.map(project => (
-                         <Card key={project.slug} className="overflow-hidden group bg-transparent border-none shadow-none">
-                            <CardHeader className="p-0">
-                            <Link href={`/portfolio/${project.slug}`}>
-                            <AbstractShape2
-                                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-                            />
-                            </Link>
-                            </CardHeader>
-                            <CardContent className="p-4 pl-0">
-                            <Badge variant="outline">{project.category}</Badge>
-                            <CardTitle className="mt-2 text-xl font-bold">
-                                <Link href={`/portfolio/${project.slug}`} className="hover:text-primary transition-colors">
-                                    {project.title}
+                        <Card key={project.slug} className="h-full flex flex-col overflow-hidden group transition-all duration-300 hover:shadow-xl hover:-translate-y-1 bg-background border">
+                            <CardHeader className="p-0 relative">
+                                <Link href={`/portfolio/${project.slug}`} className="block overflow-hidden aspect-[4/3]">
+                                <Image
+                                    src={project.imageUrl}
+                                    alt={project.title}
+                                    width={600}
+                                    height={450}
+                                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                                    data-ai-hint={project.category === 'Branding' ? 'branding design' : project.category === 'Digital Marketing' ? 'digital marketing' : 'web development'}
+                                />
                                 </Link>
-                            </CardTitle>
-                            <CardDescription className="mt-1">{project.description}</CardDescription>
+                            </CardHeader>
+                            <CardContent className="p-6 flex-grow flex flex-col">
+                                <Badge variant="outline">{project.category}</Badge>
+                                <CardTitle className="mt-4 text-xl group-hover:text-primary transition-colors">
+                                    <Link href={`/portfolio/${project.slug}`}>
+                                        {project.title}
+                                    </Link>
+                                </CardTitle>
+                                <CardDescription className="mt-2 text-sm flex-grow">{project.description}</CardDescription>
                             </CardContent>
+                             <CardFooter className="p-6 pt-0 mt-auto">
+                                <Link href={`/portfolio/${project.slug}`} className="font-semibold text-sm text-primary flex items-center gap-1.5 group/link">
+                                    View Project <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover/link:translate-x-1" />
+                                </Link>
+                            </CardFooter>
                         </Card>
                     ))}
                 </div>

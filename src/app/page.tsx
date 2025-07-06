@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { serviceGroups, portfolio, testimonials, partners } from "@/lib/data";
 import Link from "next/link";
 import {
@@ -13,12 +13,12 @@ import {
 } from "@/components/ui/carousel"
 import { InteractiveServices } from "@/components/InteractiveServices";
 import { AbstractShape1 } from "@/components/vectors/AbstractShape1";
-import { AbstractShape2 } from "@/components/vectors/AbstractShape2";
 import { PersonVector } from "@/components/vectors/PersonVector";
 import { PartnerLogoVector } from "@/components/vectors/PartnerLogoVector";
 import { ArrowRight } from "lucide-react";
 import { ScrollingBanner } from "@/components/ScrollingBanner";
 import { HeroVectorBackground } from "@/components/vectors/HeroVectorBackground";
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'Grownex - Focused Design & Marketing Agency',
@@ -132,37 +132,53 @@ export default function Home() {
                 align: "start",
                 loop: true,
               }}
-              className="w-full"
+              className="w-full max-w-6xl mx-auto"
             >
               <CarouselContent>
                 {portfolio.map((project) => (
                   <CarouselItem key={project.slug} className="md:basis-1/2 lg:basis-1/3">
-                    <div className="p-1">
-                      <Card className="overflow-hidden group border-none bg-transparent shadow-none">
-                        <CardHeader className="p-0">
-                           <Link href={`/portfolio/${project.slug}`}>
-                            <AbstractShape2
-                              className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-                            />
+                    <Card className="h-full flex flex-col overflow-hidden group transition-all duration-300 hover:shadow-xl bg-background border">
+                      <CardHeader className="p-0 relative">
+                        <Link href={`/portfolio/${project.slug}`} className="block overflow-hidden aspect-[4/3]">
+                          <Image
+                            src={project.imageUrl}
+                            alt={project.title}
+                            width={600}
+                            height={450}
+                            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                            data-ai-hint={project.category === 'Branding' ? 'branding design' : project.category === 'Digital Marketing' ? 'digital marketing' : 'web development'}
+                          />
+                        </Link>
+                      </CardHeader>
+                      <CardContent className="p-6 flex-grow flex flex-col">
+                        <Badge variant="outline">{project.category}</Badge>
+                        <CardTitle className="mt-4 text-xl group-hover:text-primary transition-colors">
+                          <Link href={`/portfolio/${project.slug}`}>
+                            {project.title}
                           </Link>
-                        </CardHeader>
-                        <CardContent className="p-4 pl-0">
-                          <Badge variant="outline">{project.category}</Badge>
-                          <CardTitle className="mt-2 text-xl font-bold">
-                             <Link href={`/portfolio/${project.slug}`} className="hover:text-primary transition-colors">
-                                {project.title}
-                              </Link>
-                          </CardTitle>
-                          <CardDescription className="mt-1">{project.description}</CardDescription>
-                        </CardContent>
-                      </Card>
-                    </div>
+                        </CardTitle>
+                        <CardDescription className="mt-2 text-sm flex-grow">{project.description}</CardDescription>
+                      </CardContent>
+                      <CardFooter className="p-6 pt-0 mt-auto">
+                         <Link href={`/portfolio/${project.slug}`} className="font-semibold text-sm text-primary flex items-center gap-1.5 group/link">
+                          View Project <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover/link:translate-x-1" />
+                        </Link>
+                      </CardFooter>
+                    </Card>
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious className="left-4" />
-              <CarouselNext className="right-4" />
+              <CarouselPrevious className="left-[-50px]" />
+              <CarouselNext className="right-[-50px]" />
             </Carousel>
+             <div className="text-center mt-12">
+              <Button asChild>
+                <Link href="/portfolio">
+                  View All Projects
+                  <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                </Link>
+              </Button>
+            </div>
           </div>
         </section>
 

@@ -1171,6 +1171,7 @@ export const portfolio: PortfolioItem[] = [
     slug: 'brand-refresh-innovatech',
     category: 'Branding',
     description: 'Modernizing a legacy tech brand to reflect its innovative services.',
+    imageUrl: 'https://placehold.co/600x450.png',
     client: 'InnovaTech Solutions',
     challenge: "InnovaTech's dated brand identity failed to communicate its cutting-edge services, losing them business to modern competitors.",
     solution: "We developed a new strategy focused on 'Human-centered Innovation,' creating a clean, bold identity. This was applied to a new website and all marketing materials.",
@@ -1185,6 +1186,7 @@ export const portfolio: PortfolioItem[] = [
     slug: 'lead-gen-for-saas',
     category: 'Digital Marketing',
     description: 'Scaling a B2B SaaS platform from 100 to 1,000 demo requests per month.',
+    imageUrl: 'https://placehold.co/600x450.png',
     client: 'ConnectFlow',
     challenge: 'ConnectFlow had a great product but struggled to generate consistent, high-quality leads. Their marketing efforts were untargeted.',
     solution: "We implemented a multi-channel strategy including targeted LinkedIn Ads, a comprehensive SEO plan, and an automated email nurturing sequence to convert visitors into demo requests.",
@@ -1199,6 +1201,7 @@ export const portfolio: PortfolioItem[] = [
     slug: 'ecommerce-platform-for-artisan',
     category: 'Web Development',
     description: 'Building a beautiful and functional Shopify store for a luxury goods brand.',
+    imageUrl: 'https://placehold.co/600x450.png',
     client: 'The Artisan Collection',
     challenge: "The brand's existing website was clunky, difficult to navigate, and not mobile-friendly, causing a high cart abandonment rate.",
     solution: "We designed and developed a custom Shopify theme reflecting the brand's luxury aesthetic. The new site features a streamlined checkout and is fully optimized for mobile.",
@@ -1343,5 +1346,6 @@ export const team: TeamMember[] = [
     bio: "Diana combines technical prowess with a keen eye for design. She leads the development of high-performance, user-friendly websites that are both beautiful and functional.",
   }
 ];
+
 
 

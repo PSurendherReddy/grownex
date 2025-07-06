@@ -51,6 +51,7 @@ export interface PortfolioItem {
   slug: string;
   category: string;
   description: string;
+  imageUrl: string;
   client: string;
   challenge: string;
   solution: string;

@@ -4,8 +4,7 @@ import type { Metadata } from 'next';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { AbstractShape1 } from "@/components/vectors/AbstractShape1";
-import { AbstractShape2 } from "@/components/vectors/AbstractShape2";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
@@ -25,6 +24,20 @@ export async function generateMetadata({ params }: { params: { slug: string } })
         description: project.challenge,
         type: 'article',
         url: `/portfolio/${project.slug}`,
+        images: [
+          {
+            url: project.imageUrl,
+            width: 600,
+            height: 450,
+            alt: project.title,
+          }
+        ]
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: `${project.title} - Grownex Case Study`,
+        description: project.challenge,
+        images: [project.imageUrl],
     },
   }
 }
@@ -41,6 +54,15 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
     if (!project) {
         notFound();
     }
+    
+    const getAiHint = (category: string) => {
+        switch (category) {
+            case 'Branding': return 'branding design';
+            case 'Digital Marketing': return 'digital marketing';
+            case 'Web Development': return 'web development';
+            default: return 'project case study';
+        }
+    };
 
     return (
         <>
@@ -62,8 +84,13 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
                 <div className="container mx-auto px-4">
                     <div className="grid lg:grid-cols-3 gap-12">
                         <div className="lg:col-span-2">
-                             <AbstractShape2
-                                className="w-full h-auto object-cover shadow-lg mb-12"
+                             <Image
+                                src={project.imageUrl}
+                                alt={project.title}
+                                width={800}
+                                height={600}
+                                className="w-full h-auto object-cover shadow-lg mb-12 rounded-lg"
+                                data-ai-hint={getAiHint(project.category)}
                             />
 
                             <div>
@@ -78,7 +105,7 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
                         </div>
 
                         <div className="lg:col-span-1">
-                            <div className="lg:sticky top-24 bg-background p-8 border">
+                            <div className="lg:sticky top-24 bg-background p-8 border rounded-lg">
                                 <h3 className="text-xl font-bold font-headline">Results</h3>
                                 <div className="mt-6 space-y-6">
                                     {project.results.map((result, index) => (
@@ -98,8 +125,22 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
                     <div className="mt-16">
                         <h2 className="text-2xl font-bold font-headline text-center mb-8">Project Visuals</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                           <AbstractShape1 className="w-full h-auto shadow-md" />
-                           <AbstractShape2 className="w-full h-auto shadow-md" />
+                           <Image 
+                                src="https://placehold.co/800x600.png"
+                                alt="Project visual 1"
+                                width={800}
+                                height={600}
+                                className="w-full h-auto shadow-md rounded-lg"
+                                data-ai-hint="project gallery"
+                           />
+                           <Image 
+                                src="https://placehold.co/800x600.png"
+                                alt="Project visual 2"
+                                width={800}
+                                height={600}
+                                className="w-full h-auto shadow-md rounded-lg"
+                                data-ai-hint="project gallery"
+                           />
                         </div>
                     </div>
                 </div>
