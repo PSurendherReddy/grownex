@@ -3,7 +3,7 @@ import type { Service, ServiceGroup, PortfolioItem, Testimonial, Partner, BlogPo
 export const services: Service[] = [
   // AI Services
   {
-    title: 'AI Chatbots',
+    title: 'AI Chatbots (Web, WhatsApp, Messenger)',
     slug: 'ai-chatbots',
     category: { title: 'AI Services', slug: 'ai-services' },
     hero: {
@@ -517,6 +517,292 @@ export const services: Service[] = [
         { step: 2, title: 'Agile Development Sprints', description: 'We work in two-week sprints, delivering testable increments of the application for your review.' },
         { step: 3, title: 'Rigorous Testing & QA', description: 'We perform automated and manual testing throughout the development process to ensure a bug-free product.' },
         { step: 4, title: 'Deployment & DevOps', description: 'We manage the deployment process using modern CI/CD pipelines and provide ongoing support and maintenance.' },
+      ],
+    },
+  },
+  // START OF NEW SERVICES
+  {
+    title: 'Hoarding Advertising',
+    slug: 'hoarding-advertising',
+    category: { title: 'Offline Advertising', slug: 'offline-advertising' },
+    hero: {
+      description: 'Capture mass attention with large-format, high-impact hoardings in prime locations. Make your brand unmissable.',
+      illustration: 'ServiceIllustration',
+    },
+    introduction: {
+      title: 'Larger Than Life Brand Presence',
+      content: 'In a world of fleeting digital ads, hoardings offer a constant, powerful presence. We secure premium locations and design eye-catching creative to ensure your message dominates the landscape and sticks in the minds of thousands of daily commuters.'
+    },
+    keyFeatures: {
+      title: 'Key Features of Our Hoarding Campaigns',
+      items: [
+        { title: 'Prime Location Scouting', description: 'We identify and secure high-traffic, high-visibility locations for maximum impact.' },
+        { title: 'Creative Design & Messaging', description: 'Our team designs bold, clear, and memorable visuals that communicate your message in seconds.' },
+        { title: 'Material & Print Management', description: 'We oversee the production process to ensure high-quality, durable materials for your hoardings.' },
+        { title: 'Campaign Monitoring', description: 'We ensure your hoardings remain in excellent condition throughout the campaign duration.' },
+      ],
+    },
+    process: {
+      title: 'From Concept to Cityscape',
+      steps: [
+        { step: 1, title: 'Strategy & Location Planning', description: 'We determine the best locations and campaign duration based on your target audience and budget.' },
+        { step: 2, title: 'Creative Development', description: 'Our designers develop compelling artwork that is optimized for large-format viewing.' },
+        { step: 3, title: 'Production & Installation', description: 'We manage the printing and professional installation of your hoarding.' },
+        { step: 4, title: 'Proof & Reporting', description: 'We provide photographic proof of installation and report on the campaign\'s reach.' },
+      ],
+    },
+  },
+  {
+    title: 'Mall Advertising',
+    slug: 'mall-advertising',
+    category: { title: 'Offline Advertising', slug: 'offline-advertising' },
+    hero: {
+      description: 'Engage a captive audience of shoppers in a high-traffic, purchase-oriented environment. Connect with consumers when they are most ready to buy.',
+      illustration: 'ServiceIllustration',
+    },
+    introduction: {
+      title: 'Connect at the Point of Purchase',
+      content: 'Mall advertising places your brand directly in the path of consumers with high purchasing intent. From digital screens to strategic placements, we create campaigns that capture attention, drive foot traffic to your store, and influence buying decisions.'
+    },
+    keyFeatures: {
+      title: 'Our Mall Advertising Solutions',
+      items: [
+        { title: 'Strategic Placement', description: 'We secure placements in high-traffic areas like food courts, entrances, and escalators.' },
+        { title: 'Digital & Static Media', description: 'We offer a range of options from dynamic digital screens to static posters and banners.' },
+        { title: 'Experiential Activations', description: 'Create memorable brand experiences with pop-up shops, product demos, or interactive kiosks.' },
+        { title: 'Audience Analytics', description: 'Leverage mall data to target specific demographics and measure campaign effectiveness.' },
+      ],
+    },
+    process: {
+      title: 'Our Mall Campaign Process',
+      steps: [
+        { step: 1, title: 'Audience & Mall Selection', description: 'We help you choose the right malls and media formats to reach your target customer.' },
+        { step: 2, title: 'Creative & Campaign Planning', description: 'We design ads and experiences tailored to the mall environment.' },
+        { step: 3, title: 'Execution & Management', description: 'Our team handles the logistics of installation, activation, and campaign monitoring.' },
+        { step: 4, title: 'Performance Review', description: 'We analyze foot traffic data and sales uplift to measure the ROI of your campaign.' },
+      ],
+    },
+  },
+  {
+    title: 'Product Shoots',
+    slug: 'product-shoots',
+    category: { title: 'Photo & Video', slug: 'photo-video-production' },
+    hero: {
+      description: 'High-quality product photography that makes your products fly off the digital shelves. From clean e-commerce shots to creative lifestyle images.',
+      illustration: 'ServiceIllustration',
+    },
+    introduction: {
+      title: 'Showcase Your Products in the Best Light',
+      content: 'In e-commerce, your product photos are your most crucial sales tool. They need to be sharp, clear, and compelling. We provide professional product photography services that capture the details, quality, and appeal of your products, driving desire and boosting conversion rates.'
+    },
+    keyFeatures: {
+      title: 'Our Photography Services',
+      items: [
+        { title: 'E-commerce Photography', description: 'Clean, crisp shots on a pure white background, optimized for Amazon, Shopify, and other marketplaces.' },
+        { title: 'Lifestyle & In-Context Shots', description: 'Show your product in use with professional models and settings to help customers envision it in their own lives.' },
+        { title: '360° Photography', description: 'Allow customers to view your product from every angle with interactive 360-degree images.' },
+        { title: 'Professional Retouching', description: 'Every image is professionally edited for perfect color, lighting, and blemish removal.' },
+      ],
+    },
+    process: {
+      title: 'Our Simple & Efficient Process',
+      steps: [
+        { step: 1, title: 'Consultation & Shot List', description: 'We work with you to create a detailed shot list and style guide for your products.' },
+        { step: 2, title: 'Studio Photography', description: 'Your products are professionally photographed in our fully equipped studio.' },
+        { step: 3, title: 'Post-Production & Editing', description: 'Our team retouches and perfects each image according to your specifications.' },
+        { step: 4, title: 'Delivery & Approval', description: 'You receive your high-resolution images via a private online gallery for review and download.' },
+      ],
+    },
+  },
+  {
+    title: 'Event Shoots',
+    slug: 'event-photo-video',
+    category: { title: 'Photo & Video', slug: 'photo-video-production' },
+    hero: {
+      description: 'Capture the energy and key moments of your corporate events, conferences, and launches with professional photography and videography.',
+      illustration: 'ServiceIllustration',
+    },
+    introduction: {
+      title: 'Preserve Your Most Important Moments',
+      content: 'Your events are a significant investment. Professional photo and video coverage allows you to extend their value long after they\'ve ended. We capture the keynotes, networking, and overall atmosphere, providing you with high-quality assets for marketing, social media, and internal communications.'
+    },
+    keyFeatures: {
+      title: 'Comprehensive Event Coverage',
+      items: [
+        { title: 'Photography & Videography', description: 'Full coverage from our team of experienced event photographers and videographers.' },
+        { title: 'Highlight Reels', description: 'Get a dynamic 1-3 minute video summary of your event, perfect for social media and future promotions.' },
+        { title: 'Speaker & Session Recordings', description: 'Full recordings of keynote speeches and breakout sessions for on-demand viewing.' },
+        { title: 'Candid & Posed Shots', description: 'A mix of candid moments and professional headshots or group photos.' },
+        { title: 'Fast Turnaround', description: 'Receive a selection of key photos within 24 hours for immediate PR and social media use.' },
+      ],
+    },
+    process: {
+      title: 'Seamless Event Integration',
+      steps: [
+        { step: 1, title: 'Pre-Event Briefing', description: 'We meet with your team to understand the event schedule, key moments, and desired shot list.' },
+        { step: 2, title: 'On-Site Coverage', description: 'Our professional and discreet team captures your event without disruption.' },
+        { step: 3, title: 'Post-Production', description: 'We edit, color grade, and produce all photos and video content.' },
+        { step: 4, title: 'Asset Delivery', description: 'All final assets are delivered via a secure online gallery for easy sharing and downloading.' },
+      ],
+    },
+  },
+  {
+    title: 'Political PR',
+    slug: 'political-pr',
+    category: { title: 'Public Relations', slug: 'public-relations' },
+    hero: {
+      description: 'Shape public perception and effectively communicate your message with strategic PR for political campaigns and public figures.',
+      illustration: 'ServiceIllustration',
+    },
+    introduction: {
+      title: 'Crafting a Winning Narrative',
+      content: 'In the fast-paced world of politics, perception is reality. Our political PR services help candidates and public figures build a positive public image, control their narrative, and effectively communicate their platform to voters and stakeholders. We are your strategic partners in communication.'
+    },
+    keyFeatures: {
+      title: 'Our Political PR Services',
+      items: [
+        { title: 'Message Development', description: 'We help you craft a clear, consistent, and compelling message that resonates with your target electorate.' },
+        { title: 'Media Relations', description: 'We secure positive media coverage and manage relationships with journalists, bloggers, and news outlets.' },
+        { title: 'Crisis Communication', description: 'We prepare for and manage potential crises, protecting your reputation and keeping your campaign on track.' },
+        { title: 'Speechwriting & Debate Prep', description: 'Our team helps you prepare powerful speeches and sharp, persuasive arguments for debates.' },
+        { title: 'Digital Reputation Management', description: 'We manage your online presence, ensuring a positive narrative across social media and search results.' },
+      ],
+    },
+    process: {
+      title: 'Our Strategic Approach',
+      steps: [
+        { step: 1, title: 'Strategy & Message Definition', description: 'We work with you to define your core message and communications strategy.' },
+        { step: 2, title: 'Media Outreach & Engagement', description: 'We proactively pitch stories and manage media inquiries to secure favorable coverage.' },
+        { step: 3, title: 'Continuous Monitoring', description: 'We constantly monitor media and public sentiment, providing you with regular updates and strategic advice.' },
+        { step: 4, title: 'Execution & Support', description: 'We provide hands-on support for all your public appearances, interviews, and events.' },
+      ],
+    },
+  },
+  {
+    title: 'Business PR',
+    slug: 'business-pr',
+    category: { title: 'Public Relations', slug: 'public-relations' },
+    hero: {
+      description: 'Enhance your corporate reputation, build industry authority, and drive business growth through strategic media relations.',
+      illustration: 'ServiceIllustration',
+    },
+    introduction: {
+      title: 'Build Credibility and Trust',
+      content: 'Positive media coverage is more credible and effective than any advertisement. Our business PR services help you earn that coverage. We tell your story to the right audiences, positioning your company as an industry leader and building the trust that is essential for long-term success.'
+    },
+    keyFeatures: {
+      title: 'Our Corporate PR Toolkit',
+      items: [
+        { title: 'Strategic Media Relations', description: 'We build relationships with key industry journalists to secure feature articles, interviews, and positive mentions.' },
+        { title: 'Thought Leadership', description: 'We position your executives as go-to experts in your field through bylined articles and speaking opportunities.' },
+        { title: 'Product Launch Campaigns', description: 'We create and execute PR campaigns that generate buzz and drive demand for your new products or services.' },
+        { title: 'Corporate Social Responsibility (CSR)', description: 'We help you communicate your CSR initiatives to build a positive brand image.' },
+        { title: 'Reputation Management', description: 'We monitor your brand\'s reputation and have strategies in place to manage any negative press.' },
+      ],
+    },
+    process: {
+      title: 'Our Public Relations Process',
+      steps: [
+        { step: 1, title: 'Discovery & Story Mining', description: 'We dig deep into your business to find compelling stories that the media will want to cover.' },
+        { step: 2, title: 'Strategy & Target Media List', description: 'We develop a PR strategy and build a targeted list of relevant publications and journalists.' },
+        { step: 3, title: 'Outreach & Pitching', description: 'Our team crafts personalized pitches and reaches out to our media contacts.' },
+        { step: 4, title: 'Coverage Reporting & Analysis', description: 'We track all media mentions and provide you with monthly reports on the impact of our PR efforts.' },
+      ],
+    },
+  },
+  {
+    title: 'SOP Creation',
+    slug: 'sop-creation',
+    category: { title: 'Business Consulting', slug: 'business-consulting' },
+    hero: {
+      description: 'Streamline your operations, ensure consistency, and scale your business effectively with professionally documented Standard Operating Procedures (SOPs).',
+      illustration: 'ServiceIllustration',
+    },
+    introduction: {
+      title: 'The Blueprint for Your Business Success',
+      content: 'As your business grows, you can\'t be everywhere at once. SOPs are the key to empowering your team, reducing errors, and ensuring that tasks are performed consistently and efficiently. We work with you to document your key processes, creating a clear and easy-to-follow playbook for your entire organization.'
+    },
+    keyFeatures: {
+      title: 'What Our SOP Service Includes',
+      items: [
+        { title: 'Process Mapping Workshops', description: 'We facilitate sessions with your team to map out your key business processes from start to finish.' },
+        { title: 'Clear & Concise Documentation', description: 'We write your SOPs in simple language, using flowcharts and checklists to make them easy to understand and follow.' },
+        { title: 'Digital SOP Hub', description: 'We can help you set up a centralized, digital knowledge base for your SOPs, making them easily accessible to your team.' },
+        { title: 'Version Control & Updates', description: 'We establish a system for keeping your SOPs up-to-date as your processes evolve.' },
+        { title: 'Employee Training Materials', description: 'We can create training materials and guides to help you roll out your new SOPs to the team.' },
+      ],
+    },
+    process: {
+      title: 'Our SOP Development Process',
+      steps: [
+        { step: 1, title: 'Discovery & Prioritization', description: 'We identify and prioritize the key processes that need to be documented first.' },
+        { step: 2, title: 'Information Gathering', description: 'We interview your subject matter experts and observe the processes in action.' },
+        { step: 3, title: 'Drafting & Review', description: 'We draft the SOPs and review them with your team to ensure accuracy and clarity.' },
+        { step: 4, title: 'Finalization & Implementation', description: 'We deliver the final SOPs and provide support for implementing them across your organization.' },
+      ],
+    },
+  },
+  {
+    title: 'Custom AI Agents',
+    slug: 'custom-ai-agents',
+    category: { title: 'AI Services', slug: 'ai-services' },
+    hero: {
+      description: 'Automate complex workflows and supercharge your team\'s productivity with custom AI agents built for your specific sales, support, and internal tasks.',
+      illustration: 'DigitalMarketingIllustration',
+    },
+    introduction: {
+      title: 'Your AI Workforce, Tailored to You',
+      content: 'Imagine an AI that doesn\'t just answer questions, but performs multi-step tasks. Our Custom AI Agents can research leads, draft emails, summarize documents, update your CRM, and more. We build intelligent agents that integrate with your existing tools and act as a powerful force multiplier for your human team.'
+    },
+    keyFeatures: {
+      title: 'Capabilities of Our AI Agents',
+      items: [
+        { title: 'Sales Prospecting Agent', description: 'Automatically researches potential clients, identifies key contacts, and drafts personalized outreach emails.' },
+        { title: 'Customer Support Agent', description: 'Handles complex support tickets by accessing your knowledge base, analyzing the issue, and suggesting solutions.' },
+        { title: 'Internal Knowledge Agent', description: 'Acts as a go-to expert for your team, instantly answering questions about company policies, processes, and data.' },
+        { title: 'Data Analysis Agent', description: 'Connects to your databases to analyze data, identify trends, and generate reports in natural language.' },
+        { title: 'Workflow Automation', description: 'Integrates with tools like Slack, Google Workspace, and your CRM to automate multi-step business processes.' },
+      ],
+    },
+    process: {
+      title: 'Building Your Custom Agent',
+      steps: [
+        { step: 1, title: 'Workflow Analysis', description: 'We work with you to identify the most high-impact, repetitive tasks that can be automated.' },
+        { step: 2, title: 'Agent Design & Tooling', description: 'We design the agent\'s reasoning process and connect it to the necessary tools and APIs (e.g., CRM, email).' },
+        { step: 3, title: 'Development & Training', description: 'We build the agent and fine-tune it with your specific data and processes for optimal performance.' },
+        { step: 4, title: 'Integration & Deployment', description: 'We deploy the agent into your existing workflows and provide comprehensive training for your team.' },
+      ],
+    },
+  },
+  {
+    title: 'Influencer Marketing',
+    slug: 'influencer-sourcing-management',
+    category: { title: 'Influencer Marketing', slug: 'influencer-marketing' },
+    hero: {
+      description: 'Amplify your message and build trust by partnering with authentic influencers, meme creators, and celebrities who resonate with your target audience.',
+      illustration: 'DigitalMarketingIllustration',
+    },
+    introduction: {
+      title: 'Leverage the Power of Trusted Voices',
+      content: 'Modern consumers trust recommendations from people they follow more than traditional advertising. Influencer marketing allows you to tap into that trust. We identify the right partners for your brand and manage the entire campaign from start to finish, ensuring authentic collaborations that drive real results.'
+    },
+    keyFeatures: {
+      title: 'Our Influencer Marketing Services',
+      items: [
+        { title: 'Influencer Sourcing & Vetting', description: 'We find and vet influencers based on audience demographics, engagement rates, and brand alignment.' },
+        { title: 'Campaign Strategy', description: 'We develop creative campaign concepts that align with your marketing goals, from brand awareness to direct sales.' },
+        { title: 'Contract Negotiation', description: 'We handle all negotiations and contracts to ensure clear deliverables and fair pricing.' },
+        { title: 'Content Coordination', description: 'We manage the entire content approval process between your brand and the influencer.' },
+        { title: 'Performance Tracking', description: 'We provide detailed reports on reach, engagement, traffic, and conversions for every campaign.' },
+      ],
+    },
+    process: {
+      title: 'Our End-to-End Campaign Management',
+      steps: [
+        { step: 1, title: 'Strategy & Influencer Discovery', description: 'We define your campaign goals and identify a curated list of potential influencer partners.' },
+        { step: 2, title: 'Outreach & Negotiation', description: 'We manage all communications and negotiations to secure the best partners for your campaign.' },
+        { step: 3, title: 'Campaign Execution', description: 'We coordinate content creation, posting schedules, and compliance with advertising guidelines.' },
+        { step: 4, title: 'Reporting & Analysis', description: 'After the campaign, we deliver a comprehensive report analyzing its performance and ROI.' },
       ],
     },
   },
