@@ -8,7 +8,7 @@
 
 import {ai} from '@/ai/genkit';
 import {z} from 'genkit';
-import type { Message } from 'genkit/model';
+import type { Message, ToolResponsePart } from 'genkit/model';
 
 // Define the schema for a single chat message
 const ChatMessageSchema = z.object({
@@ -25,23 +25,19 @@ const LeadDetailsSchema = z.object({
     query: z.string().describe("A summary of the user's inquiry based on the conversation."),
 });
 
+// Changed the tool to return a simple string for the model to output directly.
+// This simplifies the logic and makes the interaction more robust.
 const captureLeadDetails = ai.defineTool(
     {
       name: 'captureLeadDetails',
-      description: 'Use this tool to capture the user\'s contact information when they express interest in Grownex\'s services and are ready to be contacted by the sales team.',
+      description: 'Use this tool to capture the user\'s contact information when they express interest in Grownex\'s services and are ready to be contacted by the sales team. The tool will return a confirmation message to be shown to the user.',
       inputSchema: LeadDetailsSchema,
-      outputSchema: z.object({
-          success: z.boolean(),
-          message: z.string(),
-      }),
+      outputSchema: z.string(),
     },
     async (input) => {
       // In a real application, you would save these details to a CRM or database.
       console.log('Lead captured:', input);
-      return {
-        success: true,
-        message: `Thanks, ${input.name}! Someone from our team will contact you shortly at ${input.phone} regarding your interest in "${input.query}".`,
-      };
+      return `Thanks, ${input.name}! Someone from our team will contact you shortly at ${input.phone} regarding your interest in "${input.query}".`;
     }
 );
 
@@ -64,7 +60,7 @@ export async function askChatbot(messages: ChatMessage[]): Promise<string> {
 Your primary goal is to answer user questions about the agency and its services.
 Your secondary goal is to identify potential customers and encourage them to provide their contact details for a follow-up.
 
-When a user shows clear interest in starting a project or getting a quote, proactively guide the conversation towards capturing their details. Use the 'captureLeadDetails' tool to collect their name, phone number, email (if provided), and a brief summary of their needs. Don't be pushy, but be clear that providing details is the next step to getting started. Once you have the details, call the tool.
+When a user shows clear interest in starting a project or getting a quote, proactively guide the conversation towards capturing their details. Use the 'captureLeadDetails' tool to collect their name, phone number, email (if provided), and a brief summary of their needs. Don't be pushy, but be clear that providing details is the next step to getting started. Once you have the details, call the tool. After calling the tool, present the confirmation message it returns directly to the user.
 
 Use the provided conversation history to maintain context. Be concise and helpful.
 
@@ -98,17 +94,14 @@ Do not make up information about pricing or specific project timelines unless th
       return response.text;
     }
 
-    const toolResponses = [];
+    const toolResponses: ToolResponsePart[] = [];
     for (const toolRequest of response.toolRequests) {
-      let toolResult;
+      let toolResult: string;
       if (toolRequest.name === 'captureLeadDetails') {
         toolResult = await captureLeadDetails(toolRequest.input);
       } else {
-        // Gracefully handle unknown tools to prevent crashes
-        toolResult = {
-          success: false,
-          message: `I'm sorry, I cannot perform the action '${toolRequest.name}'. I can only answer questions and capture contact details.`,
-        };
+        // Gracefully handle unknown tools to prevent crashes.
+        toolResult = `I'm sorry, I cannot perform the action '${toolRequest.name}'. I can only answer questions and capture contact details.`;
       }
       
       toolResponses.push({
