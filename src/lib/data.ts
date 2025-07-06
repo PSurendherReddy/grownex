@@ -584,6 +584,130 @@ export const services: Service[] = [
     },
   },
   {
+    title: 'Campus Ads',
+    slug: 'college-campus-ads',
+    category: { title: 'Offline Advertising', slug: 'offline-advertising' },
+    hero: {
+      description: 'Target the next generation of consumers directly on college and university campuses.',
+      illustration: 'OfflineAdvertisingIllustration',
+    },
+    introduction: {
+      title: 'Connect with the Youth Market',
+      content: 'Engage with students where they live, study, and socialize. Campus advertising offers a unique opportunity to build brand loyalty with a demographic that has significant purchasing power and influence.'
+    },
+    keyFeatures: {
+      title: 'Key Features',
+      items: [
+        { title: 'Poster & Flyer Distribution', description: 'Targeted placement in high-traffic areas like student unions, libraries, and dorms.' },
+        { title: 'Event Sponsorship', description: 'Sponsor campus events, clubs, or sports teams to build a positive brand association.' },
+        { title: 'Digital Screens', description: 'Advertise on digital screens in cafeterias, student centers, and gyms.' },
+        { title: 'Brand Ambassadorships', description: 'Recruit student brand ambassadors to promote your product on campus.' },
+      ],
+    },
+    process: {
+      title: 'Our Process',
+      steps: [
+        { step: 1, title: 'Campus Selection & Strategy', description: 'We identify the best campuses and advertising channels to reach your target student demographic.' },
+        { step: 2, title: 'Creative Development', description: 'We design creative that is appealing and relevant to a student audience.' },
+        { step: 3, title: 'Execution & Rollout', description: 'We manage all logistics, from printing and distribution to event coordination.' },
+        { step: 4, title: 'Reporting', description: 'We provide reports on reach, engagement, and student feedback.' },
+      ],
+    },
+  },
+    {
+    title: 'Apartment Ads',
+    slug: 'apartment-complex-ads',
+    category: { title: 'Offline Advertising', slug: 'offline-advertising' },
+    hero: {
+      description: 'Reach a concentrated audience directly where they live with targeted advertising in residential communities.',
+      illustration: 'OfflineAdvertisingIllustration',
+    },
+    introduction: {
+      title: 'Your Brand, At Home',
+      content: 'Connect with residents in a trusted, everyday environment. Apartment advertising places your message in high-traffic common areas, ensuring repeated exposure and building familiarity with a valuable local audience.'
+    },
+    keyFeatures: {
+      title: 'Our Apartment Advertising Services',
+      items: [
+        { title: 'Notice Board & Lobby Posters', description: 'Place eye-catching posters on community notice boards and in lobby areas.' },
+        { title: 'Elevator Ads', description: 'Capture attention in elevators with strategically placed static or digital ads.' },
+        { title: 'Door Hanger Distribution', description: 'Deliver your promotional materials directly to residents\' doors.' },
+        { title: 'Community Event Sponsorship', description: 'Sponsor local events within the apartment complex to build goodwill and engagement.' },
+      ],
+    },
+    process: {
+      title: 'Our Process',
+      steps: [
+        { step: 1, title: 'Community Identification', description: 'We identify and select apartment complexes that match your target demographic.' },
+        { step: 2, title: 'Secure Permissions', description: 'Our team handles all negotiations and permissions with property management.' },
+        { step: 3, title: 'Material Production & Placement', description: 'We manage the design, printing, and professional placement of all ad materials.' },
+        { step: 4, title: 'Reporting & Verification', description: 'We provide photographic proof of placement and reports on the campaign\'s reach.' },
+      ],
+    },
+  },
+  {
+    title: 'Petrol Pump Advertising',
+    slug: 'petrol-pump-advertising',
+    category: { title: 'Offline Advertising', slug: 'offline-advertising' },
+    hero: {
+      description: 'Capture the undivided attention of a diverse audience of vehicle owners during their weekly refueling routine.',
+      illustration: 'OfflineAdvertisingIllustration',
+    },
+    introduction: {
+      title: 'Connect During a Moment of Pause',
+      content: 'Petrol pump advertising offers a unique opportunity to reach a captive audience. For a few minutes, drivers are focused on a single task, making them highly receptive to clear, bold messaging placed directly in their line of sight.'
+    },
+    keyFeatures: {
+      title: 'Our Petrol Pump Advertising Options',
+      items: [
+        { title: 'Fuel Nozzle Ads', description: 'Your message placed directly in the customer\'s hand.' },
+        { title: 'Dispenser Unit Posters', description: 'Large, eye-level posters on the fuel dispensing units.' },
+        { title: 'Canopy & Pillar Banners', description: 'Large-format banners for maximum visibility across the station.' },
+        { title: 'Digital Screens', description: 'Engage customers with dynamic video or animated content on digital screens.' },
+      ],
+    },
+    process: {
+      title: 'Our Fuel-Powered Process',
+      steps: [
+        { step: 1, title: 'Location Strategy', description: 'We select high-traffic petrol pumps in locations that align with your business goals.' },
+        { step: 2, title: 'Creative Design', description: 'Our team designs simple, high-impact creative that is easily digestible in a short time.' },
+        { step: 3, title: 'Installation & Maintenance', description: 'We manage the installation and ensure your ads remain in top condition.' },
+        { step: 4, title: 'Campaign Monitoring', description: 'We provide reports including photos of the installed ads and data on station footfall.' },
+      ],
+    },
+  },
+  {
+    title: 'Pamphlet Distribution',
+    slug: 'pamphlet-distribution',
+    category: { title: 'Offline Advertising', slug: 'offline-advertising' },
+    hero: {
+      description: 'Deliver your message directly into the hands of potential customers with a targeted, cost-effective pamphlet distribution campaign.',
+      illustration: 'OfflineAdvertisingIllustration',
+    },
+    introduction: {
+      title: 'Direct, Tangible, and Local',
+      content: 'In the digital age, a physical piece of marketing can stand out. Pamphlets and flyers are a powerful way to generate local buzz, announce offers, and drive foot traffic to your business, all with precise geographic targeting.'
+    },
+    keyFeatures: {
+      title: 'Our Distribution Methods',
+      items: [
+        { title: 'Newspaper Insertion', description: 'Reach thousands of households by inserting your pamphlet into daily newspapers.' },
+        { title: 'Door-to-Door Delivery', description: 'Target specific residential areas with direct delivery to homes.' },
+        { title: 'Hand-to-Hand Distribution', description: 'Engage potential customers directly at high-traffic locations like markets, metro stations, or events.' },
+        { title: 'Business-to-Business Drops', description: 'Target other local businesses in a specific commercial area.' },
+      ],
+    },
+    process: {
+      title: 'Our Distribution Process',
+      steps: [
+        { step: 1, title: 'Targeting & Planning', description: 'We work with you to define the perfect distribution area and strategy based on your goals.' },
+        { step: 2, title: 'Design & Printing', description: 'We design a compelling pamphlet and manage the entire printing process for you.' },
+        { step: 3, title: 'Supervised Distribution', description: 'Our trained teams carry out the distribution, supervised to ensure accuracy and reach.' },
+        { step: 4, title: 'Proof of Delivery', description: 'We provide detailed reports and photographic evidence of the distribution campaign.' },
+      ],
+    },
+  },
+  {
     title: 'Product Shoots',
     slug: 'product-shoots',
     category: { title: 'Photo & Video', slug: 'photo-video-production' },
@@ -803,37 +927,6 @@ export const services: Service[] = [
         { step: 2, title: 'Outreach & Negotiation', description: 'We manage all communications and negotiations to secure the best partners for your campaign.' },
         { step: 3, title: 'Campaign Execution', description: 'We coordinate content creation, posting schedules, and compliance with advertising guidelines.' },
         { step: 4, title: 'Reporting & Analysis', description: 'After the campaign, we deliver a comprehensive report analyzing its performance and ROI.' },
-      ],
-    },
-  },
-  {
-    title: 'Campus Ads',
-    slug: 'college-campus-ads',
-    category: { title: 'Offline Advertising', slug: 'offline-advertising' },
-    hero: {
-      description: 'Target the next generation of consumers directly on college and university campuses.',
-      illustration: 'OfflineAdvertisingIllustration',
-    },
-    introduction: {
-      title: 'Connect with the Youth Market',
-      content: 'Engage with students where they live, study, and socialize. Campus advertising offers a unique opportunity to build brand loyalty with a demographic that has significant purchasing power and influence.'
-    },
-    keyFeatures: {
-      title: 'Key Features',
-      items: [
-        { title: 'Poster & Flyer Distribution', description: 'Targeted placement in high-traffic areas like student unions, libraries, and dorms.' },
-        { title: 'Event Sponsorship', description: 'Sponsor campus events, clubs, or sports teams to build a positive brand association.' },
-        { title: 'Digital Screens', description: 'Advertise on digital screens in cafeterias, student centers, and gyms.' },
-        { title: 'Brand Ambassadorships', description: 'Recruit student brand ambassadors to promote your product on campus.' },
-      ],
-    },
-    process: {
-      title: 'Our Process',
-      steps: [
-        { step: 1, title: 'Campus Selection & Strategy', description: 'We identify the best campuses and advertising channels to reach your target student demographic.' },
-        { step: 2, title: 'Creative Development', description: 'We design creative that is appealing and relevant to a student audience.' },
-        { step: 3, title: 'Execution & Rollout', description: 'We manage all logistics, from printing and distribution to event coordination.' },
-        { step: 4, title: 'Reporting', description: 'We provide reports on reach, engagement, and student feedback.' },
       ],
     },
   },
@@ -1216,3 +1309,4 @@ export const team: TeamMember[] = [
     bio: "Diana combines technical prowess with a keen eye for design. She leads the development of high-performance, user-friendly websites that are both beautiful and functional.",
   }
 ];
+
