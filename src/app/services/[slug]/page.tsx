@@ -8,12 +8,24 @@ import { BrandingIllustration } from "@/components/vectors/BrandingIllustration"
 import { DigitalMarketingIllustration } from "@/components/vectors/DigitalMarketingIllustration";
 import { WebDevIllustration } from "@/components/vectors/WebDevIllustration";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { AIServicesIllustration } from "@/components/vectors/AIServicesIllustration";
+import { BusinessConsultingIllustration } from "@/components/vectors/BusinessConsultingIllustration";
+import { InfluencerMarketingIllustration } from "@/components/vectors/InfluencerMarketingIllustration";
+import { OfflineAdvertisingIllustration } from "@/components/vectors/OfflineAdvertisingIllustration";
+import { PhotoVideoIllustration } from "@/components/vectors/PhotoVideoIllustration";
+import { PublicRelationsIllustration } from "@/components/vectors/PublicRelationsIllustration";
 
 const illustrationComponents: Record<string, React.ElementType> = {
     ServiceIllustration,
     BrandingIllustration,
     DigitalMarketingIllustration,
     WebDevIllustration,
+    AIServicesIllustration,
+    BusinessConsultingIllustration,
+    InfluencerMarketingIllustration,
+    OfflineAdvertisingIllustration,
+    PhotoVideoIllustration,
+    PublicRelationsIllustration,
 }
 
 export function generateStaticParams() {

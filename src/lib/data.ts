@@ -8,7 +8,7 @@ export const services: Service[] = [
     category: { title: 'AI Services', slug: 'ai-services' },
     hero: {
       description: 'Engage customers 24/7 with intelligent, automated conversations on your website, WhatsApp, and Messenger. Convert visitors into qualified leads, day or night.',
-      illustration: 'DigitalMarketingIllustration',
+      illustration: 'AIServicesIllustration',
     },
     introduction: {
       title: 'Never Miss a Lead Again',
@@ -527,7 +527,7 @@ export const services: Service[] = [
     category: { title: 'Offline Advertising', slug: 'offline-advertising' },
     hero: {
       description: 'Capture mass attention with large-format, high-impact hoardings in prime locations. Make your brand unmissable.',
-      illustration: 'ServiceIllustration',
+      illustration: 'OfflineAdvertisingIllustration',
     },
     introduction: {
       title: 'Larger Than Life Brand Presence',
@@ -558,7 +558,7 @@ export const services: Service[] = [
     category: { title: 'Offline Advertising', slug: 'offline-advertising' },
     hero: {
       description: 'Engage a captive audience of shoppers in a high-traffic, purchase-oriented environment. Connect with consumers when they are most ready to buy.',
-      illustration: 'ServiceIllustration',
+      illustration: 'OfflineAdvertisingIllustration',
     },
     introduction: {
       title: 'Connect at the Point of Purchase',
@@ -589,7 +589,7 @@ export const services: Service[] = [
     category: { title: 'Photo & Video', slug: 'photo-video-production' },
     hero: {
       description: 'High-quality product photography that makes your products fly off the digital shelves. From clean e-commerce shots to creative lifestyle images.',
-      illustration: 'ServiceIllustration',
+      illustration: 'PhotoVideoIllustration',
     },
     introduction: {
       title: 'Showcase Your Products in the Best Light',
@@ -620,7 +620,7 @@ export const services: Service[] = [
     category: { title: 'Photo & Video', slug: 'photo-video-production' },
     hero: {
       description: 'Capture the energy and key moments of your corporate events, conferences, and launches with professional photography and videography.',
-      illustration: 'ServiceIllustration',
+      illustration: 'PhotoVideoIllustration',
     },
     introduction: {
       title: 'Preserve Your Most Important Moments',
@@ -652,7 +652,7 @@ export const services: Service[] = [
     category: { title: 'Public Relations', slug: 'public-relations' },
     hero: {
       description: 'Shape public perception and effectively communicate your message with strategic PR for political campaigns and public figures.',
-      illustration: 'ServiceIllustration',
+      illustration: 'PublicRelationsIllustration',
     },
     introduction: {
       title: 'Crafting a Winning Narrative',
@@ -684,7 +684,7 @@ export const services: Service[] = [
     category: { title: 'Public Relations', slug: 'public-relations' },
     hero: {
       description: 'Enhance your corporate reputation, build industry authority, and drive business growth through strategic media relations.',
-      illustration: 'ServiceIllustration',
+      illustration: 'PublicRelationsIllustration',
     },
     introduction: {
       title: 'Build Credibility and Trust',
@@ -716,7 +716,7 @@ export const services: Service[] = [
     category: { title: 'Business Consulting', slug: 'business-consulting' },
     hero: {
       description: 'Streamline your operations, ensure consistency, and scale your business effectively with professionally documented Standard Operating Procedures (SOPs).',
-      illustration: 'ServiceIllustration',
+      illustration: 'BusinessConsultingIllustration',
     },
     introduction: {
       title: 'The Blueprint for Your Business Success',
@@ -748,7 +748,7 @@ export const services: Service[] = [
     category: { title: 'AI Services', slug: 'ai-services' },
     hero: {
       description: 'Automate complex workflows and supercharge your team\'s productivity with custom AI agents built for your specific sales, support, and internal tasks.',
-      illustration: 'DigitalMarketingIllustration',
+      illustration: 'AIServicesIllustration',
     },
     introduction: {
       title: 'Your AI Workforce, Tailored to You',
@@ -780,7 +780,7 @@ export const services: Service[] = [
     category: { title: 'Influencer Marketing', slug: 'influencer-marketing' },
     hero: {
       description: 'Amplify your message and build trust by partnering with authentic influencers, meme creators, and celebrities who resonate with your target audience.',
-      illustration: 'DigitalMarketingIllustration',
+      illustration: 'InfluencerMarketingIllustration',
     },
     introduction: {
       title: 'Leverage the Power of Trusted Voices',
@@ -803,6 +803,131 @@ export const services: Service[] = [
         { step: 2, title: 'Outreach & Negotiation', description: 'We manage all communications and negotiations to secure the best partners for your campaign.' },
         { step: 3, title: 'Campaign Execution', description: 'We coordinate content creation, posting schedules, and compliance with advertising guidelines.' },
         { step: 4, title: 'Reporting & Analysis', description: 'After the campaign, we deliver a comprehensive report analyzing its performance and ROI.' },
+      ],
+    },
+  },
+  {
+    title: 'Campus Ads',
+    slug: 'college-campus-ads',
+    category: { title: 'Offline Advertising', slug: 'offline-advertising' },
+    hero: {
+      description: 'Target the next generation of consumers directly on college and university campuses.',
+      illustration: 'OfflineAdvertisingIllustration',
+    },
+    introduction: {
+      title: 'Connect with the Youth Market',
+      content: 'Engage with students where they live, study, and socialize. Campus advertising offers a unique opportunity to build brand loyalty with a demographic that has significant purchasing power and influence.'
+    },
+    keyFeatures: {
+      title: 'Key Features',
+      items: [
+        { title: 'Poster & Flyer Distribution', description: 'Targeted placement in high-traffic areas like student unions, libraries, and dorms.' },
+        { title: 'Event Sponsorship', description: 'Sponsor campus events, clubs, or sports teams to build a positive brand association.' },
+        { title: 'Digital Screens', description: 'Advertise on digital screens in cafeterias, student centers, and gyms.' },
+        { title: 'Brand Ambassadorships', description: 'Recruit student brand ambassadors to promote your product on campus.' },
+      ],
+    },
+    process: {
+      title: 'Our Process',
+      steps: [
+        { step: 1, title: 'Campus Selection & Strategy', description: 'We identify the best campuses and advertising channels to reach your target student demographic.' },
+        { step: 2, title: 'Creative Development', description: 'We design creative that is appealing and relevant to a student audience.' },
+        { step: 3, title: 'Execution & Rollout', description: 'We manage all logistics, from printing and distribution to event coordination.' },
+        { step: 4, title: 'Reporting', description: 'We provide reports on reach, engagement, and student feedback.' },
+      ],
+    },
+  },
+  {
+    title: 'Press Releases',
+    slug: 'press-release-handling',
+    category: { title: 'Public Relations', slug: 'public-relations' },
+    hero: {
+      description: 'Get your news in front of the right journalists and publications with professionally written and distributed press releases.',
+      illustration: 'PublicRelationsIllustration',
+    },
+    introduction: {
+      title: 'Announce Your News to the World',
+      content: 'A well-crafted press release is a powerful tool for communicating your company\'s milestones. We write compelling press releases and distribute them to a targeted list of media contacts to maximize your chances of getting coverage.'
+    },
+    keyFeatures: {
+      title: 'Key Features',
+      items: [
+        { title: 'Professional Copywriting', description: 'We write your press release in the proper format, with a compelling headline and newsworthy angle.' },
+        { title: 'Targeted Distribution', description: 'We distribute your release to a curated list of journalists, bloggers, and outlets covering your industry.' },
+        { title: 'Wire Service Distribution', description: 'Option to distribute via major newswire services for broad reach.' },
+        { title: 'Media Monitoring', description: 'We track who picks up your story and provide you with a report of all media coverage.' },
+      ],
+    },
+    process: {
+      title: 'Our Process',
+      steps: [
+        { step: 1, title: 'Information Gathering', description: 'We gather all the necessary information about your announcement.' },
+        { step: 2, title: 'Writing & Approval', description: 'We draft the press release and send it to you for review and approval.' },
+        { step: 3, title: 'Distribution', description: 'We distribute the final press release to our targeted media list and/or newswire services.' },
+        { step: 4, title: 'Reporting', description: 'We provide a comprehensive report of where your press release was published.' },
+      ],
+    },
+  },
+  {
+    title: 'Market Research',
+    slug: 'market-competitor-research',
+    category: { title: 'Business Consulting', slug: 'business-consulting' },
+    hero: {
+      description: 'Make data-driven decisions with in-depth research and analysis of your market, customers, and competitors.',
+      illustration: 'BusinessConsultingIllustration',
+    },
+    introduction: {
+      title: 'Know Your Battlefield',
+      content: 'Don\'t guess, know. Our market research services provide you with the insights you need to understand your market landscape, identify opportunities, and mitigate risks. We turn data into a strategic advantage.'
+    },
+    keyFeatures: {
+      title: 'Key Features',
+      items: [
+        { title: 'Competitor Analysis', description: 'A deep dive into your competitors\' strategies, strengths, weaknesses, and market positioning.' },
+        { title: 'Customer Surveys & Interviews', description: 'Get direct feedback from your target audience to understand their needs, pain points, and perceptions.' },
+        { title: 'Market Sizing & Trend Analysis', description: 'Understand the size of your potential market and the key trends shaping your industry.' },
+        { title: 'SWOT Analysis', description: 'A comprehensive analysis of your company\'s strengths, weaknesses, opportunities, and threats.' },
+      ],
+    },
+    process: {
+      title: 'Our Process',
+      steps: [
+        { step: 1, title: 'Define Research Objectives', description: 'We work with you to define the key questions you need answered.' },
+        { step: 2, title: 'Data Collection', description: 'We use a mix of primary (surveys, interviews) and secondary (reports, public data) research methods.' },
+        { step: 3, title: 'Analysis & Synthesis', description: 'Our team analyzes the data to identify key insights and patterns.' },
+        { step: 4, title: 'Strategic Recommendations', description: 'We deliver a comprehensive report with actionable recommendations based on our findings.' },
+      ],
+    },
+  },
+  {
+    title: 'Voice AI Solutions',
+    slug: 'voice-ai-solutions',
+    category: { title: 'AI Services', slug: 'ai-services' },
+    hero: {
+      description: 'Modernize your customer service calls with intelligent voice assistants and AI-powered IVR bots that provide human-like support.',
+      illustration: 'AIServicesIllustration',
+    },
+    introduction: {
+      title: 'The Future of Voice Communication',
+      content: 'Frustrating phone menus are a thing of the past. Our Voice AI solutions understand natural language, allowing customers to simply state what they need. We build intelligent call assistants that can answer questions, route calls, and even handle complex tasks, improving customer satisfaction and freeing up your human agents.'
+    },
+    keyFeatures: {
+      title: 'Key Features',
+      items: [
+        { title: '24/7 Call Answering', description: 'Provide round-the-clock support to your customers without increasing staff.' },
+        { title: 'Natural Language Understanding', description: 'Our AI understands complex queries and conversational language, not just keywords.' },
+        { title: 'Intelligent Call Routing', description: 'Automatically route callers to the right department or agent based on their needs.' },
+        { title: 'Appointment Booking & Management', description: 'Allow customers to book, reschedule, or cancel appointments over the phone automatically.' },
+        { title: 'CRM Integration', description: 'Log call details and customer information directly into your CRM.' },
+      ],
+    },
+    process: {
+      title: 'Our Process',
+      steps: [
+        { step: 1, title: 'Discovery & Call Flow Design', description: 'We analyze your current call flows and design an intelligent, efficient path for your Voice AI.' },
+        { step: 2, title: 'AI Development & Training', description: 'We build and train the AI on your specific business information and processes.' },
+        { step: 3, title: 'Telephony & CRM Integration', description: 'We integrate the Voice AI with your phone system and CRM.' },
+        { step: 4, title: 'Launch & Optimization', description: 'We launch your new Voice AI and continuously monitor and optimize its performance.' },
       ],
     },
   },
